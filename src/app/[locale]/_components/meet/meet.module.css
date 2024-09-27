@@ -1,0 +1,10 @@
+
+.profile {
+
+    transition: 0.5s;
+    clip-path: circle(75% at 25% 25%);
+}
+
+.profile:hover{
+    transform: scale(1.1);
+}
