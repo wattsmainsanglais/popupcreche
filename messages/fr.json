@@ -1,0 +1,16 @@
+{
+
+    "Nav": {
+        "Links": {
+            "what": "Nous faisons",
+            "meet": "Recontrez-nous",
+            "reviews": "Avis",
+            "faq": "FAQ",
+            "contact": "Contactez-nous"
+
+        }
+    },
+    "Splash": {
+        "heading": "Professionnelles expérimentées de la garde d'enfants pour les mariages, les événements et plus encore... "
+    } 
+}

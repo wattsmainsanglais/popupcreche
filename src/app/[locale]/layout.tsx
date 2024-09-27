@@ -5,7 +5,9 @@ import "./globals.css";
 import '@radix-ui/themes/styles.css';
 // Radix UI themes
 import { Theme} from '@radix-ui/themes'
-import { ThemeProvider } from 'next-themes';
+
+import NavBar from "./_components/navigation/navBar";
+
 //global css
 
 
@@ -22,11 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang={locale} suppressHydrationWarning>
+       <body >
        <Theme data-is-root-theme='false' accentColor='plum' grayColor='mauve' scaling='100%' panelBackground='solid' >
-      <body >
+       <NavBar locale={locale} />
         {children}
+       </Theme>
       </body>
-      </Theme>
+
+     
     </html>
   );
 }

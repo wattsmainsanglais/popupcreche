@@ -1,0 +1,17 @@
+{
+
+    "Nav": {
+        "Links": {
+            "what": "What we do",
+            "meet": "Meet us",
+            "reviews": "Reviews",
+            "faq": "FAQ",
+            "contact": "Contact Us"
+
+        }
+    },
+    "Splash": {
+        "heading": "Experienced childcare professionals for weddings, events and more… "
+    } 
+
+}
