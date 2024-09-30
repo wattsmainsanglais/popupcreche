@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import styles from "./page.module.css";
 
 import { Flex } from "@radix-ui/themes";
@@ -7,6 +8,7 @@ import Splash from "./_components/splash/Splash";
 import Whatwedo from "./_components/whatwedo/WhatWeDo";
 import Meetus from "./_components/meet/MeetUs";
 import Slider from "./_components/slideshow/Slider"
+import ReviewWrapper from "./_components/reviews/reviewWrapper";
 
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
 import s2 from '../../../public/slide1/KL2_7633web.jpg'
@@ -21,7 +23,7 @@ export default function Home() {
 
 
 
-  const images= [s1, s2, s3, s4, s5]
+  const images: StaticImport[]= [s1, s2, s3, s4, s5]
 
   return (
     <Flex justify='center' direction='column'>
@@ -30,6 +32,7 @@ export default function Home() {
       <Whatwedo />
       <Meetus />
       <Slider images={images} />
+      <ReviewWrapper />
 
 
 

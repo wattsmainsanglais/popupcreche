@@ -9,12 +9,14 @@ import { Flex } from "@radix-ui/themes";
 import Image from "next/image";
 
 import style from './slider.module.css'
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 
 
 
 
-export default function Slider({images}) {
+
+export default function Slider({images}: {images: StaticImport}) {
 
 const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
 
@@ -43,7 +45,7 @@ const handleNext = () => {
         <Flex width='100vw' height='90vh' mb='5'  justify='center'>
             <Flex justify='center' align='center'>
 
-                {images.map((image, index) => (
+                {images.map((image: string | StaticImport, index: any) => (
                     <motion.div
                       key={index}
                       initial='center'

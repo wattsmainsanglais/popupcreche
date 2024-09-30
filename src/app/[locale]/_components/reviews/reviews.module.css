@@ -1,0 +1,11 @@
+.backgroundWrapper{
+    background-image: url('/images/all-playing.jpg');
+    background-size: cover;
+}
+
+.reviewBox{
+    background-color: rgba(240, 231, 225, 0.884);
+   
+    font-style: italic;
+    border-radius: 15px 15px 15px 15px;
+}
