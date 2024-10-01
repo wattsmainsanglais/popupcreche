@@ -2,41 +2,48 @@
 
 import React, { useState } from "react";
 import {motion} from 'framer-motion'
-import { Flex, Text, Box} from "@radix-ui/themes";
+import { Flex, Text, Box, Heading} from "@radix-ui/themes";
 
-import { useTranslations } from "next-intl";
-import { tr } from "framer-motion/m";
+import FaqBox from "./FaqBox";
+
+import Image from "next/image";
+import truck from '../../../../../public/images/dino.png'
 
 export default function Faq({tprops}){
 
 
-const [hovered, setHovered]  =React.useState(false)
-
- const[q1, setq1] = React.useState(tprops.q1)
- const[a1, seta1] = React.useState(tprops.a1)
-
- function HoverHandle(){
-    setHovered(!hovered)
- }
-
     return (
+        <>
+        <Flex width='99vw' mt='9' mb='9' direction='column' justify='center' align='center' gap='0'>
+            <Heading mb='1'>Faq</Heading>
+            {tprops.map((item, index) => (
+                index % 2 === 0 ? 
+                <motion.div
+                initial={{x: -550}}
+                whileHover={{x: -300}}>
+                   <Flex align='center'>
+                    <Image src={item.i} width={75} alt='Toy truck' />
+                    <FaqBox question={item.q} answer={item.a} color='#bbdad2' justify='end' />
+                    
+                   </Flex>
+                    
+                </motion.div>:  
+                <motion.div
+                initial={{x: 550}}
+                whileHover={{x: 300}}
+                >   
+                    <Flex align='center'>
 
-        <Flex width='99vw' mt='9' mb='9'>
+                        <FaqBox question={item.q} answer={item.a} color='pink' justify='start' />
+                        <Image src={item.i} width={75} alt='Toy truck' />
+                    </Flex>
+                </motion.div>
+
+            ))}
+
             
-            <motion.div
-             
-             initial={{x: -200}}
-             whileHover={{x: 150}}
-            >
-            <Box width='45vw' p='5' onMouseEnter={HoverHandle} onMouseLeave={HoverHandle} style={{backgroundColor: '#bbdad2', borderRadius: '10px'}} >
-              
-                 {hovered? <Text>{a1}</Text>:<Flex justify='end'><Text align='right'>{q1}</Text></Flex>}
-            </Box>
-
-
-            </motion.div>
-
         </Flex>
+        </>
 
 
     )
