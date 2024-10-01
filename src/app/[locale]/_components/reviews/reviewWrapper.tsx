@@ -12,8 +12,8 @@ export default function ReviewWrapper() {
 
     return(
         <>
-        <Flex mt='5' justify='center'><Heading>{t("heading")}</Heading></Flex>
-        <Box width='100vw' className={style.backgroundWrapper} pt='5' pb='5' mt='5'>
+        <Flex mt='5'  justify='center'><Heading>{t("heading")}</Heading></Flex>
+        <Box width='100vw' className={style.backgroundWrapper} pt='5' pb='5' mt='5' mb='5'>
 
             <Flex direction='column'>
                 <Flex justify='start' >

@@ -9,6 +9,7 @@ import Whatwedo from "./_components/whatwedo/WhatWeDo";
 import Meetus from "./_components/meet/MeetUs";
 import Slider from "./_components/slideshow/Slider"
 import ReviewWrapper from "./_components/reviews/reviewWrapper";
+import FaqWrapper from "./_components/faq/faqWrapper";
 
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
 import s2 from '../../../public/slide1/KL2_7633web.jpg'
@@ -16,6 +17,8 @@ import s3 from '../../../public/slide1/KL2_7921web.jpg'
 import s4 from '../../../public/slide1/harriet-playing.jpg'
 import s5 from '../../../public/slide1/holding-banner.jpg'
 import s6 from '../../../public/slide1/sinead-playing.jpg'
+
+
 
 
 
@@ -33,6 +36,7 @@ export default function Home() {
       <Meetus />
       <Slider images={images} />
       <ReviewWrapper />
+      <FaqWrapper  />
 
 
 
