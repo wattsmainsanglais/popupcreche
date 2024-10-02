@@ -10,6 +10,8 @@ import Meetus from "./_components/meet/MeetUs";
 import Slider from "./_components/slideshow/Slider"
 import ReviewWrapper from "./_components/reviews/reviewWrapper";
 import FaqWrapper from "./_components/faq/faqWrapper";
+import ContactWrapper from "./_components/contact/ContactWrapper";
+
 
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
 import s2 from '../../../public/slide1/KL2_7633web.jpg'
@@ -37,6 +39,7 @@ export default function Home() {
       <Slider images={images} />
       <ReviewWrapper />
       <FaqWrapper  />
+      <ContactWrapper />
 
 
 

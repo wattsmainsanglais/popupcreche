@@ -14,11 +14,12 @@ export default function Faq({tprops}){
 
     return (
         <>
-        <Flex width='99vw' mt='9' mb='9' direction='column' justify='center' align='center' gap='0'>
-            <Heading mb='1'>Faq</Heading>
+        <Flex width='99vw' mt='9' mb='9' direction='column' justify='center' align='center' gap='1'>
+            <Heading mb='1'>FAQ</Heading>
             {tprops.map((item, index) => (
-                index % 2 === 0 ? 
+                index < 2 ? 
                 <motion.div
+                key={index}
                 initial={{x: -550}}
                 whileHover={{x: -300}}>
                    <Flex align='center'>
@@ -29,6 +30,7 @@ export default function Faq({tprops}){
                     
                 </motion.div>:  
                 <motion.div
+                key={index}
                 initial={{x: 550}}
                 whileHover={{x: 300}}
                 >   
