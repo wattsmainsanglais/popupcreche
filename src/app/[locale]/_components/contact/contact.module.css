@@ -1,11 +1,36 @@
 
 .socialWrapper{
-  
- 
   content: "";
   background-image: url('/images/KL2_7431web.jpg');
   background-size: cover;
+  border-radius: 15px;
   
- 
 
+}
+
+@keyframes icondance {
+
+  0%{
+      transform: rotate(-20deg);
+  }
+
+  50%{
+      transform: rotate(20deg);
+  }
+
+  75%{
+      transform: rotate(-20deg);
+  }
+
+  100%{
+      transform: rotate(0deg);
+  }
+  
+}
+
+.socialLogo:hover{
+
+  animation: icondance .4s linear;
+  animation-iteration-count: 1;
+  cursor: pointer;
 }

@@ -11,6 +11,7 @@ import Slider from "./_components/slideshow/Slider"
 import ReviewWrapper from "./_components/reviews/reviewWrapper";
 import FaqWrapper from "./_components/faq/faqWrapper";
 import ContactWrapper from "./_components/contact/ContactWrapper";
+import ComponentSeperator from "./_components/ComponentSeperator";
 
 
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
@@ -31,16 +32,35 @@ export default function Home() {
   const images: StaticImport[]= [s1, s2, s3, s4, s5]
 
   return (
-    <Flex justify='center' direction='column'>
-
+    <Flex justify='center' direction='column' align='center'>
+      
       <Splash />
-      <Whatwedo />
-      <Meetus />
-      <Slider images={images} />
-      <ReviewWrapper />
-      <FaqWrapper  />
-      <ContactWrapper />
-
+   
+    
+      <ComponentSeperator>
+        <Whatwedo />
+      </ComponentSeperator>  
+      
+      <ComponentSeperator>
+        <Meetus />
+      </ComponentSeperator>
+      
+      <ComponentSeperator>
+        <Slider images={images} />
+      </ComponentSeperator>  
+      
+      <ComponentSeperator>
+        <ReviewWrapper />
+      
+      </ComponentSeperator>  
+      
+      <ComponentSeperator>
+        <FaqWrapper  />
+      </ComponentSeperator>  
+      
+      <ComponentSeperator>
+        <ContactWrapper />
+      </ComponentSeperator>
 
 
     </Flex>

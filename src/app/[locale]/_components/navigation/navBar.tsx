@@ -28,7 +28,7 @@ export default function NavBar({locale}: {locale: string}){
         </Flex>
         <Flex justify='center' gap='5' width='60vw'>
           {navList.map(item => (
-            <Text>{item}</Text>
+            <Text size='4'>{item}</Text>
           ))}
         </Flex>
         <Flex width='10vw' mr='5' justify='end'>

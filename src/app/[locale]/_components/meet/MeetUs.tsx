@@ -18,9 +18,9 @@ export default function Meetus(){
 
     return(
 
-    <Flex direction='column' width='99vw' mt='9' mb='9' style={{backgroundColor: '#efe7e1'}}>
+    <Flex direction='column' width='99vw' style={{backgroundColor: '#efe7e1'}}>
 
-        <Box>
+        <Box mt='5'>
             <Heading align='center'>
                 {t("heading")}
             </Heading>
@@ -35,8 +35,8 @@ export default function Meetus(){
                 className={style.profile}
             />
 
-            <Box p='5'>
-                <Text>
+            <Box p='9' width='60%'>
+                <Text size='4'>
                     {t("sinead")}
                 </Text>
             </Box>
@@ -44,8 +44,8 @@ export default function Meetus(){
         </Flex>
         <Flex justify='center' p='5'>
            
-            <Box p='5'>
-                <Text>
+            <Box p='9' width='60%'>
+                <Text size='4'>
                     {t("harriet")}
                 </Text>
             </Box> 

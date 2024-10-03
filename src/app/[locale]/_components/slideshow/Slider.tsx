@@ -42,7 +42,7 @@ const handleNext = () => {
     return(
         <>
        
-        <Flex width='100vw' height='90vh' mb='5'  justify='center'>
+        <Flex width='100vw' height='90vh'  justify='center'>
             <Flex justify='center' align='center'>
 
                 {images.map((image: string | StaticImport, index: any) => (

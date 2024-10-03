@@ -15,7 +15,7 @@ export default function Whatwedo(){
                 {t("heading")}
             </Heading>
             <Box p='3' >
-                <Text >  
+                <Text size='4' >  
                 {t("para")}
 
                 </Text>
