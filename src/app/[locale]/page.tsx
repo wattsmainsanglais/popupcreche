@@ -13,6 +13,7 @@ import FaqWrapper from "./_components/faq/faqWrapper";
 import ContactWrapper from "./_components/contact/ContactWrapper";
 import ComponentSeperator from "./_components/ComponentSeperator";
 import GMap from "./_components/map/GMap";
+import DeckMap from "./_components/map/DeckMap";
 
 
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
@@ -24,6 +25,7 @@ import s6 from '../../../public/slide1/sinead-playing.jpg'
 
 
 const api = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
+const mapId = process.env.GOOGLEMAPID
 
 
 export default function Home() {
@@ -64,7 +66,7 @@ export default function Home() {
       </ComponentSeperator>
 
      <ComponentSeperator>
-        <GMap api={api}/>
+        <GMap api={api} mapId={mapId}/>
      </ComponentSeperator>
       
       
