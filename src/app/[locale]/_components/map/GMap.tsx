@@ -2,8 +2,11 @@
 import React, {useMemo, useEffect} from 'react';
 import {APIProvider, Map, useMap} from '@vis.gl/react-google-maps';
 import {DeckProps} from '@deck.gl/core';
-import {ScatterplotLayer} from '@deck.gl/layers';
+import {PolygonLayer} from '@deck.gl/layers';
 import {GoogleMapsOverlay as DeckOverlay} from '@deck.gl/google-maps';
+import data from './data/data.json'
+
+import {ScatterplotLayer} from '@deck.gl/layers';
 
 import { Flex } from '@radix-ui/themes';
 
@@ -22,16 +25,30 @@ function DeckGLOverlay(props: DeckProps) {
 
 export default function GMap({api, mapId}: {api: string, mapId: string}) {
   const layers = [
-    new ScatterplotLayer({
-      id: 'deckgl-circle',
+    new PolygonLayer({
+    id: 'PolygonLayer',
+    data: [{points: [[.41, 46.11],[.50, 46.11] ,[.50, 47.11],[.41, 47.11]]}],
+
+    getPolygon: d => d.points,
+    stroked: true,
+    getFillColor: [50, 150, 265, 175],
+    getLineColor: [255, 255, 255],
+    getLineWidth: 20,
+    lineWidthMinPixels: 1,
+    pickable: true
+  }),
+  new ScatterplotLayer({
+    id: 'deckgl-circle',
       data: [
         {position: [.41, 46.11]}
       ],
       getPosition: d => d.position,
       getFillColor: [255, 0, 0, 100],
       getRadius: 10000
-    })
-  ];
+  })
+   ];
+
+
 
   return (
   <Flex width='90vw' height='80vh'>
