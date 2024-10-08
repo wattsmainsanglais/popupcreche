@@ -49,7 +49,7 @@ export default function GMap({api, mapId}: {api: string, mapId: string}) {
         defaultZoom={7}
         mapId={mapId} >
         <DeckGLOverlay layers={layers} />
-        <MapMarker />
+        <MapMarker src='/images/KL2_7431web.jpg' src2='/images/KL2_8487web.jpg' />
       </Map>
     </APIProvider>
   </Flex>
