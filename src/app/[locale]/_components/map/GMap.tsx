@@ -7,7 +7,8 @@ import {GoogleMapsOverlay as DeckOverlay} from '@deck.gl/google-maps';
 
 import MapMarker from './MapMarker';
 
-import { Flex } from '@radix-ui/themes';
+import { Flex, Text, Heading } from '@radix-ui/themes';
+import { markerTypes } from './data/markerData';
 
 function DeckGLOverlay(props: DeckProps) {
   const map = useMap();
@@ -22,7 +23,10 @@ function DeckGLOverlay(props: DeckProps) {
   return null;
 }
 
-export default function GMap({api, mapId}: {api: string, mapId: string}) {
+export default function GMap({api, mapId, markerArray}: {api: string, mapId: string, markerArray: markerTypes}) {
+
+ const[markers, setMarkers] = React.useState(markerArray)
+
   const layers = [
     new PolygonLayer({
     id: 'PolygonLayer',
@@ -30,8 +34,8 @@ export default function GMap({api, mapId}: {api: string, mapId: string}) {
 
     getPolygon: d => d.points,
     stroked: true,
-    getFillColor: [50, 150, 265, 65],
-    getLineColor: [255, 255, 255],
+    getFillColor: [225, 120, 40, 65],
+    getLineColor: [255, 255, 255, 0],
     getLineWidth: 20,
     lineWidthMinPixels: 1,
     pickable: true
@@ -41,18 +45,31 @@ export default function GMap({api, mapId}: {api: string, mapId: string}) {
 
 
   return (
-  <Flex width='90vw' height='80vh'>
-    <APIProvider apiKey={api}>
-      <Map
-      
-        defaultCenter={{lat: 46.11, lng: 0.45}}
-        defaultZoom={7}
-        mapId={mapId} >
-        <DeckGLOverlay layers={layers} />
-        <MapMarker src='/images/KL2_7431web.jpg' src2='/images/KL2_8487web.jpg' />
-      </Map>
-    </APIProvider>
-  </Flex>
+      <Flex width='95vw' height='80vh'>
+        <Flex width= '50%' justify='center' align='center' direction='column' gap='2' p='3'>
+          <Heading>
+            Our Locations
+          </Heading>
+          <Text>
+            The map highlights out usual work area, plus there are icons for venues which we frequently work with 
+          </Text>
+        </Flex>
+        <Flex width='50%'>
+          <APIProvider apiKey={api}>
+            <Map
+            
+              defaultCenter={{lat: 46.11, lng: 0.45}}
+              defaultZoom={6.5}
+              mapId={mapId} >
+              <DeckGLOverlay layers={layers} />
+              {markers.map( m => 
+                <MapMarker name={m.name} lat={m.lat} long={m.long} src={m.image1} src2={m.image2} />
+              )}
+              
+            </Map>
+          </APIProvider>
+        </Flex>
+      </Flex>
 )}
 
 

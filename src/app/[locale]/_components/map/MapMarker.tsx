@@ -1,13 +1,14 @@
 import React from "react";
 
-import { Flex, Box, Text, Button } from "@radix-ui/themes";
+import { Flex, Box, Text, Button, Em} from "@radix-ui/themes";
 
 import {TargetIcon} from '@radix-ui/react-icons'
 import { AdvancedMarker } from "@vis.gl/react-google-maps";
+import bunny from '../../../../../public/images/trucks.png'
 
 import Image from "next/image";
 
-export default function MapMarker({src, src2}: {src: string, src2: string}){
+export default function MapMarker({name, lat, long, src, src2}: {name: string, lat: number, long: number, src: string, src2: string}){
 
     const keyStr =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
@@ -35,12 +36,12 @@ export default function MapMarker({src, src2}: {src: string, src2: string}){
     return(
         <Box>
             
-            <AdvancedMarker position={{lat: 46.11, lng: 0.5}} onClick={popupHandler} style={{cursor:'pointer'}}>
+            <AdvancedMarker position={{lat: lat, lng: long}} onClick={popupHandler} style={{cursor:'pointer'}}>
 
-                 <TargetIcon fontSize={24} />
-                 {togglePopup?<Flex style={{position: 'absolute', backgroundColor:'white' }} p='3'>
+                 <Image src={bunny} width={32} alt='bunny logo' style={{zIndex: '1'}} />
+                 {togglePopup?<Flex style={{position: 'absolute', backgroundColor:'white', borderRadius: '10px', zIndex:'2' }} p='3' direction='column' align='center' justify='center' >
                             
-                            <Text>This is the pop up</Text>
+                            <Text size='3' ><Em>{name}</Em></Text>
                             <Flex gap='1'>
                                 <Image
                                 src={src}

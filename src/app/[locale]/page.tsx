@@ -15,6 +15,8 @@ import ComponentSeperator from "./_components/ComponentSeperator";
 import GMap from "./_components/map/GMap";
 import DeckMap from "./_components/map/DeckMap";
 
+import {markerArray} from './_components/map/data/markerData'
+
 
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
 import s2 from '../../../public/slide1/KL2_7633web.jpg'
@@ -66,7 +68,7 @@ export default function Home() {
       </ComponentSeperator>
 
      <ComponentSeperator>
-        <GMap api={api} mapId={mapId}/>
+        <GMap api={api} mapId={mapId} markerArray={markerArray}/>
      </ComponentSeperator>
       
       
