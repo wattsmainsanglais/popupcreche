@@ -24,13 +24,7 @@ export type markerTypes =
         image1: '/images/KL2_7431web.jpg',
         image2: '/images/KL2_8487web.jpg'
     },
-    {
-        name: 'Chateau de Brives',
-        long: -0.4617,
-        lat: 45.6703,
-        image1: '/images/KL2_7431web.jpg',
-        image2: '/images/KL2_8487web.jpg'
-    },
+   
     {
         name: 'Chateau la Durantie',
         long: 1.1208,
@@ -49,6 +43,13 @@ export type markerTypes =
         name: 'Manoir Beaulieu',
         long: 0.2279,
         lat: 45.3805,
+        image1: '/images/KL2_7431web.jpg',
+        image2: '/images/KL2_8487web.jpg'
+    },
+    {
+        name: 'Chateau de Brives',
+        long: -0.4617,
+        lat: 45.6703,
         image1: '/images/KL2_7431web.jpg',
         image2: '/images/KL2_8487web.jpg'
     },

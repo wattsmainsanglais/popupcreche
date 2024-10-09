@@ -4,7 +4,7 @@ import { Flex, Box, Text, Button, Em} from "@radix-ui/themes";
 
 import {TargetIcon} from '@radix-ui/react-icons'
 import { AdvancedMarker } from "@vis.gl/react-google-maps";
-import bunny from '../../../../../public/images/trucks.png'
+import bunny from '../../../../../public/images/bunny-good.png'
 
 import Image from "next/image";
 
@@ -36,10 +36,10 @@ export default function MapMarker({name, lat, long, src, src2}: {name: string, l
     return(
         <Box>
             
-            <AdvancedMarker position={{lat: lat, lng: long}} onClick={popupHandler} style={{cursor:'pointer'}}>
+            <AdvancedMarker zIndex={1} position={{lat: lat, lng: long}} onClick={popupHandler} style={{cursor:'pointer'}}>
 
                  <Image src={bunny} width={32} alt='bunny logo' style={{zIndex: '1'}} />
-                 {togglePopup?<Flex style={{position: 'absolute', backgroundColor:'white', borderRadius: '10px', zIndex:'2' }} p='3' direction='column' align='center' justify='center' >
+                 {togglePopup?<Flex style={{position: 'absolute', backgroundColor:'white', borderRadius: '10px', zIndex:'3' }} p='3' direction='column' align='center' justify='center' >
                             
                             <Text size='3' ><Em>{name}</Em></Text>
                             <Flex gap='1'>

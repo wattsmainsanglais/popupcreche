@@ -4,19 +4,23 @@ import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
-import { Flex } from "@radix-ui/themes";
+import { Flex, Box } from "@radix-ui/themes";
 
 import Image from "next/image";
 
 import style from './slider.module.css'
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImageData } from "next/image";
+
+import { FaArrowsRotate } from "react-icons/fa6";
 
 
 
 
 
 
-export default function Slider({images}: {images: StaticImport}) {
+
+
+export default function Slider({images}: {images: StaticImageData}) {
 
 const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
 
@@ -29,6 +33,7 @@ const handleNext = () => {
     });
   };
 
+
     const positions = ["center", "left1", "left", "right", "right1"];
 
     const imageVariants = {
@@ -40,12 +45,12 @@ const handleNext = () => {
     }
     
     return(
-        <>
-       
-        <Flex width='100vw' height='90vh'  justify='center'>
+      <>
+        <Box width='99vw'>
+        <Flex width='100vw' height='90vh'  justify='center' direction='column' align='center' gap='5'>
             <Flex justify='center' align='center'>
 
-                {images.map((image: string | StaticImport, index: any) => (
+                {images.map((image: string | StaticImageData, index: any) => (
                     <motion.div
                       key={index}
                       initial='center'
@@ -66,16 +71,23 @@ const handleNext = () => {
                 ))}
 
             </Flex>
-          
+        
          </Flex> 
-         <button
-          className="text-white mt-[400px] bg-indigo-400 rounded-md py-2 px-4"
-          onClick={handleNext}
-        >
-          Back
-            </button> 
-         
-         </>
+         <Flex width='99vw' mt='3' justify='center'>
+              
+             <motion.button
+              style={{backgroundColor: 'none', border: 'none'}}
+              whileTap={{rotateZ: 45}}>
+              
+
+              <FaArrowsRotate onClick={handleNext} fontSize={24} />
+             </motion.button>
+              
+            
+
+            </Flex>
+            </Box>
+        </>
     )
 
 };

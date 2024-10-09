@@ -16,6 +16,7 @@ import GMap from "./_components/map/GMap";
 import DeckMap from "./_components/map/DeckMap";
 
 import {markerArray} from './_components/map/data/markerData'
+import { markerTypes } from "./_components/map/data/markerData";
 
 
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
@@ -26,8 +27,8 @@ import s5 from '../../../public/slide1/holding-banner.jpg'
 import s6 from '../../../public/slide1/sinead-playing.jpg'
 
 
-const api = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
-const mapId = process.env.GOOGLEMAPID
+const apiKey: string | undefined = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
+const mapId: string | undefined = process.env.GOOGLEMAPID
 
 
 export default function Home() {
@@ -68,7 +69,7 @@ export default function Home() {
       </ComponentSeperator>
 
      <ComponentSeperator>
-        <GMap api={api} mapId={mapId} markerArray={markerArray}/>
+        <GMap apiKey={apiKey} mapId={mapId} markerArray={markerArray}/>
      </ComponentSeperator>
       
       
