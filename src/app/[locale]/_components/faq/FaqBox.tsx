@@ -16,7 +16,7 @@ export default function FaqBox({question, answer, color, justify}){
 
     return(
 
-        <Box width='45vw' p='5' onClick={HoverHandle} style={{backgroundColor: color, borderRadius: '10px'}} >
+        <Box  width='45vw' p='5' onClick={HoverHandle} style={{backgroundColor: color, borderRadius: '10px'}} >
               
         {hovered? <Text size='4'>{a}</Text>:<Flex justify={justify} p='3'><Text size='4' align='right'>{q}</Text></Flex>}
     </Box>

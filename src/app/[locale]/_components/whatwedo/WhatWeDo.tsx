@@ -9,7 +9,7 @@ export default function Whatwedo(){
     let t = useTranslations("What")
 
     return(
-        <Flex width='99vw' justify='center' direction='column' p='5' style={{backgroundColor: '#c8e6e0' }}>
+        <Flex id='What-we-do' width='99vw' justify='center' direction='column' p='5' style={{backgroundColor: '#c8e6e0' }}>
 
             <Heading align='center' m='4'>
                 {t("heading")}

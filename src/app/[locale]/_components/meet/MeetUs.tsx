@@ -18,7 +18,7 @@ export default function Meetus(){
 
     return(
 
-    <Flex direction='column' width='99vw' style={{backgroundColor: '#efe7e1'}}>
+    <Flex id='Meet-us' direction='column' width='99vw' style={{backgroundColor: '#efe7e1'}}>
 
         <Box mt='5'>
             <Heading align='center'>

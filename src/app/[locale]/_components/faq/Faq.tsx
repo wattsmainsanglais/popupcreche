@@ -14,7 +14,7 @@ export default function Faq({tprops}){
 
     return (
         <>
-        <Flex width='99vw' direction='column' justify='center' align='center' gap='1'>
+        <Flex id='FAQ' width='99vw' direction='column' justify='center' align='center' gap='1'>
             <Heading mb='1'>FAQ</Heading>
             {tprops.map((item, index) => (
                 index < 2 ? 

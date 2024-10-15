@@ -18,14 +18,21 @@ import DeckMap from "./_components/map/DeckMap";
 import {markerArray} from './_components/map/data/markerData'
 import { markerTypes } from "./_components/map/data/markerData";
 
-
+//slide 1 imports
 import s1 from '../../../public/slide1/KL2_7291web.jpg'
 import s2 from '../../../public/slide1/KL2_7633web.jpg'
 import s3 from '../../../public/slide1/KL2_7921web.jpg'
 import s4 from '../../../public/slide1/harriet-playing.jpg'
-import s5 from '../../../public/slide1/holding-banner.jpg'
-import s6 from '../../../public/slide1/sinead-playing.jpg'
+import s5 from '../../../public/slide1/7 annelimphoto.jpg'
+import s6 from '../../../public/slide1/3 annelimphoto.jpg'
 
+//slide2 imports
+
+import s7 from '../../../public/slide2/KL2_7489web.jpg'
+import s8 from '../../../public/slide2/KL2_8447web.jpg'
+import s9 from '../../../public/slide2/KL2_8729web.jpg'
+import s10 from '../../../public/slide2/KL2_8763web.jpg'
+import s11 from '../../../public/slide2/KL2_8765web.jpg'
 
 const apiKey: string | undefined = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
 const mapId: string | undefined = process.env.GOOGLEMAPID
@@ -35,7 +42,8 @@ export default function Home() {
 
 
 
-  const images: StaticImport[]= [s1, s2, s3, s4, s5]
+  const images: StaticImport[]= [s1, s2, s3, s5, s6]
+  const images2: StaticImport[]= [s7, s8, s9, s10, s11]
 
   return (
     <Flex justify='center' direction='column' align='center'>
@@ -62,6 +70,10 @@ export default function Home() {
       
       <ComponentSeperator>
         <FaqWrapper  />
+      </ComponentSeperator>  
+
+      <ComponentSeperator>
+        <Slider images={images2} />
       </ComponentSeperator>  
       
       <ComponentSeperator>
