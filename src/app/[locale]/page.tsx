@@ -14,6 +14,7 @@ import ContactWrapper from "./_components/contact/ContactWrapper";
 import ComponentSeperator from "./_components/ComponentSeperator";
 import GMap from "./_components/map/GMap";
 import DeckMap from "./_components/map/DeckMap";
+import GoTop from "./_components/buttons/GoTopButton";
 
 import {markerArray} from './_components/map/data/markerData'
 import { markerTypes } from "./_components/map/data/markerData";
@@ -83,7 +84,8 @@ export default function Home() {
      <ComponentSeperator>
         <GMap apiKey={apiKey} mapId={mapId} markerArray={markerArray}/>
      </ComponentSeperator>
-      
+    
+      <GoTop/>
       
 
 
