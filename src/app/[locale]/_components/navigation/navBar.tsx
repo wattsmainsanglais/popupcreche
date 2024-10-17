@@ -3,7 +3,7 @@ import React from "react";
 import { Flex, Box, Text, TabNav } from "@radix-ui/themes";
 
 import Image from "next/image";
-import miniLogo from '../../../../../public/images/Logo-final-wo-central.jpg'
+import miniLogo from '../../../../../public/images/bunny-good.png'
 
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./LangSwitcher";
@@ -19,11 +19,11 @@ export default function NavBar({locale}: {locale: string}){
 
     return (
     <Flex justify='between' align='center' width='100vw' top='0' position='sticky' style={{backgroundColor: 'white'}}>
-        <Flex justify='start'>
+        <Flex justify='start' pl='2'>
 
             <Image
                 src={miniLogo}
-                width={100}
+                width={60}
                 alt='ThePopUpWeddingCreche Logo'>
             </Image>
 

@@ -20,7 +20,7 @@ import { FaArrowsRotate } from "react-icons/fa6";
 
 
 
-export default function Slider({images}: {images: StaticImageData}) {
+export default function Slider({images, ratios, heightRatio}: {images: StaticImageData[], ratios: number[], heightRatio: string}) {
 
 const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
 
@@ -37,17 +37,17 @@ const handleNext = () => {
     const positions = ["center", "left1", "left", "right", "right1"];
 
     const imageVariants = {
-        center: { x: "0%", scale: 0.9, zIndex: 5 },
-        left1: { x: "-50%", scale: 0.7, zIndex: 3 },
-        left: { x: "-90%", scale: 0.5, zIndex: 2 },
-        right: { x: "90%", scale: 0.5, zIndex: 1 },
-        right1: { x: "50%", scale: 0.7, zIndex: 3 },
+        center: { x: "0%", scale: ratios[0], zIndex: 5 },
+        left1: { x: "-50%", scale: ratios[1], zIndex: 3 },
+        left: { x: "-90%", scale: ratios[2], zIndex: 2 },
+        right: { x: "90%", scale: ratios[2], zIndex: 1 },
+        right1: { x: "50%", scale: ratios[1], zIndex: 3 },
     }
     
     return(
       <>
         <Box width='99vw'>
-        <Flex width='100vw' height='90vh'  justify='center' direction='column' align='center' gap='5'>
+        <Flex width='100vw' height={heightRatio}  justify='center' direction='column' align='center' gap='5'>
             <Flex justify='center' align='center'>
 
                 {images.map((image: string | StaticImageData, index: any) => (
