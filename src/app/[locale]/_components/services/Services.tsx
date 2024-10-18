@@ -14,7 +14,7 @@ export default function Services(){
         <Flex width='90vw' justify='center' direction='column'>
             <Flex justify='center' pb='8'>
                   <Heading >
-                Our Services
+                    Services
                 </Heading>
             </Flex>
             <Flex justify='center'>
@@ -22,7 +22,7 @@ export default function Services(){
                 <Flex justify='center' pb='3' width='75vw' >
                 <Tabs.List>
                     <Flex  gap='9' justify='center'>
-                        <Flex direction='column'>
+                        <Flex direction='column' justify='center' align='center'>
                             <Image
                             width={160}
                             alt='The Pop-up Wedding Creche - Ceremony Nanny'
@@ -34,7 +34,7 @@ export default function Services(){
                         </Flex>
                     
                     
-                        <Flex direction='column' justify='end'>
+                        <Flex direction='column' justify='end' align='center'>
                             <Image
                             width={160}
                             alt='The Pop-up Wedding Creche - Private Nanny'
@@ -47,7 +47,7 @@ export default function Services(){
 
                    
                     
-                        <Flex direction='column'>
+                        <Flex direction='column' align='center'>
                             <Image
                             width={160}
                             alt='The Pop-up Wedding Creche - Wedding Creche'
