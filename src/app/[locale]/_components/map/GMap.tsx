@@ -34,7 +34,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | und
 
     getPolygon: d => d.points,
     stroked: true,
-    getFillColor: [225, 120, 40, 65],
+    getFillColor: [160, 109, 170, 65],
     getLineColor: [255, 255, 255, 0],
     getLineWidth: 20,
     lineWidthMinPixels: 1,
