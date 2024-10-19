@@ -18,7 +18,7 @@ export default function NavBar({locale}: {locale: string}){
     const navList: string[] = [t("what"), t("meet"), t("reviews"), t("faq"), t("contact")];
 
     return (
-    <Flex justify='between' align='center' width='100vw' top='0' position='sticky' style={{backgroundColor: 'white'}}>
+    <Flex justify='between' align='center' width='100vw' top='0'  style={{backgroundColor: 'white'}}>
         <Flex justify='start' pl='2'>
 
             <Image
@@ -35,7 +35,7 @@ export default function NavBar({locale}: {locale: string}){
           ))}
           </TabNav.Root>
         </Flex>
-        <Flex width='10vw' mr='5' justify='end'>
+        <Flex width='10vw' mr='6' justify='end'>
           <LanguageSwitcher locale={locale} />
 
         </Flex>
