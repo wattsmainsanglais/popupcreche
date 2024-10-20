@@ -14,6 +14,7 @@ import style from './meet.module.css'
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 import MeetUsAvatar from "./_components/Avatar";
+import { small } from "framer-motion/client";
 
  interface MeetData {
     name: string,
@@ -63,7 +64,7 @@ export default function Meetus(){
 
     <Flex id='Meet-us' direction='column' width='99vw' style={{backgroundColor: '#efe7e1'}} p='4'>
 
-        <Box mt='5'>
+        <Box mt='5' mb={{initial: '2', xs:'2', sm: '2', md: '0'}} >
             <Heading align='center'>
                 {t("heading")}
             </Heading>
@@ -100,28 +101,29 @@ export default function Meetus(){
                   
             />
         </Flex>*/}
-        <Flex justify='center' p='8'>
+        <Flex justify='center' p={{initial: '3', xs: '3', sm: '3', md: '5', lg: '8'}}>
 
             <Tabs.Root defaultValue="Si">
-                <Tabs.List>
-                <Flex justify='center'width='75vw' gap='8'>
-                {meetData.map((m: MeetData , index: number) => (
-                    <MeetUsAvatar key={index} name={m.name} src={m.src} value={m.value} />
-                ))}
-                </Flex>
-                </Tabs.List>
-                
-                <Flex justify='center' width='75vw' p='5'>
-                {meetData.map((m: MeetData, index: number) => (
-                    <Flex justify='center' key={index}> 
-                    <Tabs.Content  value={m.value}>
-                        <Text size='4'>{m.text}</Text>
-                    </Tabs.Content>
+                <Flex direction={{initial: 'row', xs: 'row', sm: 'column', md: 'column'}} height={{initial: '65vh', xs: '70vh', sm: '50vh'}} align={{initial: 'start', xs: 'start', sm: 'start'}}>
+                    <Tabs.List >
+                    <Flex justify='center' width={{initial: '35vw', xs: '35vw', sm: '75vw', md: '75vw'}} gap={{initial: '3', xs: '3', sm: '4', md: '8'}} direction={{initial:'column', xs: 'column', sm: 'row'}}>
+                    {meetData.map((m: MeetData , index: number) => (
+                        <MeetUsAvatar key={index} name={m.name} src={m.src} value={m.value} />
+                    ))}
                     </Flex>
-                ))}
+                    </Tabs.List>
+                    
+                    <Flex justify='center' width={{initial: '65vw', xs: '65vw', sm: '75vw', md: '75vw'}} p={{initial: '3', xs: '5', sm: '5', md: '7'}}>
+                    {meetData.map((m: MeetData, index: number) => (
+                        <Flex justify='center' key={index} align={{initial: 'start', xs: 'start', sm: 'start'}}> 
+                        <Tabs.Content  value={m.value}>
+                            <Text size={{initial: '2', xs: '2', sm: '4', md: '4'}}>{m.text}</Text>
+                        </Tabs.Content>
+                        </Flex>
+                    ))}
 
+                    </Flex>
                 </Flex>
-
             </Tabs.Root>
 
 
