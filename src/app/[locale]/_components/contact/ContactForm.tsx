@@ -20,6 +20,7 @@ export default function ContactForm() {
     const [message, setMessage] = useState<string | undefined>('')
 
     async function submit(data: FormData){
+        
         setError('')
         setMessage('')
 
