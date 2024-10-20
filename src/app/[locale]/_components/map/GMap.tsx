@@ -30,7 +30,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | und
   const layers = [
     new PolygonLayer({
     id: 'PolygonLayer',
-    data: [{points: [[-1.568, 46.408],[-1.398, 46.68] ,[-0.868, 47.06],[-0.069, 47.266],[.710, 47.381],[2.397, 47.064],[2.633, 46.352],[2.336, 45.522],[1.942, 45.090],[1.277, 44.826],[.513, 44.794],[-0.4531, 44.716],[-0.896, 44.821],[-1.183, 45.11]]}],
+    data: [{points: [[-1.568, 46.408],[-1.398, 46.68] ,[-0.868, 47.06],[-0.069, 47.266],[.710, 47.381],[2.397, 47.064],[2.633, 46.352],[2.336, 45.522],[1.942, 45.090],[1.277, 44.826],[0.513, 44.794],[-0.453, 44.716],[-0.896, 44.821],[-1.183, 45.11]]}],
 
     getPolygon: d => d.points,
     stroked: true,
@@ -41,6 +41,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | und
     pickable: true
   })
    ];
+   
 
 
 

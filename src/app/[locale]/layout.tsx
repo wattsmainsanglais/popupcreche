@@ -7,6 +7,7 @@ import '@radix-ui/themes/styles.css';
 import { Theme} from '@radix-ui/themes'
 
 import NavBar from "./_components/navigation/navBar";
+import Footer from "./_components/footer/Footer";
 
 //global css
 
@@ -28,6 +29,7 @@ export default function RootLayout({
        <Theme data-is-root-theme='false' accentColor='plum' grayColor='mauve' scaling='100%' panelBackground='solid' >
        <NavBar locale={locale} />
         {children}
+       <Footer />
        </Theme>
       </body>
 
