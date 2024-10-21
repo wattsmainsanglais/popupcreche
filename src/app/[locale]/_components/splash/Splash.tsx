@@ -15,8 +15,11 @@ export default function Splash(){
 
             <Image
             src={logo}
-            width={500}
             alt='The Pop-Up Wedding Creche Logo'
+            style={{
+                maxWidth: '100%',
+                height: 'auto'
+            }}
             >
 
 

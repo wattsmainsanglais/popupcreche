@@ -25,10 +25,10 @@ export default function NavBar({locale}: {locale: string}){
                 src={miniLogo}
                 width={60}
                 alt='ThePopUpWeddingCreche Logo'>
-            </Image>
+            </Image> 
 
         </Flex>
-        <Flex justify='center' gap='5' width='60vw'>
+        <Flex justify='center' gap='5' width='60vw' >
           <TabNav.Root size='2'>
           {navList.map((item, index) => (
             <TabNav.Link key={index} href={`#${item}`}><Text size='4'>{item}</Text></TabNav.Link>

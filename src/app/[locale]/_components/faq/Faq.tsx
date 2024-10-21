@@ -11,10 +11,11 @@ import truck from '../../../../../public/images/dino.png'
 
 export default function Faq({tprops}){
 
+    const win = window.innerWidth
 
     return (
-        <>
-        <Flex id='FAQ' width='99vw' direction='column' justify='center' align='center' gap='1'>
+       
+        <Flex id='FAQ' width='99vw' direction='column' justify='center' align='center' gap='1' display={win < 1080? 'none': 'flex'}>
             <Heading mb='1'>FAQ</Heading>
             {tprops.map((item, index) => (
                 index < 2 ? 
@@ -45,7 +46,7 @@ export default function Faq({tprops}){
 
             
         </Flex>
-        </>
+       
 
 
     )
