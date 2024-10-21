@@ -8,13 +8,14 @@ import Socials from "./Socials";
 export default function ContactWrapper(){
 
     return(
-        <Flex id='Contact-us' direction='column' justify='center' align='center'>
+        <Flex width='99vw' id='Contact-us' direction='column' justify='center' align='center'>
             <Heading>Contact</Heading>
-            <Grid columns='2' rows='1' width='99vw' justify='center' align='center'>
+           
+            <Flex direction={{initial: 'column', xs: 'column', sm: 'column', md: 'row'}} width='99vw' justify='center' align='center'>
                 <ContactForm />
                 <Socials />
 
-            </Grid>
+            </Flex>
         </Flex>
        
     )

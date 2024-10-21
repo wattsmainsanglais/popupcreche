@@ -20,7 +20,14 @@ import { FaArrowsRotate } from "react-icons/fa6";
 
 
 
-export default function Slider({images, ratios, heightRatio}: {images: StaticImageData[], ratios: number[], heightRatio: string}) {
+export default function Slider({images, ratios, heightRatio}: {images: StaticImageData[], ratios: number[], heightRatio: number[] | string | number}) {
+
+
+  const win = window.innerWidth
+  
+  const altHeightRatio: string | number = (heightRatio-15).toString()+'vh'
+ 
+
 
 const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
 
@@ -47,7 +54,7 @@ const handleNext = () => {
     return(
       <>
         <Box width='99vw'>
-        <Flex width='100vw' height={heightRatio}  justify='center' direction='column' align='center' gap='5'>
+        <Flex width='100vw' height={win < 1000 ? altHeightRatio:  heightRatio.toString()+'vh'}  justify='center' direction='column' align='center' gap='5'>
             <Flex justify='center' align='center'>
 
                 {images.map((image: string | StaticImageData, index: any) => (
@@ -64,7 +71,8 @@ const handleNext = () => {
                         <Image
                          src={image}
                          alt='image'
-                         width={400}
+                         width={380}
+                         sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw"
                           />
 
                     </motion.div>
@@ -73,7 +81,7 @@ const handleNext = () => {
             </Flex>
         
          </Flex> 
-         <Flex width='99vw' mt='3' justify='center'>
+         <Flex width='99vw' mt={{initial: '0', xs: '0', sm:'0', md: '3'}} justify='center'>
               
              <motion.button
               style={{backgroundColor: 'none', border: 'none'}}

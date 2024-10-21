@@ -11,7 +11,7 @@ export default function Socials(){
 
     return(
 
-        <Flex width='80%' height='80%' className={style.socialWrapper} align='center' justify='center'>
+        <Flex  width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '45vw'}} height='60vh' className={style.socialWrapper} align='center' justify='center'>
 
             <Flex gap='7'>
         

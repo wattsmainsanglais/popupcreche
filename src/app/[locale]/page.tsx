@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import styles from "./page.module.css";
 
+
 import { Suspense } from 'react'
 
 import { Flex, Skeleton } from "@radix-ui/themes";
@@ -46,10 +47,10 @@ export default function Home() {
 
   const landscape: number[] = [.95 , .85, .7]
   const portrait: number[] = [.9 , .7 , .5]
-  const heightRatio: string[] = ['90vh', '65vh']
+  const heightRatio: number[] | string = [90, 65]
 
-  const images: StaticImport[]= [s1, s2, s3, s5, s6]
-  const images2: StaticImport[]= [s7, s8, s9, s10, s11]
+  const images: StaticImageData[]= [s1, s2, s3, s5, s6]
+  const images2: StaticImageData[]= [s7, s8, s9, s10, s11]
 
   return (
     <Flex justify='center' direction='column' align='center'>

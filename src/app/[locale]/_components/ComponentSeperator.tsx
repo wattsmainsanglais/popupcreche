@@ -8,7 +8,7 @@ export default function ComponentSeperator({children}: {children: React.ReactNod
     <>  
    
         <Box width='20vw' height='2px' style={{borderTop: '2px solid #c8e6e0' }}></Box>
-        <Flex width='100vw' justify='center' align='center' mt='9' mb='9' >
+        <Flex width='100vw' justify='center' align='center' mt={{initial: '5', xs: '5', sm: '5', md: '9'}} mb={{initial: '5', xs: '5', sm: '5', md: '9'}} >
 
             {children}
 

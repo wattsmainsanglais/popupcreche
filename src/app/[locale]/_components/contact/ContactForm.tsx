@@ -39,23 +39,23 @@ export default function ContactForm() {
 
     return  (
 
-            <Flex justify='center' pt='8' pb='8' gap='2' align='center' direction={{initial:'column', sm:'column', xs: 'column', lg:'row', xl:'row'}} >
-            <Card size='5' variant="classic" >
+            <Flex justify='center' width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '45vw'}} pt={{initial: '3', xs: '3', sm: '5', md:'8'}} pb={{initial: '3', xs: '3', sm: '5', md:'8'}} gap='2' align='center'  >
+            <Card size={{initial: '5' ,xs: '5', sm: '5', md: '5' }} variant="classic" >
                 <form action={submit} ref={ref}>  
-                    <Flex gap='2' direction='column' align='center' width='100%' justify='center'>
+                    <Flex gap='2' direction='column' align='center' justify='center'>
 
                         <Heading size='5' align='center'>Contact Us Here</Heading>
                         <Flex direction='column' gap='2'>
-                            <Box width='200px'>
+                            <Box width={{ initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
                                 <TextField.Root name='name' size='2' type='text' placeholder="Name"></TextField.Root>
                             </Box>
-                            <Box width='200px'>
+                            <Box width={{initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
                                 <TextField.Root name='email' type='email' placeholder="Email"></TextField.Root>
                             </Box>
-                            <Box width='200px'>
+                            <Box width={{initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
                                 <TextField.Root name='tel' size='2' type='number' placeholder="Telephone"></TextField.Root>
                             </Box>
-                            <Box width='350px'>
+                            <Box width={{initial: '250px', xs: '250px', sm: '250px', md: '350px'}}>
                                 <TextArea size="2" name='message'  placeholder="Write your message here" resize='vertical'></TextArea>
                             </Box>
                              
