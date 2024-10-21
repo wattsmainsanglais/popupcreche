@@ -9,3 +9,11 @@
     font-style: italic;
     border-radius: 15px 15px 15px 15px;
 }
+
+
+@media only screen and (max-width: 900px) {
+
+    .backgroundWrapper{
+        background-image: url('/images/KL2_8226web.jpg');
+    }
+}

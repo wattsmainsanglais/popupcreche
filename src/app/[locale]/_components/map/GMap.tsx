@@ -46,8 +46,8 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | und
 
 
   return (
-      <Flex width='95vw' height='80vh'>
-        <Flex width= '50%' justify='center' align='center' direction='column' gap='2' p='3'>
+      <Flex width='95vw' height='80vh' direction={{initial: 'column', xs: 'column', sm: 'column', md: 'row' }} justify='center' align='center'>
+        <Flex width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '50vw'}} justify='center' align='center' direction='column' gap='2' p='3'>
           <Heading>
             Our Locations
           </Heading>
@@ -55,7 +55,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | und
             The map highlights out usual work area, plus there are icons for venues which we frequently work with 
           </Text>
         </Flex>
-        <Flex width='50%'>
+        <Flex width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '50vw'}} height={{initial: '60vh', xs: '60vh', sm: '60vh'}}>
           <APIProvider apiKey={apiKey}>
             <Map
             

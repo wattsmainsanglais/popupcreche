@@ -14,17 +14,17 @@ export default function ReviewWrapper() {
         <Flex id='Reviews' direction='column' justify='center' align='center'>
             <Flex  justify='center'><Heading>{t("heading")}</Heading></Flex>
             <Box width='100vw' height='100vh' className={style.backgroundWrapper} pt='5' pb='5' mt='5' mb='5'>
-
-                <Flex direction='column'>
+                
+                <Flex direction='column'  width='100vw' height='80vh' justify={{initial: 'between', xs: 'between', sm: 'between', md: 'start'}}>
                     <Flex justify='start' >
                         
-                        <Flex className={style.reviewBox} p='6' width='40vw' >
+                        <Flex className={style.reviewBox} p='6' width={{initial: '80vw', xs: '80vw', sm: '80vw', md: '40vw'}} >
                             <Text size='4'>{t("list.one")}</Text>
                         </Flex>
                     </Flex>
                     <Flex justify='end' >
                         
-                        <Flex className={style.reviewBox} p='6' width='40vw' >
+                        <Flex className={style.reviewBox} p='6' width={{initial: '80vw', xs: '80vw', sm: '80vw', md: '40vw'}} >
                             <Text size='4'>{t("list.two")}</Text>
                         </Flex>
                     </Flex>

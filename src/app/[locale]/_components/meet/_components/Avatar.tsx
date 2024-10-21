@@ -14,7 +14,7 @@ export default function MeetUsAvatar({name, src, value}: {name: string, src: str
             <Avatar 
                 src={src}
                 fallback='S'
-                size={{initial: '5', xs: '5', sm: '8', md: '9'}}
+                size={{initial: '5', xs: '5', sm: '7', md: '9'}}
             />
         
             <Tabs.Trigger value={value} style={{cursor: 'pointer' }}>
