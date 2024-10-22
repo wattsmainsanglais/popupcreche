@@ -35,25 +35,25 @@ export default function Meetus(){
     const meetData: MeetData[] = [
         {
           name: 'Sinead',
-          src: `${process.env.LIVESITE}images/sinead-profile-alt.jpg`,
+          src: `images/sinead-profile-alt.jpg`,
           value: 'Si',
           text:  t("sinead") 
         },
         {
             name: 'Harriet',
-            src: `${process.env.LIVESITE}images/harriet-profile-alt.jpg`,
+            src: `images/harriet-profile-alt.jpg`,
             value: 'Ha',
             text:  t("harriet") 
           },
           {
             name: 'Gaelle',
-            src: `${process.env.LIVESITE}images/KL2_8009.jpg`,
+            src: `/images/KL2_8009.jpg`,
             value: 'Ga',
             text:  t("sinead") 
           },
           {
             name: 'Rachel',
-            src: `${process.env.LIVESITE}images/sinead-profile-alt.jpg`,
+            src: `/images/sinead-profile-alt.jpg`,
             value: 'Ra',
             text:  t("sinead") 
           },
