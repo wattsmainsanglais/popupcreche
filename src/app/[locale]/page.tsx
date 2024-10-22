@@ -13,7 +13,7 @@ import Services from "./_components/services/Services";
 import Meetus from "./_components/meet/MeetUs";
 import Slider from "./_components/slideshow/Slider"
 import ReviewWrapper from "./_components/reviews/reviewWrapper";
-import FaqWrapper from "./_components/faq/faqWrapper";
+import FaqWrapper from "./_components/faq/FaqWrapper";
 import ContactWrapper from "./_components/contact/ContactWrapper";
 import ComponentSeperator from "./_components/ComponentSeperator";
 import GMap from "./_components/map/GMap";
