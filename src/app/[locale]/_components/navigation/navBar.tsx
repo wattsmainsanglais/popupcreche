@@ -1,19 +1,25 @@
-import React from "react";
+
+import {useEffect, useState} from 'react';
 
 import { Flex, Box, Text, TabNav } from "@radix-ui/themes";
 
 import Image from "next/image";
 import miniLogo from '../../../../../public/images/bunny-good.png'
 
-import { useTranslations } from "next-intl";
+import { getTranslations } from 'next-intl/server';
 import LanguageSwitcher from "./LangSwitcher";
 
+import NavItemsResponsive from './NavItemsResponsive';
 
 
 
-export default function NavBar({locale}: {locale: string}){
 
-    const t = useTranslations("Nav.Links")
+
+
+export default async function NavBar({locale}: {locale: string}){
+
+  
+    const t = await getTranslations("Nav.Links")
     
     const navList: string[] = [t("what"), t("meet"), t("reviews"), t("faq"), t("contact")];
 
@@ -28,14 +34,10 @@ export default function NavBar({locale}: {locale: string}){
             </Image> 
 
         </Flex>
-        <Flex justify='center' gap='5' width='60vw' >
-          <TabNav.Root size='2'>
-          {navList.map((item, index) => (
-            <TabNav.Link key={index} href={`#${item}`}><Text size='4'>{item}</Text></TabNav.Link>
-          ))}
-          </TabNav.Root>
+        <Flex justify={{initial:'end' ,xs: 'end', sm: 'end', md: 'end', lg: 'center'}} gap='5' width='60vw' >
+           <NavItemsResponsive navList={navList} />
         </Flex>
-        <Flex width='10vw' mr='6' justify='end'>
+        <Flex width='10vw' ml='1' mr='2' justify='end'>
           <LanguageSwitcher locale={locale} />
 
         </Flex>
