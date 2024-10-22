@@ -47,13 +47,13 @@ export default function Meetus(){
           },
           {
             name: 'Gaelle',
-            src: `/images/KL2_8009.jpg`,
+            src: `images/KL2_8009.jpg`,
             value: 'Ga',
             text:  t("sinead") 
           },
           {
             name: 'Rachel',
-            src: `/images/sinead-profile-alt.jpg`,
+            src: `images/sinead-profile-alt.jpg`,
             value: 'Ra',
             text:  t("sinead") 
           },
