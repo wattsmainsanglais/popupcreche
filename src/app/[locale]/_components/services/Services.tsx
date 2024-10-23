@@ -6,6 +6,8 @@ import cn from '../../../../../public/services/cn.jpg'
 import pn from '../../../../../public/services/pn.jpg'
 import wc from '../../../../../public/services/wc.jpg'
 
+import { ResponsiveHeadingSizes, ResponsiveTextSizes } from "../../layout";
+
 
 export default function Services(){
 
@@ -13,35 +15,42 @@ export default function Services(){
     return (
         <Flex width='90vw' justify='center' direction='column'>
             <Flex justify='center' pb='8'>
-                  <Heading >
+                  <Heading size={ResponsiveHeadingSizes} >
                     Services
                 </Heading>
             </Flex>
             <Flex justify='center'>
             <Tabs.Root defaultValue="cn" >
-                <Flex justify='center' pb='3' width='75vw' >
+                <Flex justify='center' pb='3' width={{initial: '95vw', xs: '95vw', sm: '95vw', md: '90vw', lg: '75vw'}} >
                 <Tabs.List>
-                    <Flex  gap='9' justify='center'>
+                    <Flex  gap={{initial: '3', xs: '3', sm: '3', md: '5', lg: '9'}} justify='center'>
                         <Flex direction='column' justify='center' align='center'>
                             <Image
-                            width={160}
+                            style={{
+                                maxWidth: '10%',
+                                height: 'auto'
+                            }}
                             alt='The Pop-up Wedding Creche - Ceremony Nanny'
                             src={cn}
                             />
                             <Tabs.Trigger value="cn">
-                                <Text size='4'>{t("Headings.cn")}</Text>
+                                <Text size={ResponsiveHeadingSizes}>{t("Headings.cn")}</Text>
                             </Tabs.Trigger>
                         </Flex>
                     
                     
                         <Flex direction='column' justify='end' align='center'>
                             <Image
-                            width={160}
-                            alt='The Pop-up Wedding Creche - Private Nanny'
                             src={pn}
+                            style={{
+                                maxWidth: '10%',
+                                height: 'auto'
+                            }}
+                            alt='The Pop-up Wedding Creche - Private Nanny'
+                            
                             />
                             <Tabs.Trigger value="pn">
-                                <Text size='4'>{t("Headings.pn")}</Text>
+                                <Text size={ResponsiveTextSizes}>{t("Headings.pn")}</Text>
                             </Tabs.Trigger>
                         </Flex>
 
@@ -49,12 +58,15 @@ export default function Services(){
                     
                         <Flex direction='column' align='center'>
                             <Image
-                            width={160}
+                            style={{
+                                maxWidth: '10%',
+                                height: 'auto'
+                            }}
                             alt='The Pop-up Wedding Creche - Wedding Creche'
                             src={wc}
                             />
                             <Tabs.Trigger value="wc">
-                                <Text size='4'>{t("Headings.wc")}</Text>
+                                <Text size={ResponsiveHeadingSizes}>{t("Headings.wc")}</Text>
                             </Tabs.Trigger> 
                         </Flex>
                     </Flex>
@@ -62,15 +74,15 @@ export default function Services(){
                 </Flex>
                 <Flex justify='center' width='75vw' pt='4'>
                     <Tabs.Content value="cn">
-                        <Text size="4">{t("Content.cnc")}</Text>
+                        <Text size={ResponsiveTextSizes}>{t("Content.cnc")}</Text>
                     </Tabs.Content>
 
                     <Tabs.Content value="pn">
-                        <Text size="4">{t("Content.pnc")}</Text>
+                        <Text size={ResponsiveTextSizes}>{t("Content.pnc")}</Text>
                     </Tabs.Content>
 
                     <Tabs.Content value="wc">
-                        <Text size="4">{t("Content.wcc")}</Text>
+                        <Text size={ResponsiveTextSizes}>{t("Content.wcc")}</Text>
                     </Tabs.Content>
                 </Flex>
             </Tabs.Root>

@@ -50,14 +50,14 @@ const [windowSize, setWindowSize] = useState(getWindowSize());
                 
             </TabNav.Root>
             :
-            <DropdownMenu.Root>
+            <DropdownMenu.Root modal={false} >
                 <DropdownMenu.Trigger>
                 <Button variant="surface">
             
                     <RxHamburgerMenu size={30} />
                 </Button>
                 </DropdownMenu.Trigger>
-                <DropdownMenu.Content>
+                <DropdownMenu.Content side='bottom'>
                 
                 {navList.map((i, index) => (
                     <Link key={index} href={`#${i}`}><DropdownMenu.Item><Text size='3'><Strong>{i}</Strong></Text></DropdownMenu.Item></Link>
