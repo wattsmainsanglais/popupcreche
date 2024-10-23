@@ -22,7 +22,7 @@ export default function LanguageSwitcher({locale}: {locale: string}){
                 </Button>
             </DropdownMenu.Trigger>
             
-                <DropdownMenu.Content size='2' side='left'>
+                <DropdownMenu.Content size='2' side='bottom'>
                         
                         <Link href={'/en'+currentRoute}><DropdownMenu.Item >en</DropdownMenu.Item></Link>
                         <Link href={'/fr'+currentRoute}><DropdownMenu.Item >fr</DropdownMenu.Item></Link>
