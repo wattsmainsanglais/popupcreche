@@ -21,9 +21,9 @@ export default function FaqMobile({tprops}){
                 key={index}
                
                 whileInView={{x: 0}}>
-                   <Flex align='center'>
+                   <Flex align='center' justify='center' width={{initial:'90vw', xs: '90vw', sm: '90vw', md: '75vw' }}>
                     <Image src={item.i} width={75} alt='Toy truck' />
-                    <FaqBox question={item.q} answer={item.a} color='#bbdad2' justify='end' />
+                    <FaqBox question={item.q} answer={item.a} color='#bbdad2' justify='center' />
                     
                    </Flex>
                     

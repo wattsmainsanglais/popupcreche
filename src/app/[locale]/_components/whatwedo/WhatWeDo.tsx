@@ -3,6 +3,7 @@ import { Flex, Heading, Text, Box} from "@radix-ui/themes";
 
 import { useTranslations } from "next-intl";
 
+import { ResponsiveTextSizes, ResponsiveHeadingSizes } from "../../layout";
 
 export default function Whatwedo(){
 
@@ -11,11 +12,11 @@ export default function Whatwedo(){
     return(
         <Flex id='What-we-do' width='99vw' justify='center' direction='column' p='5' style={{backgroundColor: '#c8e6e0' }}>
 
-            <Heading align='center' m='4'>
+            <Heading size={ResponsiveHeadingSizes} align='center' m='4'>
                 {t("heading")}
             </Heading>
             <Box p='3' >
-                <Text size='4' >  
+                <Text size={ResponsiveTextSizes} >  
                 {t("para")}
 
                 </Text>

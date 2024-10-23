@@ -23,7 +23,7 @@ function DeckGLOverlay(props: DeckProps) {
   return null;
 }
 
-export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | undefined, mapId: string | undefined, markerArray: markerTypes}) {
+export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | undefined, mapId: string | undefined, markerArray: markerTypes[]}) {
 
  const[markers, setMarkers] = React.useState(markerArray)
 
@@ -63,7 +63,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string | und
               defaultZoom={6.5}
               mapId={mapId} >
               <DeckGLOverlay layers={layers} />
-              {markers.map( (m: { name: string; lat: number; long: number; image1: string; image2: string; }, index: React.Key | null | undefined) => 
+              {markers.map( (m: markerTypes, index: React.Key | null | undefined) => 
                 <MapMarker key={index} name={m.name} lat={m.lat} long={m.long} src={m.image1} src2={m.image2} />
               )}
               

@@ -1,3 +1,4 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export type markerTypes =  
     {
@@ -7,8 +8,8 @@ export type markerTypes =
         lat: number;
         long: number;
         info?: string;
-        image1?: string;
-        image2?: string;
+        image1?: StaticImport | undefined | string;
+        image2?: StaticImport | undefined | string;
 
     };
 

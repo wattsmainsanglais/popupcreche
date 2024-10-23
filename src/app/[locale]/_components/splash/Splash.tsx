@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 
 import logo from '../../../../../public/images/Logo-final-wo-central.jpg'
 
+import { ResponsiveTextSizes, ResponsiveHeadingSizes } from "../../layout";
+
 export default function Splash(){
 
     const t = useTranslations("Splash")
@@ -25,7 +27,7 @@ export default function Splash(){
 
             </Image>
 
-            <Heading size='5'>
+            <Heading size={ResponsiveHeadingSizes} align='center'>
             {t("heading")}
             </Heading>
 

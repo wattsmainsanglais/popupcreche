@@ -8,8 +8,12 @@ import { Theme} from '@radix-ui/themes'
 
 import NavBar from "./_components/navigation/navBar";
 import Footer from "./_components/footer/Footer";
+import { Responsive } from "@radix-ui/themes/props";
 
 //global css
+
+export const ResponsiveTextSizes: Responsive<T> = {initial:'3', xs: '3', sm: '3', md: '4', lg: '4', xl: '5'}
+export const ResponsiveHeadingSizes: Responsive<T> = {initial:'3', xs: '3', sm: '3', md: '4', lg: '5', xl: '5'}
 
 
 

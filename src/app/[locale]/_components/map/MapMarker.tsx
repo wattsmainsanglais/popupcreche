@@ -7,8 +7,9 @@ import { AdvancedMarker } from "@vis.gl/react-google-maps";
 import bunny from '../../../../../public/images/Pop-up_bunny_marker.png'
 
 import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-export default function MapMarker({name, lat, long, src, src2}: {name: string, lat: number, long: number, src: string, src2: string}){
+export default function MapMarker({name, lat, long, src, src2}: {name: string, lat: number, long: number, src: StaticImport | undefined, src2: StaticImport | undefined}){
 
     const keyStr =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
