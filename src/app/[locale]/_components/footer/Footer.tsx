@@ -53,7 +53,7 @@ export default function Footer(){
 
         <Flex justify='start' pb='5'>
 
-        <DropdownMenu.Root>
+        <DropdownMenu.Root modal={false}>
             <DropdownMenu.Trigger>
                 <Button variant='ghost'>
                 <Text>Photo Credits</Text>
@@ -61,7 +61,7 @@ export default function Footer(){
                 </Button>
             </DropdownMenu.Trigger>
             
-            <DropdownMenu.Content color="plum">
+            <DropdownMenu.Content color="plum" side='top'>
                 <DropdownMenu.Item><Text color="gray">Katy Lunsford Photography</Text></DropdownMenu.Item>
             </DropdownMenu.Content>
             
