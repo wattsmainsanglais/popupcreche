@@ -56,13 +56,16 @@ export default function Footer(){
         <DropdownMenu.Root modal={false}>
             <DropdownMenu.Trigger>
                 <Button variant='ghost'>
-                <Text>Photo Credits</Text>
+                <Text>Photo & Art Credits</Text>
                 <DropdownMenu.TriggerIcon />
                 </Button>
             </DropdownMenu.Trigger>
             
             <DropdownMenu.Content color="plum" side='top'>
                 <DropdownMenu.Item><Text color="gray">Katy Lunsford Photography</Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text color="gray">Anneli Marinovich Photography</Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text color="gray">Michael Mann Photography</Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text color="gray">Logo by Aquaroline</Text></DropdownMenu.Item>
             </DropdownMenu.Content>
             
         </DropdownMenu.Root>

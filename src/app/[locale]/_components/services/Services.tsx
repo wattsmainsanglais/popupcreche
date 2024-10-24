@@ -43,7 +43,7 @@ export default function Services(){
     ]
 
     return (
-        <Flex width='90vw' justify='center' direction='column'>
+        <Flex width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '80vw'}} justify='center' direction='column'>
             <Flex justify='center' pb='8'>
                   <Heading size={ResponsiveHeadingSizes} >
                     Services
@@ -51,7 +51,7 @@ export default function Services(){
             </Flex>
             <Flex justify='center' align='center'>
             <Tabs.Root defaultValue="cn"  >
-                <Flex justify='center' pb='3' width={{initial: '95vw', xs: '95vw', sm: '95vw', md: '90vw', lg: '75vw'}} >
+                <Flex justify='center' pb='3' width={{initial: '95vw', xs: '95vw', sm: '95vw', md: '80vw', lg: '80vw'}} >
                 <Tabs.List>
                     <Flex  gap={{initial: '1', xs: '1', sm: '2', md: '5', lg: '9'}} justify='center' width='99vw'>
                        { servicesArray.map((s: ServicesTypes, index: number) =>  

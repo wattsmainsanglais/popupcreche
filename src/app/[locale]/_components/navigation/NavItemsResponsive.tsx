@@ -18,14 +18,16 @@ export default function NavItemsResponsive({navList}: {navList: string[]}){
 
 const [windowSize, setWindowSize] = useState(getWindowSize());
 
-
-
   function getWindowSize() {
-    const {innerWidth} = window;
-    return {innerWidth};
-  }
+    if (typeof window !== "undefined"){
+      const {innerWidth}: {innerWidth: number | undefined} = window;
+      return {innerWidth};
+    }
+    }
+
 
   useEffect(() => {
+  
     function handleWindowResize() {
       setWindowSize(getWindowSize());
     }

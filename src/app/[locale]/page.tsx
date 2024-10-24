@@ -33,10 +33,10 @@ import s6 from '../../../public/slide1/4 michael_mannphotography.jpg'
 
 //slide2 imports
 
-import s7 from '../../../public/slide2/KL2_7489web.jpg'
-import s8 from '../../../public/slide2/KL2_8447web.jpg'
-import s9 from '../../../public/slide2/KL2_8729web.jpg'
-import s10 from '../../../public/slide2/KL2_8763web.jpg'
+import s7 from '../../../public/slide2/KL2_7337.jpg'
+import s8 from '../../../public/slide2/KL2_7395.jpg'
+import s9 from '../../../public/slide2/KL2_7400.jpg'
+import s10 from '../../../public/slide2/KL2_7813.jpg'
 import s11 from '../../../public/slide2/KL2_8765web.jpg'
 
 const apiKey: string | undefined = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
