@@ -37,7 +37,7 @@ import s7 from '../../../public/slide2/KL2_7337.jpg'
 import s8 from '../../../public/slide2/KL2_7395.jpg'
 import s9 from '../../../public/slide2/KL2_7400.jpg'
 import s10 from '../../../public/slide2/KL2_7813.jpg'
-import s11 from '../../../public/slide2/KL2_8765web.jpg'
+import s11 from '../../../public/slide2/KL2_7859.jpg'
 
 const apiKey: string | undefined = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
 const mapId: string | undefined = process.env.GOOGLEMAPID
