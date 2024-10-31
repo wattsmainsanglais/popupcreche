@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
        <body >
-       <Theme data-is-root-theme='false' accentColor='plum' grayColor='mauve' scaling='100%' panelBackground='solid' >
+       <Theme data-is-root-theme='false' accentColor='sky' grayColor='mauve' scaling='100%' panelBackground='translucent' >
        <NavBar locale={locale} />
         {children}
        <Footer />

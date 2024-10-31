@@ -3,7 +3,7 @@ import React from "react";
 import { Flex, Box, Text, Button, Em} from "@radix-ui/themes";
 
 import {TargetIcon} from '@radix-ui/react-icons'
-import { AdvancedMarker } from "@vis.gl/react-google-maps";
+import { AdvancedMarker, AdvancedMarkerAnchorPoint, Pin, PinProps } from "@vis.gl/react-google-maps";
 import bunny from '../../../../../public/images/Pop-up_bunny_marker.png'
 
 import Image from "next/image";
@@ -32,6 +32,9 @@ export default function MapMarker({name, lat, long, src, src2}: {name: string, l
     function popupHandler(){
         setTogglePopup(!togglePopup)
     }
+
+  
+
 
 
     return(
@@ -71,3 +74,4 @@ export default function MapMarker({name, lat, long, src, src2}: {name: string, l
         </Box>
     )
 }
+

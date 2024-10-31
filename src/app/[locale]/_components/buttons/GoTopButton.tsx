@@ -36,14 +36,14 @@ export default function GoTop(){
 
     return (
       <>
-        <Box  position='fixed' left='95%' bottom='5%'>
+        <Box  position='fixed' left='95%' bottom='5%' style={{zIndex: '3'}}>
         
           <motion.div
           onClick={scrollToTop}
           variants={ScrollToTopContainerVariants}
           initial="hide"
           animate={controls}
-          ><Button className={style.goTop}>
+          ><Button className={style.goTop} variant="soft">
          
             ^
             </Button>

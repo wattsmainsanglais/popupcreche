@@ -49,7 +49,7 @@ export default function Meetus(){
             name: 'Gaelle',
             src: `images/KL2_8009.jpg`,
             value: 'Ga',
-            text:  t("sinead") 
+            text:  t("gaelle") 
           },
           {
             name: 'Rachel',
@@ -103,9 +103,9 @@ export default function Meetus(){
         </Flex>*/}
         <Flex justify='center' p={{initial: '3', xs: '3', sm: '3', md: '5', lg: '8'}}>
 
-            <Tabs.Root defaultValue="Si">
+            <Tabs.Root defaultValue="Si" >
                 <Flex direction={{initial: 'row', xs: 'row', sm: 'row', md: 'column'}} height={{initial: '65vh', xs: '70vh', sm: '60vh', md: '80vh'}} align={{initial: 'start', xs: 'start', sm: 'start', md: 'center'}}>
-                    <Tabs.List >
+                    <Tabs.List color="gray">
                     <Flex justify='center' width={{initial: '35vw', xs: '35vw', sm: '40vw', md: '75vw'}} gap={{initial: '3', xs: '3', sm: '4', md: '8'}} direction={{initial:'column', xs: 'column', sm: 'column', md: 'row'}}>
                     {meetData.map((m: MeetData , index: number) => (
                         <MeetUsAvatar key={index} name={m.name} src={m.src} value={m.value} />

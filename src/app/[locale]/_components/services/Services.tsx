@@ -52,7 +52,7 @@ export default function Services(){
             <Flex justify='center' align='center'>
             <Tabs.Root defaultValue="cn"  >
                 <Flex justify='center' pb='3' width={{initial: '95vw', xs: '95vw', sm: '95vw', md: '80vw', lg: '80vw'}} >
-                <Tabs.List>
+                <Tabs.List color="gray">
                     <Flex  gap={{initial: '1', xs: '1', sm: '2', md: '5', lg: '9'}} justify='center' width='99vw'>
                        { servicesArray.map((s: ServicesTypes, index: number) =>  
                         <Flex key={index} direction='column' justify='center' align='center'>

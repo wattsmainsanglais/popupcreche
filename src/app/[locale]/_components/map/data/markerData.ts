@@ -44,8 +44,8 @@ export type markerTypes =
         name: 'Manoir Beaulieu',
         long: 0.2279,
         lat: 45.3805,
-        image1: '/images/KL2_7431web.jpg',
-        image2: '/images/KL2_8487web.jpg'
+        image1: '/mapImages/lb-484.jpg',
+        image2: '/mapImages/lb-532-2.jpg'
     },
     {
         name: 'Chateau de Brives',
