@@ -55,7 +55,7 @@ export default function Meetus(){
             name: 'Rachel',
             src: `images/sinead-profile-alt.jpg`,
             value: 'Ra',
-            text:  t("sinead") 
+            text:  t("rachel") 
           },
        
     ]

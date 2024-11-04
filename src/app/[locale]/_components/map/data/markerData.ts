@@ -8,8 +8,8 @@ export type markerTypes =
         lat: number;
         long: number;
         info?: string;
-        image1?: StaticImport | undefined | string;
-        image2?: StaticImport | undefined | string;
+        image1?: StaticImport |  string;
+        image2?: StaticImport |  string;
 
     };
 
@@ -22,8 +22,8 @@ export type markerTypes =
         name: 'Chateau de la Valouze',
         long: 0.1125,
         lat: 45.1409,
-        image1: '/images/KL2_7431web.jpg',
-        image2: '/images/KL2_8487web.jpg'
+        image1: '/mapImages/Chateau-de-la-Valouze-Anneli-Marinovich-stairs.jpg',
+        image2: '/mapImages/Chateau-de-la-Valouze-Anneli-Marinovich.jpg'
     },
    
     {
