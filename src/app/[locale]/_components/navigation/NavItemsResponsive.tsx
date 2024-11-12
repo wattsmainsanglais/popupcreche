@@ -38,18 +38,8 @@ const [windowSize, setWindowSize] = useState(getWindowSize());
     
     return(
         
-
-        windowSize.innerWidth > 1024 ? 
-            <TabView navList={navList} />
-            :
-            <DropdownView navList={navList} />
-        
-
-
-
-
+        windowSize.innerWidth > 1024 ? <TabView navList={navList} />:<DropdownView navList={navList} />
         
     )
-
 
 }
