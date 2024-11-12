@@ -18,10 +18,9 @@ import NavItemsResponsive from './NavItemsResponsive';
 
 export default async function NavBar({locale}: {locale: string}){
 
-  
     const t = await getTranslations("Nav.Links")
     
-    const navList: string[] = [t("what"), t("meet"), t("reviews"), t("faq"), t("contact")];
+    const navList: string[] = [t("what"), t("meet"), t("reviews"), t("faq"), t("contact"), t("map")];
 
     return (
     <Flex justify='between' align='center' width='100vw' top='0'  style={{backgroundColor: 'white'}}>
@@ -35,9 +34,9 @@ export default async function NavBar({locale}: {locale: string}){
 
         </Flex>
         <Flex justify={{initial:'end' ,xs: 'end', sm: 'end', md: 'end', lg: 'center'}} gap='5' width='60vw' >
-           <NavItemsResponsive navList={navList} />
+           <NavItemsResponsive navList={navList}  />
         </Flex>
-        <Flex width='10vw' ml='1' mr={{initial: '2', xs: '2', sm: '2', md: '4'}} justify='end'>
+        <Flex width='10vw' ml='1' mr={{initial: '2', xs: '2', sm: '2', md: '5'}} justify='end'>
           <LanguageSwitcher locale={locale} />
 
         </Flex>

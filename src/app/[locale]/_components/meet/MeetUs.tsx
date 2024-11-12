@@ -104,9 +104,9 @@ export default function Meetus(){
         <Flex justify='center' p={{initial: '3', xs: '3', sm: '3', md: '5', lg: '8'}}>
 
             <Tabs.Root defaultValue="Si" >
-                <Flex direction={{initial: 'row', xs: 'row', sm: 'row', md: 'column'}} height={{initial: '65vh', xs: '70vh', sm: '60vh', md: '80vh'}} align={{initial: 'start', xs: 'start', sm: 'start', md: 'center'}}>
+                <Flex direction={{initial: 'row', xs: 'row', sm: 'column', md: 'column'}} height={{initial: '70vh', xs: '75vh', sm: '80vh', md: '80vh'}} align={{initial: 'start', xs: 'start', sm: 'center', md: 'center'}}>
                     <Tabs.List color="gray">
-                    <Flex justify='center' width={{initial: '35vw', xs: '35vw', sm: '40vw', md: '75vw'}} gap={{initial: '3', xs: '3', sm: '4', md: '8'}} direction={{initial:'column', xs: 'column', sm: 'column', md: 'row'}}>
+                    <Flex justify='center' width={{initial: '35vw', xs: '35vw', sm: '65vw', md: '75vw'}} gap={{initial: '3', xs: '3', sm: '4', md: '8'}} direction={{initial:'column', xs: 'column', sm: 'row', md: 'row'}}>
                     {meetData.map((m: MeetData , index: number) => (
                         <MeetUsAvatar key={index} name={m.name} src={m.src} value={m.value} />
                     ))}
@@ -117,7 +117,7 @@ export default function Meetus(){
                     {meetData.map((m: MeetData, index: number) => (
                         <Flex justify='center' key={index} align={{initial: 'start', xs: 'start', sm: 'start'}}> 
                         <Tabs.Content  value={m.value}>
-                            <Text size={{initial: '2', xs: '2', sm: '4', md: '4'}}>{m.text}</Text>
+                            <Text size={{initial: '2', xs: '2', sm: '3', md: '4'}}>{m.text}</Text>
                         </Tabs.Content>
                         </Flex>
                     ))}

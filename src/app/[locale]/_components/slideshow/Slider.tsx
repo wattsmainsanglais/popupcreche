@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import { Flex, Box } from "@radix-ui/themes";
@@ -14,16 +14,32 @@ import { StaticImageData } from "next/image";
 import { FaArrowsRotate } from "react-icons/fa6";
 
 
-
-
-
-
-
-
 export default function Slider({images, ratios, heightRatio}: {images: StaticImageData[], ratios: number[], heightRatio: number[] | string | number}) {
 
 
-  const win = window.innerWidth
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  function getWindowSize() {
+    if (typeof window !== 'undefined'){
+      const {innerWidth}: {innerWidth: number} = window;
+      return {innerWidth};
+    } 
+    
+    }
+
+
+  useEffect(() => {
+  
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
   
   const altHeightRatio: string | number = (heightRatio-15).toString()+'vh'
  
@@ -54,7 +70,7 @@ const handleNext = () => {
     return(
       <>
         <Box width='99vw'>
-        <Flex width='100vw' height={win < 1000 ? altHeightRatio:  heightRatio.toString()+'vh'}  justify='center' direction='column' align='center' gap='5'>
+        <Flex width='100vw' height={windowSize?.innerWidth < 1024 ? altHeightRatio:  heightRatio.toString()+'vh'}  justify='center' direction='column' align='center' gap='5'>
             <Flex justify='center' align='center'>
 
                 {images.map((image: string | StaticImageData, index: any) => (

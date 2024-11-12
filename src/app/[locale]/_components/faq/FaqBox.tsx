@@ -16,9 +16,9 @@ export default function FaqBox({question, answer, color, justify}){
 
     return(
 
-        <Box  width={{initial: '70vw', xs: '70vw', sm: '60vw', md: '60vw', lg: '45vw'}} p='5' onClick={HoverHandle} style={{backgroundColor: color, borderRadius: '10px'}} >
+        <Box  width={{initial: '70vw', xs: '70vw', sm: '60vw', md: '60vw', lg: '35vw'}} p='5' onClick={HoverHandle} style={{backgroundColor: color, borderRadius: '10px'}} >
               
-        {hovered? <Text size={{initial: '2', xs: '2', sm: '2', md: '3', lg: '4'}}>{a}</Text>:<Flex justify={justify} p='3'><Text size={{initial: '2', xs: '2', sm: '2', md: '3', lg: '4'}} align='right'>{q}</Text></Flex>}
-    </Box>
+        {hovered? <Flex> <Text size={{initial: '2', xs: '2', sm: '2', md: '3', lg: '4'}}>{a}</Text></Flex>:<Flex justify={justify} p='3'><Text size={{initial: '2', xs: '2', sm: '2', md: '3', lg: '4'}} align='right'>{q}</Text></Flex>}
+        </Box>
     )
 }

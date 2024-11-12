@@ -1,52 +1,49 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {motion} from 'framer-motion'
 import { Flex, Text, Box, Heading} from "@radix-ui/themes";
 
 import FaqBox from "./FaqBox";
+import FaqDesktop from "./FaqDesktop";
+import FaqMobile from "./FaqMobile";
 
 import Image from "next/image";
 import truck from '../../../../../public/images/dino.png'
 
+
+
 export default function Faq({tprops}){
 
-    const win = window.innerWidth
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  function getWindowSize() {
+    if (typeof window !== 'undefined'){
+      const {innerWidth}: {innerWidth: number} = window;
+      return {innerWidth};
+    } else { 
+      return
+    }
+    
+    }
+
+
+  useEffect(() => {
+  
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
 
     return (
-       
-        <Flex id='FAQ' width='99vw' direction='column' justify='center' align='center' gap='1' display={win < 1080? 'none': 'flex'}>
-            <Heading mb='1'>FAQ</Heading>
-            {tprops.map((item, index) => (
-                index < 2 ? 
-                <motion.div
-                key={index}
-                initial={{x: -550}}
-                whileHover={{x: -300}}>
-                   <Flex align='center'>
-                    <Image src={item.i} width={75} alt='Toy truck' />
-                    <FaqBox question={item.q} answer={item.a} color='#bbdad2' justify='end' />
-                    
-                   </Flex>
-                    
-                </motion.div>:  
-                <motion.div
-                key={index}
-                initial={{x: 550}}
-                whileHover={{x: 300}}
-                >   
-                    <Flex align='center'>
-
-                        <FaqBox question={item.q} answer={item.a} color='pink' justify='start' />
-                        <Image src={item.i} width={75} alt='Toy truck' />
-                    </Flex>
-                </motion.div>
-
-            ))}
-
-            
-        </Flex>
-       
+     windowSize?.innerWidth <= 1024 ? <FaqMobile tprops={tprops} />: <FaqDesktop tprops={tprops} /> 
 
 
     )

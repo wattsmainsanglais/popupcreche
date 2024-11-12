@@ -11,7 +11,7 @@ export default function ReviewWrapper() {
     const t = useTranslations("Reviews")
 
     return(
-        <Flex id='Reviews' direction='column' justify='center' align='center'>
+        <Flex id='Reviews' direction='column' justify='center' align='center' width='100vw'>
             <Flex  justify='center'><Heading>{t("heading")}</Heading></Flex>
             <Box width='100vw' height='100vh' className={style.backgroundWrapper} pt='5' pb='5' mt='5' mb='5'>
                 
