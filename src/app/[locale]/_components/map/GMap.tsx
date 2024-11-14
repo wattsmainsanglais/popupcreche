@@ -30,7 +30,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string, mapI
   const layers = [
     new PolygonLayer({
     id: 'PolygonLayer',
-    data: [{points: [[-1.568, 46.408],[-1.398, 46.68] ,[-0.868, 47.06],[-0.069, 47.266],[.710, 47.381],[2.397, 47.064],[2.633, 46.352],[2.336, 45.522],[1.942, 45.090],[1.277, 44.826],[0.513, 44.794],[-0.453, 44.716],[-0.896, 44.821],[-1.183, 45.11]]}],
+    data: [{points: [[-1.468, 45.908],[-1.398, 46.18] ,[-0.868, 46.56],[-0.069, 46.766],[.710, 46.881],[2.397, 46.564],[2.633, 45.852],[2.336, 45.022],[1.942, 44.590],[1.277, 44.326],[0.513, 44.294],[-0.453, 44.216],[-0.896, 44.321],[-1.183, 44.61]]}],
 
     getPolygon: d => d.points,
     stroked: true,
@@ -59,7 +59,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string, mapI
           <APIProvider apiKey={apiKey}>
             <Map
             
-              defaultCenter={{lat: 45.65, lng: 1.25}}
+              defaultCenter={{lat: 45.35, lng: 1.25}}
               defaultZoom={6.5}
               mapId={mapId} >
               <DeckGLOverlay layers={layers} />
