@@ -43,7 +43,7 @@ export default function GoTop(){
           variants={ScrollToTopContainerVariants}
           initial="hide"
           animate={controls}
-          ><Button className={style.goTop} variant="soft">
+          ><Button className={style.goTop} variant="solid">
          
             ^
             </Button>

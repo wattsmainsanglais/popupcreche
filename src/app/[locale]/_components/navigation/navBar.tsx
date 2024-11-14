@@ -12,15 +12,17 @@ import LanguageSwitcher from "./LangSwitcher";
 import NavItemsResponsive from './NavItemsResponsive';
 
 
-
-
-
+export interface NavList  {
+        title: string,
+        id: string
+       } 
+    
 
 export default async function NavBar({locale}: {locale: string}){
 
     const t = await getTranslations("Nav.Links")
     
-    const navList: string[] = [t("what"), t("meet"), t("reviews"), t("faq"), t("contact"), t("map")];
+    const navList: NavList[] = [{title: t("what"), id: 'What-we-do'}, {title: t("meet"), id: 'Meet-us'}, {title: t("reviews"), id: 'Reviews'}, {title: t("faq"), id: 'faq'}, {title: t("contact"), id: 'Contact-us'}, {title: t("map"), id: 'Map'}];
 
     return (
     <Flex justify='between' align='center' width='100vw' top='0'  style={{backgroundColor: 'white'}}>

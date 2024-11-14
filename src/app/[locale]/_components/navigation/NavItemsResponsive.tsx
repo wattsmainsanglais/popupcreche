@@ -5,9 +5,10 @@ import {useEffect, useState} from 'react';
 import TabView from './TabView';
 import DropdownView from './DropdownView';
 
+import { NavList } from './navBar';
 
 
-export default function NavItemsResponsive({navList}: {navList: string[]}){
+export default function NavItemsResponsive({navList}: {navList: NavList[]}){
 
 const [windowSize, setWindowSize] = useState(getWindowSize());
 

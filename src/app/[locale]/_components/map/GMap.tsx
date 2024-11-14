@@ -46,7 +46,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string, mapI
 
 
   return (
-      <Flex width='95vw' height='80vh' direction={{initial: 'column', xs: 'column', sm: 'column', md: 'row' }} justify='center' align='center'>
+      <Flex id="Map" width='95vw' height='80vh' direction={{initial: 'column', xs: 'column', sm: 'column', md: 'row' }} justify='center' align='center'>
         <Flex width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '50vw'}} justify='center' align='center' direction='column' gap='2' p='3'>
           <Heading>
             Our Locations

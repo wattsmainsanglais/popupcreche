@@ -3,13 +3,13 @@
 import Link from 'next/link';
 
 import { Flex, Box, Text, TabNav , DropdownMenu, Button, Strong} from "@radix-ui/themes";
-7
+
 import { RxHamburgerMenu } from 'react-icons/rx';
+import { NavList } from './navBar';
 
 
 
-
-export default function DropdownView({navList}: {navList: string[]}){
+export default function DropdownView({navList}: {navList: NavList[]}){
 
     return (
         <DropdownMenu.Root modal={false} >
@@ -22,7 +22,7 @@ export default function DropdownView({navList}: {navList: string[]}){
             <DropdownMenu.Content side='bottom'>
             
                 {navList.map((i, index) => (
-                    <Link key={index} href={`#${i}`}><DropdownMenu.Item><Text size='3'><Strong>{i}</Strong></Text></DropdownMenu.Item></Link>
+                    <Link key={index} href={`#${i.id}`}><DropdownMenu.Item><Text size='3'><Strong>{i.title}</Strong></Text></DropdownMenu.Item></Link>
                 ))}
         
             </DropdownMenu.Content>

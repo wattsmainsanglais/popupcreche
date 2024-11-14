@@ -61,11 +61,11 @@ export default function Footer(){
                 </Button>
             </DropdownMenu.Trigger>
             
-            <DropdownMenu.Content color="plum" side='top'>
-                <DropdownMenu.Item><Text color="gray">Katy Lunsford Photography</Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text color="gray">Anneli Marinovich Photography</Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text color="gray">Michael Mann Photography</Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text color="gray">Logo by Aquaroline</Text></DropdownMenu.Item>
+            <DropdownMenu.Content side='top'>
+                <DropdownMenu.Item><Text >Katy Lunsford Photography</Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text >Anneli Marinovich Photography</Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text >Michael Mann Photography</Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text >Logo by Aquaroline</Text></DropdownMenu.Item>
             </DropdownMenu.Content>
             
         </DropdownMenu.Root>
