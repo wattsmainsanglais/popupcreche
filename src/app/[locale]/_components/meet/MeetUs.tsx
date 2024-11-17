@@ -35,13 +35,13 @@ export default function Meetus(){
     const meetData: MeetData[] = [
         {
           name: 'Sinead',
-          src: `images/sinead-profile-alt.jpg`,
+          src: `images/sinead-profile-altcs.jpg`,
           value: 'Si',
           text:  t("sinead") 
         },
         {
             name: 'Harriet',
-            src: `images/harriet-profile-alt.jpg`,
+            src: `images/harriet-profile-altsc.jpg`,
             value: 'Ha',
             text:  t("harriet") 
           },
@@ -53,7 +53,7 @@ export default function Meetus(){
           },
           {
             name: 'Rachel',
-            src: `images/sinead-profile-alt.jpg`,
+            src: `images/rachel-profile.jpg`,
             value: 'Ra',
             text:  t("rachel") 
           },
