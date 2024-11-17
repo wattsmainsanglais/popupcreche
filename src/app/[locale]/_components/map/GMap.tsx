@@ -64,7 +64,7 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string, mapI
               mapId={mapId} >
               <DeckGLOverlay layers={layers} />
               {markers.map( (m: markerTypes, index: React.Key | null | undefined) => 
-                <MapMarker key={index} name={m.name} lat={m.lat} long={m.long} src={m.image1} src2={m.image2} />
+                <MapMarker key={index} name={m.name} lat={m.lat} long={m.long} src2={m.image2} info={m.info} />
               )}
               
             </Map>

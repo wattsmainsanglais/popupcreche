@@ -9,7 +9,7 @@ import bunny from '../../../../../public/images/Pop-up_bunny_marker.png'
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-export default function MapMarker({name, lat, long, src, src2}: {name: string, lat: number, long: number, src: StaticImport | string, src2: StaticImport | string}){
+export default function MapMarker({name, lat, long, src2, info}: {name: string, lat: number, long: number, src2: StaticImport | string, info?: string}){
 
     const keyStr =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
@@ -47,25 +47,18 @@ export default function MapMarker({name, lat, long, src, src2}: {name: string, l
                             
                             <Text size='3' ><Em>{name}</Em></Text>
                             <Flex gap='1'>
-                                <Image
-                                src={src}
-                                alt='photo'
-                                width={75}
-                                height={112.5}
-                                placeholder="blur"
-                                blurDataURL={rgbDataURL(237, 181, 6)}
-                                />
                                  <Image
                                 src={src2}
                                 alt='photo'
-                                width={75}
-                                height={112.5}
+                                width={142.5}
+                                height={90}
                                 placeholder="blur"
                                 blurDataURL={rgbDataURL(237, 181, 6)}
                                 />
 
                                 
                             </Flex>
+                            <Text size='1'>{info}</Text>
                          </Flex>: null}
 
             </AdvancedMarker>
