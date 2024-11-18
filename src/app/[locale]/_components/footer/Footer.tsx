@@ -66,7 +66,9 @@ export default function Footer(){
                 <DropdownMenu.Item><Text ><a href='https://annelimarinovich.com/' target='_blank'>Anneli Marinovich Photography</a></Text></DropdownMenu.Item>
                 <DropdownMenu.Item><Text ><a href='https://michaelmannphotography.com/' target='_blank'>Michael Mann Photography</a></Text></DropdownMenu.Item>
                 <DropdownMenu.Item><Text ><a href='https://www.lydiataylorjones.com/' target='_blank'>Lydia Taylor Photography</a></Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text ><a href='https://www.davidpagephotography.com/' target='_blank'>David Page Photography</a></Text></DropdownMenu.Item>
                 <DropdownMenu.Item><Text><a href='https://www.aquaroline.com/' target='_blank'>Logo and Graphics by Aquaroline</a></Text></DropdownMenu.Item>
+                
             </DropdownMenu.Content>
             
         </DropdownMenu.Root>

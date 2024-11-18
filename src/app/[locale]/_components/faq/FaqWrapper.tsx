@@ -12,7 +12,7 @@ export default async function FaqWrapper(){
 
     return (
         
-        <Flex width='99vw'>
+        <Flex width='99vw' id='faq'>
             <Faq tprops={tprops} />
         </Flex>
         
