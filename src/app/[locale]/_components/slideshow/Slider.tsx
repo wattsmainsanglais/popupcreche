@@ -14,7 +14,7 @@ import { StaticImageData } from "next/image";
 import { FaArrowsRotate } from "react-icons/fa6";
 
 
-export default function Slider({images, ratios, heightRatio}: {images: StaticImageData[], ratios: number[], heightRatio: number[] | string | number}) {
+export default function Slider({images, ratios, heightRatio, alt}: {images: StaticImageData[], ratios: number[], heightRatio: number[] | string | number, alt: string}) {
 
 
   const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -86,7 +86,8 @@ const handleNext = () => {
 
                         <Image
                          src={image}
-                         alt='image'
+                         title={alt}
+                         alt={alt}
                          width={380}
                          sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw"
                           />

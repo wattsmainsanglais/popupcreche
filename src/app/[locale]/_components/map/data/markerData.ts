@@ -29,13 +29,15 @@ export type markerTypes =
         name: 'Chateau la Durantie',
         long: 1.1208,
         lat: 45.3963,
-        image2: '/images/KL2_8487web.jpg'
+        image2: '/mapImages/Chateau-Durantie-Michael-Mann.jpg',
+        info: 'Photo Credit- Michael Mann Photography'
     },
     {
         name: 'Manoir de Longeveau',
         long: 0.2096,
         lat: 45.3072,
-        image2: '/images/KL2_8487web.jpg'
+        image2: '/mapImages/Manoir_longveau_David_Page.jpg',
+        info: 'Photo Credit- David Page Photography'
     },
     {
         name: 'Manoir Beaulieu',

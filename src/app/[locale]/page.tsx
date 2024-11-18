@@ -70,7 +70,7 @@ export default function Home() {
        
       <ComponentSeperator>
         <Suspense fallback={<Skeleton />} >
-           <Slider images={images} ratios={landscape} heightRatio={heightRatio[1]} />
+           <Slider images={images} ratios={landscape} heightRatio={heightRatio[1]} alt='Michael Mann Photography' />
         </Suspense>
       </ComponentSeperator>  
       
@@ -95,7 +95,7 @@ export default function Home() {
      
 
       <ComponentSeperator>
-        <Slider images={images2} ratios={portrait} heightRatio={heightRatio[0]}/>
+        <Slider images={images2} ratios={portrait} heightRatio={heightRatio[0]} alt='Katy Lunsford Photography'/>
       </ComponentSeperator>  
       
       <ComponentSeperator>
