@@ -49,7 +49,7 @@ export default function MapMarker({name, lat, long, src2, info}: {name: string, 
                             <Flex gap='1'>
                                  <Image
                                 src={src2}
-                                alt='photo'
+                                alt={info}
                                 width={142.5}
                                 height={90}
                                 placeholder="blur"
