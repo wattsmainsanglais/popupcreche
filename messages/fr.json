@@ -51,15 +51,28 @@
     "Faq": {
         "heading": "Faq's",
         "qs": {
-            "q1": "Why a Wedding Creche?",
-            "a1": "A wedding is a special day to celebrate your love with those you love. It’s a time to let your hair down, relax and enjoy yourself after all the hard work that has gone into the planning. Some parts of the day, although beautiful, can feel tiring for little ones- that’s where we come in. We arrive and create a beautiful, peaceful and fun environment for children of all ages to enjoy. Every element is thought about, from activities, toys and games, to a cosy place for story times and naps, let your guests take a breath knowing we’ve got it all covered to make their day easier. You can relax knowing that when it comes to your little guests, we have it all in hand.",
-            "q2": "What can we offer?",
-            "a2": "For small numbers of children our nanny service can accompany them throughout your wedding day, while you get ready and the next day to allow you a lie-in (ideal for couples getting married who also have their own little ones). For groups of children we can offer full day crèches, crèches at specific points of the day (for example during the ceremony or speeches), and crèches the day before and after (ideal for rehearsal dinners and pool parties). As the evening draws in you may want to make use of our babysitting and pyjama party services. We are happy to discuss what would best suit you and your plan for the day.",
-            "q3": "How about holidays?",
-            "a3": "Whether a special holiday like a honeymoon or a much-needed family getaway you deserve to switch off while on holiday and feel as rested as possible after you return. Allow us to take the planning and organisation out of your holiday by offering engaging activities to your children while you relax. We can accompany you on every step of your trip or at specific moments to allow you time by the pool or a day out as adults. Share a romantic meal while we offer evening wind-downs, baby-sitting for little ones and pyjama parties for bigger ones.",
-            "q4": "What else do I need to know",
-            "a4": "We are safeguarding and first aid trained and are fully insured, and criminal record checked. In planning for your event, we will take information from you such as allergies and additional needs to ensure that we take the best care of each child. The pop-up crèche is full of beautiful toys, specially chosen to enchant your little ones. We will take information from you about the age and interests of your little guests, and you can leave the rest to us, everything we do will be tailored to them. We request a minimum booking of 6-10 hours per event and a 50% deposit in order to reserve your date. Contact us for a free, no obligation consultation to discuss your bespoke package, we look forward to meeting you!"
+            "q1": "Pourquoi une crèche de mariage?",
+            "a1": "Un mariage est un jour spécial pour célébrer votre amour avec ceux que vous aimez. C'est le moment de se laisser aller, de se détendre et de s'amuser après tout le dur labeur de l'organisation. Certaines parties de la journée, bien que magnifiques, peuvent être fatigantes pour les plus petits, et c'est là que nous intervenons. Nous arrivons et créons un environnement magnifique, paisible et amusant pour les enfants de tous âges. Chaque élément est pris en compte : activités, jouets et jeux, endroit douillet pour les histoires et les siestes. Laissez vos invités respirer en sachant que nous avons tout prévu pour leur faciliter la tâche. Vous pouvez vous détendre en sachant que nous avons tout prévu pour vos petits invités.",
+            "q2": "Que pouvons-nous vous proposer?",
+            "a2": "Pour un petit nombre d'enfants, notre service de nounou peut les accompagner tout au long de la journée du mariage, pendant que vous vous préparez et le lendemain pour vous permettre de vous reposer (idéal pour les couples qui se marient et qui ont aussi leurs propres petits enfants). Pour les groupes d'enfants, nous pouvons proposer des crèches pour toute la journée, des crèches à des moments spécifiques de la journée (par exemple pendant la cérémonie ou les discours), et des crèches la veille et le lendemain (idéal pour les dîners de répétition et les fêtes au bord de la piscine). Veuillez consulter la section services pour plus de détails. Nous pouvons prendre en charge les enfants de la naissance à 10 ans. ",
+            "q3": "Comment réserver?",
+            "a3": "Contactez-nous via le formulaire de contact en bas du site ou via nos réseaux sociaux. Nous demandons une réservation minimum de 8 heures par événement et un acompte de 50% afin de réserver votre date. Contactez-nous pour une consultation gratuite et sans engagement afin de discuter de votre forfait sur mesure, nous avons hâte de vous rencontrer !",
+            "q4": "Que dois-je savoir d'autre?",
+            "a4": "Nous sommes formés à la protection des enfants et aux premiers secours, nous sommes entièrement assurés et nous avons fait l'objet d'un contrôle extrait de casier judiciare. Lors de la préparation de votre événement, nous prendrons connaissance de vos informations, telles que les allergies et les besoins supplémentaires, afin de nous assurer que nous prenons le plus grand soin de chaque enfant. La crèche pop-up est remplie de beaux jouets, spécialement choisis pour enchanter vos petits. Nous vous demanderons des informations sur l'âge et les centres d'intérêt de vos petits invités, et vous pouvez nous laisser faire le reste, tout ce que nous ferons sera adapté à eux."
     
         }
+        },
+        "Map": {
+        "heading": "Où nous travaillons",
+        "para": "La carte montre notre zone de travail habituelle, ainsi que des icônes pour les lieux avec lesquels nous travaillons fréquemment"
+    },
+    "Contact": {
+        "heading": "Ecrivez-nous",
+        "formfields": {
+            "name": "Nom",
+            "email": "Mail",
+            "tele": "Tel",
+            "msg": "Message"
         }
+    }
 }

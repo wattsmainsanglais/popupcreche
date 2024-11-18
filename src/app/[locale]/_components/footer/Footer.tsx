@@ -62,10 +62,11 @@ export default function Footer(){
             </DropdownMenu.Trigger>
             
             <DropdownMenu.Content side='top'>
-                <DropdownMenu.Item><Text >Katy Lunsford Photography</Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text >Anneli Marinovich Photography</Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text >Michael Mann Photography</Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text >Logo by Aquaroline</Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text ><a href='https://www.katylunsford.com/' target='_blank'>Katy Lunsford Photography</a></Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text ><a href='https://annelimarinovich.com/' target='_blank'>Anneli Marinovich Photography</a></Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text ><a href='https://michaelmannphotography.com/' target='_blank'>Michael Mann Photography</a></Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text ><a href='https://www.lydiataylorjones.com/' target='_blank'>Lydia Taylor Photography</a></Text></DropdownMenu.Item>
+                <DropdownMenu.Item><Text><a href='https://www.aquaroline.com/' target='_blank'>Logo and Graphics by Aquaroline</a></Text></DropdownMenu.Item>
             </DropdownMenu.Content>
             
         </DropdownMenu.Root>

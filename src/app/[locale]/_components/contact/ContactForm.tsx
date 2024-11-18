@@ -10,7 +10,7 @@ import { Box, Card, Heading, Text, Flex, TextField, TextArea } from "@radix-ui/t
 import { SubmitButton } from "../buttons/SubmitButton";
 
 
-export default function ContactForm() {
+export default function ContactForm({trans}: {trans: {[key: string]: string}}  ) {
 
 
 
@@ -44,19 +44,19 @@ export default function ContactForm() {
                 <form action={submit} ref={ref}>  
                     <Flex gap='2' direction='column' align='center' justify='center'>
 
-                        <Heading size='5' align='center'>Contact Us Here</Heading>
+                        <Heading size='5' align='center'>{trans.heading}</Heading>
                         <Flex direction='column' gap='2'>
                             <Box width={{ initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
-                                <TextField.Root name='name' size='2' type='text' placeholder="Name"></TextField.Root>
+                                <TextField.Root name='name' size='2' type='text' placeholder={trans.name}></TextField.Root>
                             </Box>
                             <Box width={{initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
-                                <TextField.Root name='email' type='email' placeholder="Email"></TextField.Root>
+                                <TextField.Root name='email' type='email' placeholder={trans.email}></TextField.Root>
                             </Box>
                             <Box width={{initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
-                                <TextField.Root name='tel' size='2' type='number' placeholder="Telephone"></TextField.Root>
+                                <TextField.Root name='tel' size='2' type='number' placeholder={trans.tele}></TextField.Root>
                             </Box>
                             <Box width={{initial: '250px', xs: '250px', sm: '250px', md: '350px'}}>
-                                <TextArea size="2" name='message'  placeholder="Write your message here" resize='vertical'></TextArea>
+                                <TextArea size="2" name='message'  placeholder={trans.msg} resize='vertical'></TextArea>
                             </Box>
                              
                              

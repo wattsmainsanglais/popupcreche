@@ -38,6 +38,7 @@ import s8 from '../../../public/slide2/KL2_7395.jpg'
 import s9 from '../../../public/slide2/KL2_7400.jpg'
 import s10 from '../../../public/slide2/KL2_7813.jpg'
 import s11 from '../../../public/slide2/KL2_7859.jpg'
+import MapWrapper from "./_components/map/MapWrapper";
 
 const apiKey: string | undefined = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
 const mapId: string | undefined = process.env.GOOGLEMAPID
@@ -89,7 +90,7 @@ export default function Home() {
 
       
      <ComponentSeperator>
-        <GMap apiKey={apiKey} mapId={mapId} markerArray={markerArray}/>
+        <MapWrapper apiKey={apiKey} mapId={mapId} markerArray={markerArray}/>
      </ComponentSeperator>
      
 

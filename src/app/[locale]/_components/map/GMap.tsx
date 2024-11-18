@@ -23,7 +23,8 @@ function DeckGLOverlay(props: DeckProps) {
   return null;
 }
 
-export default function GMap({apiKey, mapId, markerArray}: {apiKey: string, mapId: string | undefined, markerArray: markerTypes[]}) {
+export default function GMap({apiKey, mapId, markerArray, translations}: {apiKey: string | undefined, mapId: string | undefined, markerArray: markerTypes[], translations: {[key:string]:string}}) {
+
 
  const[markers, setMarkers] = React.useState(markerArray)
 
@@ -49,10 +50,10 @@ export default function GMap({apiKey, mapId, markerArray}: {apiKey: string, mapI
       <Flex id="Map" width='95vw' height='80vh' direction={{initial: 'column', xs: 'column', sm: 'column', md: 'row' }} justify='center' align='center'>
         <Flex width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '50vw'}} justify='center' align='center' direction='column' gap='2' p='3'>
           <Heading>
-            Our Locations
+            {translations.heading}
           </Heading>
           <Text>
-            The map highlights out usual work area, plus there are icons for venues which we frequently work with 
+           {translations.para}
           </Text>
         </Flex>
         <Flex width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '50vw'}} height={{initial: '60vh', xs: '60vh', sm: '60vh'}}>

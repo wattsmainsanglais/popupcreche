@@ -55,10 +55,23 @@
         "q2": "What can we offer?",
         "a2": "For small numbers of children our nanny or ceremony service can accompany them throughout your wedding day, while you get ready and the next day to allow you a lie-in (ideal for couples getting married who also have their own little ones). For groups of children we can offer full day crèches, crèches at specific points of the day (for example during the ceremony or speeches), and crèches the day before and after (ideal for rehearsal dinners and pool parties). Please see the services section for more details. We can care for children aged from birth to 10 years old.",
         "q3": "What is the booking process?",
-        "a3": "Please contact us using either the contact form at the bottom of the site or through our social media channels. We request a minimum booking of 6-10 hours per event and a 50% deposit in order to reserve your date. Contact us for a free, no obligation consultation to discuss your bespoke package, we look forward to meeting you!",
+        "a3": "Please contact us using either the contact form at the bottom of the site or through our social media channels. We request a minimum booking of 8 hours per event and a 50% deposit in order to reserve your date. Contact us for a free, no obligation consultation to discuss your bespoke package, we look forward to meeting you!",
         "q4": "What else do I need to know",
         "a4": "We are safeguarding and first aid trained and are fully insured, and criminal record checked. In planning for your event, we will take information from you such as allergies and additional needs to ensure that we take the best care of each child. The pop-up crèche is full of beautiful toys, specially chosen to enchant your little ones. We will take information from you about the age and interests of your little guests, and you can leave the rest to us, everything we do will be tailored to them. "
 
     }
+    },
+    "Map": {
+        "heading": "Our Locations",
+        "para": "The map highlights out usual work area, plus there are icons for venues which we frequently work with"
+    },
+    "Contact": {
+        "heading": "Write to us here",
+        "formfields": {
+            "name": "Name",
+            "email": "Email",
+            "tele": "Telephone",
+            "msg": "Write your message here"
+        }
     }
 }
