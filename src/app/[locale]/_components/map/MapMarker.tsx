@@ -50,6 +50,7 @@ export default function MapMarker({name, lat, long, src2, info}: {name: string, 
                                  <Image
                                 src={src2}
                                 alt={info}
+                                title={info}
                                 width={142.5}
                                 height={90}
                                 placeholder="blur"

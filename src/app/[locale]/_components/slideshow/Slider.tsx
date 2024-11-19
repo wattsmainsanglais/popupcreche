@@ -101,7 +101,7 @@ const handleNext = () => {
          <Flex width='99vw' mt={{initial: '0', xs: '0', sm:'0', md: '3'}} justify='center'>
               
              <motion.button
-              style={{backgroundColor: 'none', border: 'none'}}
+              style={{backgroundColor: 'white', border: 'none'}}
               whileTap={{rotateZ: 45}}>
               
 

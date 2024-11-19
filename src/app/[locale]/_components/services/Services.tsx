@@ -16,6 +16,7 @@ export default function Services(){
         src: StaticImageData,
         text: string,
         value: string
+        credit: string
     }
 
     const t = useTranslations("Services")
@@ -25,19 +26,22 @@ export default function Services(){
         heading: t("Headings.cn"),
         src: cn,
         text: t("Content.cnc"),
-        value: 'cn'
+        value: 'cn',
+        credit: 'Photo Credit- Anneli Marinovich Photography'
        },
        {
         heading: t("Headings.pn"),
         src: pn,
         text: t("Content.pnc"),
-        value: 'pn'
+        value: 'pn',
+        credit: 'Photo Credit- Katy Lunsford Photography'
        },
        {
         heading: t("Headings.wc"),
         src: wc,
         text: t("Content.wcc"),
-        value: 'wc'
+        value: 'wc',
+        credit: 'Photo Credit- Katy Lunsford Photography'
        }
 
     ]
@@ -61,7 +65,8 @@ export default function Services(){
                                     maxWidth: '90%',
                                     height: 'auto'
                                 }}
-                                alt={`The Pop-up Wedding Creche - ${s.heading}`}
+                                title={s.credit}
+                                alt={`The Pop-up Wedding Creche - ${s.credit}`}
                                 src={s.src}
                                 sizes="(max-width: 768px) 20vw, (max-width: 1200px) 30vw,"
                                 />
