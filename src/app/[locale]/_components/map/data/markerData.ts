@@ -36,7 +36,7 @@ export type markerTypes =
         name: 'Manoir de Longeveau',
         long: 0.2096,
         lat: 45.3072,
-        image2: '/mapImages/Manoir_longveau_david_page.JPG',
+        image2: '/mapImages/Manoir_longveau_david_page1.jpg',
         info: 'Photo Credit- David Page Photography'
     },
     {
