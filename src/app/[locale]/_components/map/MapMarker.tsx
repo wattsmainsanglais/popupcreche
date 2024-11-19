@@ -54,7 +54,7 @@ export default function MapMarker({name, lat, long, src2, info}: {name: string, 
                                 width={142.5}
                                 height={90}
                                 placeholder="blur"
-                                blurDataURL={rgbDataURL(237, 181, 6)}
+                                blurDataURL={rgbDataURL(187, 218, 210)}
                                 />
 
                                 

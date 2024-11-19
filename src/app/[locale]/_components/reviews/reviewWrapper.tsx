@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Flex, Text, Box, Heading } from "@radix-ui/themes";
 
 import style from './reviews.module.css'
-
+import { ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 export default function ReviewWrapper() {
 
@@ -12,7 +12,7 @@ export default function ReviewWrapper() {
 
     return(
         <Flex id='Reviews' direction='column' justify='center' align='center' width='100vw'>
-            <Flex  justify='center'><Heading>{t("heading")}</Heading></Flex>
+            <Flex  justify='center'><Heading size={ResponsiveHeadingSizes}>{t("heading")}</Heading></Flex>
             <Box width='100vw' height='100vh' className={style.backgroundWrapper} pt='5' pb='5' mt='5' mb='5'>
                 
                 <Flex direction='column'  width='100vw' height='90vh' justify={{initial: 'between', xs: 'between', sm: 'between', md: 'center'}}>

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 import logo from '../../../../../public/images/Logo-final-wo-central.jpg'
 
-import { ResponsiveTextSizes, ResponsiveHeadingSizes } from "../../layout";
+import { ResponsiveTextSizes, ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 export default function Splash(){
 

@@ -12,6 +12,7 @@ import gaelle from '../../../../../public/images/KL2_8009.jpg'
 
 import style from './meet.module.css'
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 import MeetUsAvatar from "./_components/Avatar";
 import { small } from "framer-motion/client";
@@ -65,7 +66,7 @@ export default function Meetus(){
     <Flex id='Meet-us' direction='column' width='99vw' style={{backgroundColor: '#efe7e1'}} p='4'>
 
         <Box mt='5' mb={{initial: '2', xs:'2', sm: '2', md: '0'}} >
-            <Heading align='center'>
+            <Heading size={ResponsiveHeadingSizes} align='center'>
                 {t("heading")}
             </Heading>
         </Box>

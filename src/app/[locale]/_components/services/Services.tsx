@@ -6,7 +6,7 @@ import cn from '../../../../../public/services/cn45.jpg'
 import pn from '../../../../../public/services/pn45.jpg'
 import wc from '../../../../../public/services/wc45.jpg'
 
-import { ResponsiveHeadingSizes, ResponsiveTextSizes } from "../../layout";
+import { ResponsiveHeadingSizes, ResponsiveTextSizes } from "../../fonts/ResponsiveFontSizes";
 
 
 export default function Services(){

@@ -3,7 +3,7 @@ import { Flex, Heading, Text, Box} from "@radix-ui/themes";
 
 import { useTranslations } from "next-intl";
 
-import { ResponsiveTextSizes, ResponsiveHeadingSizes } from "../../layout";
+import { ResponsiveTextSizes, ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 export default function Whatwedo(){
 

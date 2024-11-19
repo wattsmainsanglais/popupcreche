@@ -9,6 +9,7 @@ import MapMarker from './MapMarker';
 
 import { Flex, Text, Heading } from '@radix-ui/themes';
 import { markerTypes } from './data/markerData';
+import { ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 function DeckGLOverlay(props: DeckProps) {
   const map = useMap();
@@ -49,7 +50,7 @@ export default function GMap({apiKey, mapId, markerArray, translations}: {apiKey
   return (
       <Flex id="Map" width='95vw' height='80vh' direction={{initial: 'column', xs: 'column', sm: 'column', md: 'row' }} justify='center' align='center'>
         <Flex width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '50vw'}} justify='center' align='center' direction='column' gap='2' p='3'>
-          <Heading>
+          <Heading size={ResponsiveHeadingSizes}>
             {translations.heading}
           </Heading>
           <Text>
