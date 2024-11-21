@@ -61,7 +61,13 @@ export type markerTypes =
         image2: '/mapImages/chateau_de_brive.jpg',
         info: 'Photo credit - Katy Lunsford'
     },
-  
+    {
+        name: 'No.3 The Chateau',
+        long: -0.3344,
+        lat: 45.6216,
+        image2: '/mapImages/no3-the-chateau.jpg',
+        info: 'Photo credit - Katy Lunsford'
+    },
     {
         name: 'Chateau de La Couronne',
         long: 0.4414,
