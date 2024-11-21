@@ -16,7 +16,15 @@ export type markerTypes =
 
  export const markerArray: markerTypes[] = [
 
-    
+    {
+        name: 'Chateau de La Cote',
+        long: 0.5985,
+        lat: 45.3085,
+        image2: '/mapImages/chateau-de-la-cote-rainy-mills.jpeg',
+        info: 'Photo credit - Rainey Mills'
+
+    },
+   
     {
         name: 'Chateau de la Valouze',
         long: 0.1125,
@@ -53,6 +61,27 @@ export type markerTypes =
         image2: '/mapImages/chateau_de_brive.jpg',
         info: 'Photo credit - Katy Lunsford'
     },
+  
+    {
+        name: 'Chateau de La Couronne',
+        long: 0.4414,
+        lat: 45.6174,
+        image2: '/mapImages/chateau-de-la-couronne.jpg',
+        info: 'Photo credit - Katy Lunsford'
+    },
+
+   
 
 
 ]
+
+/*
+
+  {
+        name: 'No.3 The Chateau',
+        long: -0.3344,
+        lat: 45.6216,
+        image2: '/mapImages/no3-the-chateau.jpg',
+        info: 'Photo credit - Katy Lunsford'
+    },
+*/
