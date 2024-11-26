@@ -1,21 +1,15 @@
 import Image from "next/image";
 
-
 import { Flex, Heading, Text, Box, Tabs} from "@radix-ui/themes";
 
 import { useTranslations } from "next-intl";
 
-import sinead from '../../../../../public/images/sinead-profile-alt.jpg'
-
-import harriet from '../../../../../public/images/harriet-profile-alt.jpg'
-import gaelle from '../../../../../public/images/KL2_8009.jpg'
-
-import style from './meet.module.css'
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 import MeetUsAvatar from "./_components/Avatar";
-import { small } from "framer-motion/client";
+
+
+
 
  interface MeetData {
     name: string,
@@ -106,7 +100,7 @@ export default function Meetus(){
 
             <Tabs.Root defaultValue="Si" >
                 <Flex direction={{initial: 'row', xs: 'row', sm: 'column', md: 'column'}} height={{initial: '70vh', xs: '75vh', sm: '80vh', md: '80vh'}} align={{initial: 'start', xs: 'start', sm: 'center', md: 'center'}}>
-                    <Tabs.List color="gray">
+                    <Tabs.List color="gray" wrap='wrap' size='2'>
                     <Flex justify='center' width={{initial: '35vw', xs: '35vw', sm: '65vw', md: '75vw'}} gap={{initial: '3', xs: '3', sm: '4', md: '8'}} direction={{initial:'column', xs: 'column', sm: 'row', md: 'row'}}>
                     {meetData.map((m: MeetData , index: number) => (
                         <MeetUsAvatar key={index} name={m.name} src={m.src} value={m.value} />

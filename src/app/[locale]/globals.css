@@ -1,7 +1,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -27,4 +29,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.rt-BaseTabList {
+
+  --tab-height: '100px';
 }

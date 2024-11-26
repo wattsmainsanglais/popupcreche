@@ -35,7 +35,7 @@ export default function Footer(){
 
 
         
-        <Flex justify='center' align='end' pr='3' >
+        <Flex justify='center' align='center' pr='3' direction='column' >
             <Image
                 src={logoMid}
                 alt='Nature dopes logo'
@@ -44,10 +44,11 @@ export default function Footer(){
 
             
             />
-            
+            <Text size='2'>thepopupweddingcreche@gmail.com</Text>
         </Flex>
 
         <Flex justify='center'>
+
             <Text>Powered By <Link href='https://www.awattsdev.eu' target="_blank"><Text className={` ${genos.className} ${style.wattsLink}`}> awattsdev</Text></Link></Text >
         </Flex>
 

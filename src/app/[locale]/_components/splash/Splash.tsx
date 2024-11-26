@@ -27,9 +27,13 @@ export default function Splash(){
 
             </Image>
 
-            <Heading size={ResponsiveHeadingSizes} align='center'>
+            <Heading size={ResponsiveHeadingSizes} align='center' mb='2'>
             {t("heading")}
             </Heading>
+            <Heading size={ResponsiveHeadingSizes} align='center'>
+            {t("heading1")}
+            </Heading>
+            
 
             
 

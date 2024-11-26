@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+
 
 import '@radix-ui/themes/styles.css';
 // Radix UI themes
 import { Theme} from '@radix-ui/themes'
+import "./globals.css";
 
 import NavBar from "./_components/navigation/navBar";
 import Footer from "./_components/footer/Footer";

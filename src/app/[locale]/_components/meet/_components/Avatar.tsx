@@ -7,21 +7,28 @@ import { ReactNode } from "react";
 
 export default function MeetUsAvatar({name, src, value}: {name: string, src: string, value: string}){
 
-    return (
-        <Flex direction='column' align='center'>
-         
-            
-            <Avatar 
-                src={src}
-                fallback='S'
-                size={{initial: '5', xs: '5', sm: '7', md: '9'}}
-            />
+    return ( 
+      
         
-            <Tabs.Trigger value={value} style={{cursor: 'pointer' }}>
-                <Text size={{initial: '2', xs: '2', sm: '4', md: '4'}}>{name}</Text>
-            </Tabs.Trigger>
+        <Flex direction='column' align='center' >
+           <Tabs.Trigger value={value} style={{cursor: 'pointer' }} >
+           <Flex direction='column' justify='center' align='center'>
 
+          
+                    <Avatar 
+                        src={src}
+                        fallback='S'
+                        size={{initial: '5', xs: '5', sm: '7', md: '9'}}
+                    />
+            
+
+                
+                    <Text size={{initial: '2', xs: '2', sm: '4', md: '4'}}>{name}</Text>
+            </Flex>    
+         </Tabs.Trigger>
         </Flex>
+        
+        
     )
 
 }
