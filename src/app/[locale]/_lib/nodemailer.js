@@ -9,17 +9,17 @@ export async function sendMail(mailOptions){
     
     `<p>Thank you ${name} for contacting us here at The Pop-Up Wedding Crèche..</p>
     <br>
-    <p>We have received your email and aim to reply to you within three working days.</p>
+    <p>We are currently out of Office for the festive period and will return on the 14th Janurary. </p>
      <br>
     <p>If this is an initial enquiry please read our information brochure attached to this email, so you can further understand our services. Please fill out our initial enquiry form which gives us the details needed to provide you with a quote ( link at the bottom of this email).</p>
      <br>
     <p>Please follow us on Instagram to see what our wonderful team have been up to: @popupweddingcreche</p>
      <br>
-    <p>Thank you so much and we look forward to speaking to you,</p>
+    <p>Thank you so much and we wish you a very merry Christmas! </p>
      <br>
     <p>Best wishes,</p>
      <br>
-    <p>Sinead</p>
+    <p>Sinead and the Pop Up Creche Team. </p>
      <br>
     
     
@@ -104,4 +104,17 @@ export async function sendMail(mailOptions){
 
 }
 
-
+/* <p>Thank you ${name} for contacting us here at The Pop-Up Wedding Crèche..</p>
+    <br>
+    <p>We have received your email and aim to reply to you within three working days.</p>
+     <br>
+    <p>If this is an initial enquiry please read our information brochure attached to this email, so you can further understand our services. Please fill out our initial enquiry form which gives us the details needed to provide you with a quote ( link at the bottom of this email).</p>
+     <br>
+    <p>Please follow us on Instagram to see what our wonderful team have been up to: @popupweddingcreche</p>
+     <br>
+    <p>Thank you so much and we look forward to speaking to you,</p>
+     <br>
+    <p>Best wishes,</p>
+     <br>
+    <p>Sinead</p>
+     <br>*/
