@@ -4,42 +4,24 @@ import {useEffect, useState} from 'react';
 
 import TabView from './TabView';
 import DropdownView from './DropdownView';
-
 import { NavList } from './navBar';
+import { Box } from '@radix-ui/themes';
 
 
 export default function NavItemsResponsive({navList}: {navList: NavList[]}){
 
-const [windowSize, setWindowSize] = useState(getWindowSize());
-
-  function getWindowSize() {
-    if (typeof window !== 'undefined'){
-      const {innerWidth}: {innerWidth: number} = window;
-      return {innerWidth};
-    } 
-    
-    
-    }
-
-
-  useEffect(() => {
-  
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-
-    
     
     return(
+        <>
+         <Box display={{initial: 'none', xs: 'none', sm: 'none', md: 'block', lg: 'block'}}>
+            <TabView navList={navList} />
+         </Box>
+         <Box display={{initial: 'block', xs: 'block', sm: 'block', md: 'none', lg: 'none'}}>
+            <DropdownView navList={navList} />
+         </Box>
         
-        windowSize.innerWidth > 1024 ? <TabView navList={navList} />:<DropdownView navList={navList} />
+        </>
+        
         
     )
 
