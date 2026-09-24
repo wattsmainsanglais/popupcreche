@@ -26,23 +26,24 @@ export async function sendMail({name, email, tel, message}: Enquiry){
 
     const clientText =
 
-    `<p>Thank you ${escapeHtml(name)} for contacting us here at The Pop-Up Wedding Crèche.</p>
+    `<p>Thank you ${escapeHtml(name)} for contacting The Pop-Up Wedding Crèche.</p>
     <br>
-    <p>We have received your email and aim to reply to you within three working days. </p>
+    <p>I have received your email and aim to reply to you within three working days. </p>
      <br>
-    <p>If this is an initial enquiry please read our information brochure attached to this email, so you can further understand our services. Please fill out our initial enquiry form which gives us the details needed to provide you with a quote ( link at the bottom of this email).</p>
+    <p>If this is an initial enquiry please read the information brochure attached to this email, so you can further understand my services. Please fill out my initial enquiry form which gives me the details needed to provide you with a quote ( link at the bottom of this email).</p>
      <br>
-    <p>Please follow us on Instagram to see what our wonderful team have been up to: @popupweddingcreche</p>
+    <p>Please follow me on Instagram to see what I have been up to: @popupweddingcreche</p>
      <br>
-    <p>Thank you so much and we look forward to speaking to you </p>
+    <p>Thank you so much and I look forward to speaking to you </p>
      <br>
     <p>Best wishes,</p>
      <br>
-    <p>Sinead and the Pop Up Creche Team. </p>
+    <p>Sinead</p>
+     <p>The Pop-Up Wedding Crèche</p>
      <br>
 
 
-    <p><a href='https://docs.google.com/document/d/1F4KhuIwFr9kqbjKyar5Z277YYqw3PDSV6QSyGALNgfc/edit?tab=t.0'>Link to our Initial Enquiry Form</a></p>`
+    <p><a href='https://docs.google.com/document/d/1F4KhuIwFr9kqbjKyar5Z277YYqw3PDSV6QSyGALNgfc/edit?tab=t.0'>Link to my Initial Enquiry Form</a></p>`
 
     const transporter = nodemailer.createTransport({
         host: smtpHost,

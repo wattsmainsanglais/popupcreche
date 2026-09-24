@@ -53,7 +53,7 @@ export default function ServicesTabs({services}: {services: ServiceItem[]}){
                 role="tabpanel"
                 id={`service-panel-${current.value}`}
                 aria-labelledby={`service-tab-${current.value}`}
-                className="mx-auto mt-8 max-w-3xl rounded-2xl bg-cream p-6 md:p-10">
+                className="mt-8 rounded-2xl border-2 border-mint bg-white p-6 md:p-10">
                 <h3 className="font-display text-2xl font-semibold md:text-3xl">{current.heading}</h3>
                 <p className="mt-3 text-lg leading-relaxed">{current.text}</p>
             </div>

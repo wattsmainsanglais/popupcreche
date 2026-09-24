@@ -12,11 +12,12 @@ import { FaArrowsRotate } from "react-icons/fa6";
 // Rendered width of each photo (was 380px). Capped to the screen width so it still fits on phones.
 const IMAGE_WIDTH = 540
 const IMAGE_CSS_WIDTH = `min(${IMAGE_WIDTH}px, 97vw)`
-// Photos are roughly 3:4, so height is about width x 1.33
-const PHOTO_ASPECT = 1.34
+// Photos are cropped to a uniform 2:3 so the fan lines up (source photos vary between 3:4 and 2:3)
+const PHOTO_ASPECT = 1.5
 
 
-export default function Slider({images, ratios, alt}: {images: StaticImageData[], ratios: number[], alt: string}) {
+// alt: one credit for all photos, or one per photo (same order as images)
+export default function Slider({images, ratios, alt}: {images: StaticImageData[], ratios: number[], alt: string | string[]}) {
 
 
 const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
@@ -60,11 +61,11 @@ const handleNext = () => {
                         >
                             <Image
                              src={image}
-                             title={alt}
-                             alt={alt}
+                             title={Array.isArray(alt) ? alt[index] : alt}
+                             alt={Array.isArray(alt) ? alt[index] : alt}
                              width={IMAGE_WIDTH}
                              sizes="(max-width: 768px) 97vw, 540px"
-                             style={{ maxWidth: 'none', width: IMAGE_CSS_WIDTH, height: 'auto' }}
+                             style={{ maxWidth: 'none', width: IMAGE_CSS_WIDTH, height: 'auto', aspectRatio: '2 / 3', objectFit: 'cover' }}
                               />
                         </motion.div>
                     ))}

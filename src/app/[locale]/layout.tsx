@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Cormorant_Garamond, Nunito } from "next/font/google";
+import { Marck_Script, Nunito } from "next/font/google";
+// import { Cormorant_Garamond } from "next/font/google";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
@@ -10,10 +11,12 @@ import NavBar from "./_components/navigation/navBar";
 import Footer from "./_components/footer/Footer";
 import { routing } from "@/i18n/routing";
 
-const cormorant = Cormorant_Garamond({
-  weight: ["500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-cormorant",
+// Heading font. Previous choice kept for easy switching back:
+// const cormorant = Cormorant_Garamond({ weight: ["500", "600", "700"], subsets: ["latin"], variable: "--font-display-face" });
+const marck = Marck_Script({
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-display-face",
 });
 
 const nunito = Nunito({
@@ -39,7 +42,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${cormorant.variable} ${nunito.variable}`}>
+    <html lang={locale} className={`${marck.variable} ${nunito.variable}`}>
       <body>
         <NavBar locale={locale} />
         {children}

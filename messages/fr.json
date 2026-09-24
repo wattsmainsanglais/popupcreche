@@ -1,56 +1,50 @@
 {
-
     "Nav": {
         "Links": {
-            "what": "Nous faisons",
-            "meet": "Recontrez-nous",
+            "what": "Ce que je fais",
+            "meet": "Rencontrez-moi",
             "reviews": "Avis",
             "faq": "FAQ",
-            "contact": "Contactez-nous",
+            "contact": "Contact",
             "map": "Carte"
-
         }
     },
     "Splash": {
-        "heading": "Professionnelles expérimentées de la garde d'enfants pour les mariages, les événements et plus encore... ",
-          "heading1": "Basé dans le sud-ouest de la France"
+        "heading": "Professionnelle expérimentée de la garde d'enfants pour les mariages, les événements et plus encore... ",
+        "heading1": "Basée dans le sud-ouest de la France"
     },
-    "What":{
-        "heading": "Nous faisons",
-        "para": "Nous sommes des professionnels expérimentés de la garde d'enfants et nous proposons une crèche pop-up amicale, chaleureuse et de haute qualité pour les petits invités de votre événement. Notre objectif est d'offrir aux enfants présents à votre mariage ou à votre événement une expérience amusante et spéciale, permettant aux adultes de se détendre et de profiter pleinement de l'instant présent. Nous comprenons que les enfants et leurs soins sont au centre de tout ce que nous faisons. Laissez-nous vous aider à faire en sorte qu'ils passent, tout comme vous, un moment merveilleux lors de votre journée spéciale ! Nous comprenons que chaque mariage ou événement est unique. Nous offrons une consultation gratuite où nous prenons le temps d'écouter vos besoins et de créer un service sur mesure pour vous. "
+    "What": {
+        "heading": "Ce que je fais",
+        "para": "Je suis une professionnelle expérimentée de la garde d'enfants et je propose une crèche pop-up amicale, chaleureuse et de haute qualité pour les petits invités de votre événement. Mon objectif est d'offrir aux enfants présents à votre mariage ou à votre événement une expérience amusante et spéciale, permettant aux adultes de se détendre et de profiter pleinement de l'instant présent. Je comprends les enfants, et leur bien-être est au centre de tout ce que je fais. Laissez-moi vous aider à faire en sorte qu'ils passent, tout comme vous, un moment merveilleux lors de votre journée spéciale ! Je comprends que chaque mariage ou événement est unique. J'offre une consultation gratuite où je prends le temps d'écouter vos besoins et de créer un service sur mesure pour vous. "
     },
     "Services": {
         "Headings": {
-            "cn": "Ceremony Nanny",
-            "pn": "Private Nanny",
+            "cn": "Wedding Nanny",
+            "pn": "Travel Nanny",
             "wc": "Wedding Crèche"
         },
         "Content": {
-            "cnc": "Il s'agit d'un service personnalisé où une nounou dédiée à votre enfant assistera au mariage avec lui. Notre nounou est là pour s'occuper de lui, jouer avec lui et répondre à ses besoins, ainsi que pour permettre à votre enfant de participer à des séances photos et faciliter des tâches spéciales telles que porter l'alliance. Votre nounou se fondra comme une invitée et permettra ces moments familiaux spéciaux tout en étant constamment là pour soutenir, prendre soin et assurer la sécurité de votre enfant, particulièrement important s'il y a une piscine. Votre nounou assurera personnellement la liaison avec vous et/ou votre organisateur de mariage pour assurer le bon déroulement de votre journée spéciale.",
-            "pnc": "Il s'agit d'un service centré sur l'enfant, c'est aussi un service individuel qui se déroule souvent à proximité du lieu du mariage ou de l'événement. La nounou et le bébé ne sont pas présents, ce qui nous permet de suivre pleinement les besoins de vos enfants et de respecter la routine si c'est quelque chose à laquelle votre bébé est habitué. Le fait que la nounou s'occupe uniquement de votre enfant signifie qu'elle peut être mobile, par exemple emmener votre enfant faire la sieste, se promener, jouer ou se coucher, et peut amener les jeunes bébés à un point de rendez-vous pour faciliter l'allaitement. Nous discutons de la routine de votre enfant et de vos projets pour la journée en veillant à ce qu'il soit aussi heureux que possible et que vous puissiez vous détendre en sachant que nous avons tout en main",
-            "wcc": "C'est l'option que nous proposons pour les groupes de 2 à 10 enfants. La crèche est une journée amusante au cours de laquelle nous mettons en place un espace de jeu rempli de jeux et d'activités magnifiques et enchanteresses pour ravir les plus petits de ceux qui assisteront à votre mariage. La crèche doit avoir lieu dans une salle indépendante, avec un accès facile aux toilettes, qui est à l'usage exclusif de la crèche pendant les heures convenues. Un système d'inscription/départ permet aux enfants d'être amenés à la crèche et d'en revenir en fonction de votre programme de la journée, par exemple pour participer à la fête de mariage ou pour assister à un repas. Le nombre d'enfants par membre du personnel dépend de leur âge et de leurs besoins. C'est un espace idéal pour que les enfants puissent répondre à leurs besoins lors d'un événement typiquement réservé aux adultes, permettant aux adultes de se détendre et de profiter pleinement de votre journée spéciale. Il est courant de nous faire apporter des repas afin que les enfants puissent manger avec nous à la crèche."
+            "cnc": "Il s'agit d'un service personnalisé où j'assisterai au mariage en me consacrant entièrement à votre enfant. Je suis là pour m'occuper de lui, jouer avec lui et répondre à ses besoins, ainsi que pour permettre à votre enfant de participer aux séances photos et faciliter des tâches spéciales telles que porter les alliances. Je me fondrai parmi les invités et permettrai ces moments familiaux spéciaux tout en étant constamment là pour soutenir, prendre soin et assurer la sécurité de votre enfant, particulièrement important s'il y a une piscine. J'assurerai personnellement la liaison avec vous et/ou votre organisateur de mariage pour assurer le bon déroulement de votre journée spéciale.",
+            "pnc": "Il s'agit d'un service centré sur l'enfant, c'est aussi un service individuel qui se déroule souvent à proximité du lieu du mariage ou de l'événement. Votre bébé et moi ne sommes pas présents, ce qui me permet de suivre pleinement les besoins de vos enfants et de respecter la routine si c'est quelque chose à laquelle votre bébé est habitué. Comme je m'occupe uniquement de votre enfant, nous pouvons être mobiles, par exemple pour la sieste, une promenade, jouer ou se coucher, et je peux amener les jeunes bébés à un point de rendez-vous pour faciliter l'allaitement. Je discute avec vous de la routine de votre enfant et de vos projets pour la journée, en veillant à ce qu'il soit aussi heureux que possible et que vous puissiez vous détendre en sachant que j'ai tout en main",
+            "wcc": "C'est l'option que je propose pour les groupes de 2 à 10 enfants. La crèche est une journée amusante au cours de laquelle je mets en place un espace de jeu rempli de jeux et d'activités magnifiques et enchanteresses pour ravir les plus petits de ceux qui assisteront à votre mariage. La crèche doit avoir lieu dans une salle indépendante, avec un accès facile aux toilettes, qui est à l'usage exclusif de la crèche pendant les heures convenues. Un système d'inscription/départ permet aux enfants d'être amenés à la crèche et d'en revenir en fonction de votre programme de la journée, par exemple pour participer à la fête de mariage ou pour assister à un repas. Le nombre d'enfants par membre du personnel dépend de leur âge et de leurs besoins. C'est un espace idéal pour que les enfants puissent répondre à leurs besoins lors d'un événement typiquement réservé aux adultes, permettant aux adultes de se détendre et de profiter pleinement de votre journée spéciale. Il est courant de faire apporter les repas à la crèche afin que les enfants puissent manger avec moi."
         }
     },
     "Meet": {
-        "heading": "Recontrez-nous",
-        "sinead": "Sinead est une professionnelle qualifiée de la garde d'enfants qui a 20 ans d'expérience dans divers contextes, notamment en tant qu'assistante maternelle et famille d'accueil. Elle apporte une grande richesse d'expérience, y compris des connaissances approfondies en matière de besoins supplémentaires et de développement des enfants. Elle adore son travail et les enfants ne cessent de l'étonner. Elle est passionnée par le soutien aux familles. À la crèche pop-up, elle aime passer du temps avec les enfants, s'amuser et faciliter une expérience familiale facile et relaxante. Elle apporte une présence amusante et engageante qui met rapidement les enfants à l'aise. ",
+        "heading": "Rencontrez-moi",
+        "sinead": "Je suis une professionnelle qualifiée de la garde d'enfants avec 20 ans d'expérience dans divers contextes, notamment en tant qu'assistante maternelle et famille d'accueil. J'apporte une grande richesse d'expérience, y compris des connaissances approfondies en matière de besoins particuliers et de développement de l'enfant. J'adore mon travail et les enfants ne cessent de m'étonner. Je suis passionnée par le soutien aux familles. À la crèche pop-up, j'aime passer du temps avec les enfants, m'amuser et offrir aux familles une expérience facile et relaxante. J'apporte une présence amusante et engageante qui met rapidement les enfants à l'aise. ",
         "harriet": "Harriet est enseignante et psychothérapeute diplomée pour enfants, accréditée par la British Association for Counselling and Psychotherapy (organisme britannique d'accréditation pour le conseil et la psychothérapie). Elle a des années d'expérience de travail avec les enfants dans une grande variété de contextes, depuis les tout-petits jusqu'aux adolescents. Elle aime accompagner les enfants dans leurs jeux imaginatifs et animer des activités créatives. Elle est toujours là pour encourager et aider les enfants à se sentir capables de participer. Elle est empathique et chaleureuse et aime offrir aux enfants un espace de jeu calme et favorable. ",
         "gaelle": "Gaelle est professeur de danse. Elle a enseigné pendant 10 ans près de Montpellier dans le sud de la France pour des enfants à partir de trois ans et a créé sa propre association de danse. Elle a également été animatrice et directrice dans des écoles et centres de vacances, colonies pendant 14 ans durant les vacances scolaires, où des groupes d'enfants vivaient des semaines d'aventures à travers la France et à l'étranger. Elle est drôle, gentille et pleine d'idées. C'est une merveilleuse maman de trois petites filles. Gaelle est française avec un niveau d'anglais intermédiaire.",
         "rachel": "Rachel est une infirmière diplômée et agréée avec 15 ans d'expérience, elle sait gérer avec confiance tous les maux qui surviennent dans la vie quotidienne des petits. Si votre enfant a des problèmes de santé dont vous aimeriez discuter avec Rachel ou si vous souhaitez spécifiquement qu'elle soit votre nounou en raison de ses soins infirmiers, n'hésitez pas à la contacter pour en discuter. Rachel est absolument géniale avec les enfants, en tant que maman de trois garçons, elle est habituée au plaisir et à l'aventure et elle connaît tous les meilleurs jeux!"
-
-        
     },
     "Reviews": {
         "heading": "Avis",
         "list": {
-            "one": "« Harriet et Sinead sont des personnes qui prennent soin d'elles naturellement. Douces, attentionnées et absolument centrées sur l'enfant, ces dames ont fourni un service inestimable pour ce mariage »",
+            "one": "« Sinead prend soin des enfants naturellement. Douce, attentionnée et absolument centrée sur l'enfant, elle a fourni un service inestimable pour ce mariage »",
             "two": "Merci beaucoup d'avoir pris soin de notre bébé, d'avoir voyagé dans un autre pays et de savoir que notre bébé était entre de bonnes mains, ce qui nous a permis de célébrer le mariage de notre amie en toute sérénité. Merci !!"
         }
-
-
     },
     "Faq": {
-        "heading": "Faq's",
+        "heading": "FAQ",
         "qs": {
             "q1": "Pourquoi une crèche de mariage?",
             "a1": "Un mariage est un jour spécial pour célébrer votre amour avec ceux que vous aimez. C'est le moment de se laisser aller, de se détendre et de s'amuser après tout le dur labeur de l'organisation. Certaines parties de la journée, bien que magnifiques, peuvent être fatigantes pour les plus petits, et c'est là que nous intervenons. Nous arrivons et créons un environnement magnifique, paisible et amusant pour les enfants de tous âges. Chaque élément est pris en compte : activités, jouets et jeux, endroit douillet pour les histoires et les siestes. Laissez vos invités respirer en sachant que nous avons tout prévu pour leur faciliter la tâche. Vous pouvez vous détendre en sachant que nous avons tout prévu pour vos petits invités.",
@@ -60,15 +54,14 @@
             "a3": "Veuillez nous contacter via le formulaire de contact en bas du site. Nous demandons une réservation minimum de 8 heures par événement et un acompte de 50% afin de réserver votre date. Contactez-nous pour une consultation gratuite et sans engagement afin de discuter de votre forfait sur mesure, nous avons hâte de vous rencontrer !",
             "q4": "Que dois-je savoir d'autre?",
             "a4": "Nous sommes formés à la protection des enfants et aux premiers secours, nous sommes entièrement assurés et nous avons fait l'objet d'un contrôle extrait de casier judiciare. Lors de la préparation de votre événement, nous prendrons connaissance de vos informations, telles que les allergies et les besoins supplémentaires, afin de nous assurer que nous prenons le plus grand soin de chaque enfant. La crèche pop-up est remplie de beaux jouets, spécialement choisis pour enchanter vos petits. Nous vous demanderons des informations sur l'âge et les centres d'intérêt de vos petits invités, et vous pouvez nous laisser faire le reste, tout ce que nous ferons sera adapté à eux."
-    
         }
-        },
-        "Map": {
-        "heading": "Où nous travaillons",
-        "para": "La carte montre notre zone de travail habituelle, ainsi que des icônes pour les lieux avec lesquels nous travaillons fréquemment"
+    },
+    "Map": {
+        "heading": "Où je travaille",
+        "para": "La carte montre ma zone de travail habituelle, ainsi que des icônes pour les lieux avec lesquels je travaille fréquemment"
     },
     "Contact": {
-        "heading": "Ecrivez-nous",
+        "heading": "Écrivez-moi",
         "formfields": {
             "name": "Nom",
             "email": "Mail",
@@ -77,9 +70,9 @@
         },
         "form": {
             "send": "Envoyer",
-            "success": "Merci, nous vous répondrons très bientôt",
+            "success": "Merci, je vous répondrai très bientôt",
             "errorInvalid": "Merci d'indiquer votre nom, une adresse e-mail valide et votre message.",
-            "errorSend": "Désolé, votre message n'a pas pu être envoyé. Veuillez réessayer plus tard, ou écrivez-nous à thepopupweddingcreche@gmail.com"
+            "errorSend": "Désolé, votre message n'a pas pu être envoyé. Veuillez réessayer plus tard, ou écrivez-moi à thepopupweddingcreche@gmail.com"
         }
     }
 }

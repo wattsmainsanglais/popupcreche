@@ -5,12 +5,11 @@
   --color-mint: #c8e6e0;
   --color-sage: #9fcbc1;
   --color-sage-dark: #4f8578;
-  --color-blush: #f6d3d8;
-  --color-cream: #efe7e1;
+  --color-mint-pale: #eef7f4;
   --color-ink: #2f2a33;
   --color-muted: #5f5866;
 
-  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-display: var(--font-display-face), Georgia, serif;
   --font-sans: var(--font-nunito), system-ui, sans-serif;
 }
 
@@ -28,11 +27,16 @@
   h1, h2, h3 {
     @apply font-display text-ink;
   }
+
+  /* The heading font has a single weight: don't let the browser fake a bold version */
+  .font-display, h1, h2, h3 {
+    font-synthesis: none;
+  }
 }
 
 /* Section heading used across the page */
 @utility section-title {
-  @apply font-display text-3xl font-semibold tracking-wide text-ink md:text-5xl;
+  @apply font-display text-3xl font-semibold text-ink md:text-5xl;
 }
 
 /* Hide scrollbar on the photo reels (still scrollable by swipe, trackpad and buttons) */

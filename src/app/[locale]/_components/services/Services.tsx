@@ -11,6 +11,7 @@ export default function Services(){
 
     const t = useTranslations("Services")
 
+    // Order: Wedding Nanny, Wedding Crèche, Travel Nanny (keys cn / wc / pn kept from the original names)
     const servicesArray: ServiceItem[] = [
        {
         heading: t("Headings.cn"),
@@ -20,17 +21,17 @@ export default function Services(){
         credit: 'Photo Credit- Anneli Marinovich Photography'
        },
        {
-        heading: t("Headings.pn"),
-        src: pn,
-        text: t("Content.pnc"),
-        value: 'pn',
-        credit: 'Photo Credit- Katy Lunsford Photography'
-       },
-       {
         heading: t("Headings.wc"),
         src: wc,
         text: t("Content.wcc"),
         value: 'wc',
+        credit: 'Photo Credit- Katy Lunsford Photography'
+       },
+       {
+        heading: t("Headings.pn"),
+        src: pn,
+        text: t("Content.pnc"),
+        value: 'pn',
         credit: 'Photo Credit- Katy Lunsford Photography'
        }
     ]

@@ -33,7 +33,7 @@ export default function MeetTabs({people}: {people: MeetData[]}){
                                 src={p.src}
                                 alt={p.name}
                                 sizes="128px"
-                                className={`h-16 w-16 rounded-full object-cover object-top ring-offset-4 ring-offset-cream transition sm:h-24 sm:w-24 md:h-32 md:w-32 ${isSelected ? 'ring-4 ring-sage' : 'opacity-70 group-hover:opacity-100'}`}
+                                className={`h-16 w-16 rounded-full object-cover object-top ring-offset-4 ring-offset-mint-pale transition sm:h-24 sm:w-24 md:h-32 md:w-32 ${isSelected ? 'ring-4 ring-sage' : 'opacity-70 group-hover:opacity-100'}`}
                             />
                             <span className={`mt-3 text-base font-bold md:text-lg ${isSelected ? 'text-ink' : 'text-muted'}`}>{p.name}</span>
                         </button>
@@ -42,7 +42,7 @@ export default function MeetTabs({people}: {people: MeetData[]}){
             </div>
 
             <div role="tabpanel" id="meet-panel" aria-labelledby={`meet-tab-${selected}`}
-                className="mx-auto mt-8 min-h-[16rem] max-w-3xl rounded-2xl bg-white/70 p-6 md:p-10">
+                className="mx-auto mt-8 min-h-[16rem] max-w-3xl rounded-2xl border-2 border-mint bg-white p-6 md:p-10">
                 <h3 className="font-display text-2xl font-semibold md:text-3xl">{person.name}</h3>
                 <p className="mt-3 text-lg leading-relaxed">{person.text}</p>
             </div>
