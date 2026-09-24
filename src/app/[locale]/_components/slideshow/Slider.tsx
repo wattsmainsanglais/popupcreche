@@ -1,48 +1,22 @@
 'use client'
 
 import React from "react";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { wrap } from "popmotion";
-import { Flex, Box } from "@radix-ui/themes";
+import { useState } from "react";
+import { motion } from "motion/react";
 
 import Image from "next/image";
-
-import style from './slider.module.css'
 import { StaticImageData } from "next/image";
 
 import { FaArrowsRotate } from "react-icons/fa6";
 
-
-export default function Slider({images, ratios, heightRatio, alt}: {images: StaticImageData[], ratios: number[], heightRatio: number[] | string | number, alt: string}) {
-
-
-  const [windowSize, setWindowSize] = useState(getWindowSize());
-
-  function getWindowSize() {
-    if (typeof window !== 'undefined'){
-      const {innerWidth}: {innerWidth: number} = window;
-      return {innerWidth};
-    } 
-    
-    }
+// Rendered width of each photo (was 380px). Capped to the screen width so it still fits on phones.
+const IMAGE_WIDTH = 540
+const IMAGE_CSS_WIDTH = `min(${IMAGE_WIDTH}px, 97vw)`
+// Photos are roughly 3:4, so height is about width x 1.33
+const PHOTO_ASPECT = 1.34
 
 
-  useEffect(() => {
-  
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-  
-  const altHeightRatio: string | number = (heightRatio-15).toString()+'vh'
- 
+export default function Slider({images, ratios, alt}: {images: StaticImageData[], ratios: number[], alt: string}) {
 
 
 const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
@@ -66,54 +40,48 @@ const handleNext = () => {
         right: { x: "90%", scale: ratios[2], zIndex: 1 },
         right1: { x: "50%", scale: ratios[1], zIndex: 3 },
     }
-    
+
     return(
-      <>
-        <Box width='99vw'>
-        <Flex width='100vw' height={windowSize?.innerWidth < 1024 ? altHeightRatio:  heightRatio.toString()+'vh'}  justify='center' direction='column' align='center' gap='5'>
-            <Flex justify='center' align='center'>
+        <section className="relative w-full overflow-x-clip py-6 md:py-16">
+            <div
+              className="flex w-full flex-col items-center justify-center"
+              // Stage is exactly as tall as the (scaled) centre photo, so the rotate button sits right under it
+              style={{height: `calc(${IMAGE_CSS_WIDTH} * ${PHOTO_ASPECT} * ${ratios[0]})`}}>
+                <div className="flex items-center justify-center">
 
-                {images.map((image: string | StaticImageData, index: any) => (
-                    <motion.div
-                      key={index}
-                      initial='center'
-                      animate={positions[positionIndexes[index]]}
-                      variants={imageVariants}
-                      transition={{ duration: 0.5 }}
-                      style={{ width: "40%", position: "absolute", display: 'flex', justifyContent: 'center'  }}
+                    {images.map((image: StaticImageData, index: number) => (
+                        <motion.div
+                          key={index}
+                          initial='center'
+                          animate={positions[positionIndexes[index]]}
+                          variants={imageVariants}
+                          transition={{ duration: 0.5 }}
+                          style={{ width: "40%", position: "absolute", display: 'flex', justifyContent: 'center'  }}
+                        >
+                            <Image
+                             src={image}
+                             title={alt}
+                             alt={alt}
+                             width={IMAGE_WIDTH}
+                             sizes="(max-width: 768px) 97vw, 540px"
+                             style={{ maxWidth: 'none', width: IMAGE_CSS_WIDTH, height: 'auto' }}
+                              />
+                        </motion.div>
+                    ))}
 
-                    >
-
-                        <Image
-                         src={image}
-                         title={alt}
-                         alt={alt}
-                         width={380}
-                         sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw"
-                          />
-
-                    </motion.div>
-                ))}
-
-            </Flex>
-        
-         </Flex> 
-         <Flex width='99vw' mt={{initial: '0', xs: '0', sm:'0', md: '3'}} justify='center'>
-              
-             <motion.button
-              style={{backgroundColor: 'white', border: 'none'}}
-              whileTap={{rotateZ: 45}}>
-              
-
-              <FaArrowsRotate onClick={handleNext} fontSize={24} />
-             </motion.button>
-              
-            
-
-            </Flex>
-            </Box>
-        </>
+                </div>
+            </div>
+            <div className="mt-5 flex w-full justify-center">
+                 <motion.button
+                  type="button"
+                  aria-label="Next photo"
+                  onClick={handleNext}
+                  className="bg-white p-2"
+                  whileTap={{rotateZ: 45}}>
+                  <FaArrowsRotate fontSize={24} />
+                 </motion.button>
+            </div>
+        </section>
     )
 
 };
-

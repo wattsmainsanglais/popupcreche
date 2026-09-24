@@ -1,35 +1,22 @@
-import React from "react";
 import { useTranslations } from "next-intl";
-
-import { Flex, Text, Box, Heading } from "@radix-ui/themes";
-
-import style from './reviews.module.css'
-import { ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 export default function ReviewWrapper() {
 
     const t = useTranslations("Reviews")
 
     return(
-        <Flex id='Reviews' direction='column' justify='center' align='center' width='100vw'>
-            <Flex  justify='center'><Heading size={ResponsiveHeadingSizes}>{t("heading")}</Heading></Flex>
-            <Box width='100vw' height='100vh' className={style.backgroundWrapper} pt='5' pb='5' mt='5' mb='5'>
-                
-                <Flex direction='column'  width='100vw' height='90vh' justify={{initial: 'between', xs: 'between', sm: 'between', md: 'center'}}>
-                    <Flex justify='start' >
-                        
-                        <Flex className={style.reviewBox} p='6' width={{initial: '80vw', xs: '80vw', sm: '80vw', md: '40vw'}} >
-                            <Text size='4'>{t("list.one")}</Text>
-                        </Flex>
-                    </Flex>
-                    <Flex justify='end' >
-                        
-                        <Flex className={style.reviewBox} p='6' width={{initial: '80vw', xs: '80vw', sm: '80vw', md: '40vw'}} >
-                            <Text size='4'>{t("list.two")}</Text>
-                        </Flex>
-                    </Flex>
-                </Flex>
-            </Box>
-        </Flex>
+        <section id='Reviews' className="py-16 md:py-24">
+            <h2 className="section-title px-4 text-center">{t("heading")}</h2>
+            <div className="mt-10 bg-[url('/images/reviewBackMobile.jpg')] bg-cover bg-center px-4 py-16 md:bg-[url('/images/Chateau-de-la-Valouze-Anneli-Marinovich-Photography-216.jpg')] md:py-32">
+                <div className="mx-auto flex max-w-6xl flex-col gap-8 md:gap-16">
+                    <blockquote className="max-w-xl rounded-2xl bg-cream/90 p-6 text-lg italic leading-relaxed shadow-lg backdrop-blur-sm md:p-8 md:text-xl">
+                        {t("list.one")}
+                    </blockquote>
+                    <blockquote className="max-w-xl self-end rounded-2xl bg-cream/90 p-6 text-lg italic leading-relaxed shadow-lg backdrop-blur-sm md:p-8 md:text-xl">
+                        {t("list.two")}
+                    </blockquote>
+                </div>
+            </div>
+        </section>
     )
 }

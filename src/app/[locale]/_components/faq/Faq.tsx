@@ -1,50 +1,24 @@
-'use client'
-
-import React, { useState, useEffect } from "react";
-import {motion} from 'framer-motion'
-import { Flex, Text, Box, Heading} from "@radix-ui/themes";
-
-import FaqBox from "./FaqBox";
-import FaqDesktop from "./FaqDesktop";
-import FaqMobile from "./FaqMobile";
-
 import Image from "next/image";
-import truck from '../../../../../public/images/dino.png'
+import { FaChevronDown } from "react-icons/fa6";
+
+import type { FaqItem } from "../../_translations/translations";
 
 
-
-export default function Faq({tprops}){
-
-  const [windowSize, setWindowSize] = useState(getWindowSize());
-
-  function getWindowSize() {
-    if (typeof window !== 'undefined'){
-      const {innerWidth}: {innerWidth: number} = window;
-      return {innerWidth};
-    } else { 
-      return
-    }
-    
-    }
-
-
-  useEffect(() => {
-  
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-
+// Native <details> accordion: works without JavaScript and is keyboard / screen reader friendly
+export default function Faq({tprops}: {tprops: FaqItem[]}){
 
     return (
-     windowSize?.innerWidth <= 1024 ? <FaqMobile tprops={tprops} />: <FaqDesktop tprops={tprops} /> 
-
-
+        <div className="mx-auto mt-10 flex max-w-3xl flex-col gap-4">
+            {tprops.map((item, index) => (
+                <details key={index} className={`group rounded-2xl ${index % 2 === 0 ? 'bg-mint' : 'bg-blush'}`}>
+                    <summary className="flex cursor-pointer list-none items-center gap-4 p-4 md:p-5 [&::-webkit-details-marker]:hidden">
+                        <Image src={item.i} alt='' width={56} height={56} className="h-12 w-12 shrink-0 md:h-14 md:w-14" />
+                        <span className="flex-1 text-lg font-bold md:text-xl">{item.q}</span>
+                        <FaChevronDown className="shrink-0 text-muted transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="px-5 pb-6 text-lg leading-relaxed md:pl-[5.75rem] md:pr-8">{item.a}</p>
+                </details>
+            ))}
+        </div>
     )
 }

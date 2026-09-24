@@ -74,6 +74,12 @@
             "email": "Mail",
             "tele": "Tel",
             "msg": "Message"
+        },
+        "form": {
+            "send": "Envoyer",
+            "success": "Merci, nous vous répondrons très bientôt",
+            "errorInvalid": "Merci d'indiquer votre nom, une adresse e-mail valide et votre message.",
+            "errorSend": "Désolé, votre message n'a pas pu être envoyé. Veuillez réessayer plus tard, ou écrivez-nous à thepopupweddingcreche@gmail.com"
         }
     }
 }

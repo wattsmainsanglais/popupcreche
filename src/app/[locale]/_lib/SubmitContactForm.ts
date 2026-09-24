@@ -1,29 +1,38 @@
 'use server'
 
+import { sendMail } from "./nodemailer"
 
- import { sendMail } from "./nodemailer.js"
+export type ContactResult = { ok: true } | { ok: false, error: 'invalid' | 'send' }
 
-export async function submitContactForm(data: FormData){
-   
-    const mailOptions = {
-    name: data.get('name') as string,
-    email: data.get('email') as string,
-    message: data.get('message') as string,
-    tel: data.get('tel') as string
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
- }
+function field(data: FormData, key: string, maxLength: number) {
+    // Collapse newlines in single-line fields so they can't leak into email headers
+    const value = String(data.get(key) ?? '').trim()
+    return (key === 'message' ? value : value.replace(/[\r\n]+/g, ' ')).slice(0, maxLength)
+}
 
-     const {message, error} = await sendMail(mailOptions)
-     if(error){
-        console.log(error)
-        return {error}
-     } else {
-        console.log(message)
-        return {message}
-     }
-     
-   
-   
+export async function submitContactForm(data: FormData): Promise<ContactResult> {
 
+    // Honeypot field, hidden from real visitors: bots that fill it get a silent "success"
+    if (data.get('company')) return { ok: true }
 
+    const enquiry = {
+        name: field(data, 'name', 100),
+        email: field(data, 'email', 254),
+        tel: field(data, 'tel', 30),
+        message: field(data, 'message', 5000)
+    }
+
+    if (!enquiry.name || !EMAIL_PATTERN.test(enquiry.email) || !enquiry.message) {
+        return { ok: false, error: 'invalid' }
+    }
+
+    try {
+        await sendMail(enquiry)
+        return { ok: true }
+    } catch (err) {
+        console.error('Enquiry email failed', err)
+        return { ok: false, error: 'send' }
+    }
 }

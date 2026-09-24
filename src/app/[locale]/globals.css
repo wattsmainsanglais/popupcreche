@@ -1,37 +1,82 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  
+@import "tailwindcss";
+
+@theme {
+  /* Brand colours, sampled from the logo and existing sections */
+  --color-mint: #c8e6e0;
+  --color-sage: #9fcbc1;
+  --color-sage-dark: #4f8578;
+  --color-blush: #f6d3d8;
+  --color-cream: #efe7e1;
+  --color-ink: #2f2a33;
+  --color-muted: #5f5866;
+
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
 }
 
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   html {
-    color-scheme: dark;
+    scroll-behavior: smooth;
+    /* Keep anchor targets clear of the sticky header */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display text-ink;
   }
 }
 
-.rt-BaseTabList {
+/* Section heading used across the page */
+@utility section-title {
+  @apply font-display text-3xl font-semibold tracking-wide text-ink md:text-5xl;
+}
 
-  --tab-height: '100px';
+/* Hide scrollbar on the photo reels (still scrollable by swipe, trackpad and buttons) */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes icondance {
+  0% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@utility icon-dance {
+  &:hover {
+    animation: icondance .4s linear 1;
+  }
+}
+
+/* awattsdev credit link underline sweep */
+.wattsLink {
+  --b: 0.1em;
+  --c: #654de9;
+  color: #0000;
+  font-size: 1.2em;
+  padding-block: var(--b);
+  background:
+    linear-gradient(var(--c) 50%, #6b59d4d2 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+          background-clip: text, padding-box;
+  transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
+}
+
+.wattsLink:hover {
+  --_p: 100%;
+  --_s: .3s;
+}
+
+/* Leaflet map: use the site font in popups/controls instead of Leaflet's Helvetica */
+.leaflet-container {
+  font-family: var(--font-sans);
 }

@@ -1,85 +1,69 @@
 'use client'
 
-import { useState } from "react";
-import { useRef } from 'react'
+import { FormEvent, useState, useTransition } from "react";
 
 import { submitContactForm } from "../../_lib/SubmitContactForm";
 
-import { Box, Card, Heading, Text, Flex, TextField, TextArea } from "@radix-ui/themes";
 
 import { SubmitButton } from "../buttons/SubmitButton";
 
 
 export default function ContactForm({trans}: {trans: {[key: string]: string}}  ) {
 
-
-
-    const ref = useRef<HTMLFormElement>(null)
-
+    const [pending, startTransition] = useTransition()
     const [error, setError] = useState<string | undefined>('')
     const [message, setMessage] = useState<string | undefined>('')
 
-    async function submit(data: FormData){
-        
+    // onSubmit rather than <form action>: React 19 clears the form after every action,
+    // which would wipe the visitor's message when sending fails
+    function submit(event: FormEvent<HTMLFormElement>){
+        event.preventDefault()
+        const form = event.currentTarget
+        const data = new FormData(form)
+
         setError('')
         setMessage('')
 
-       const {message, error} = await submitContactForm(data)
-       if(error){
-        setError(error)
-       } else {
-        setMessage(message)
-       }
+        startTransition(async () => {
+            let result
+            try {
+                result = await submitContactForm(data)
+            } catch {
+                // Network failure: the request never reached the server
+                setError(trans.errorSend)
+                return
+            }
 
-       ref.current?.reset()
-
-
+            if(result.ok){
+                setMessage(trans.success)
+                form.reset()
+            } else {
+                // Keep what the visitor typed so they can fix it or try again
+                setError(result.error === 'invalid' ? trans.errorInvalid : trans.errorSend)
+            }
+        })
     }
 
 
+    const field = "w-full rounded-xl border border-sage/60 bg-white px-4 py-3 text-base text-ink placeholder:text-muted/80 focus:border-sage-dark focus:outline-none focus:ring-2 focus:ring-sage/40"
+
     return  (
+        <form onSubmit={submit} className="flex flex-col gap-3 rounded-2xl bg-white p-6 shadow-sm md:p-8">
+            <h3 className="mb-2 text-center font-display text-2xl font-semibold md:text-3xl">{trans.heading}</h3>
 
-            <Flex justify='center' width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '45vw'}} pt={{initial: '3', xs: '3', sm: '5', md:'8'}} pb={{initial: '3', xs: '3', sm: '5', md:'8'}} gap='2' align='center'  >
-            <Card size={{initial: '5' ,xs: '5', sm: '5', md: '5' }} variant="classic" >
-                <form action={submit} ref={ref}>  
-                    <Flex gap='2' direction='column' align='center' justify='center'>
+            <input name='name' type='text' placeholder={trans.name} aria-label={trans.name} autoComplete='name' maxLength={100} required className={field} />
+            <input name='email' type='email' placeholder={trans.email} aria-label={trans.email} autoComplete='email' maxLength={254} required className={field} />
+            <input name='tel' type='tel' placeholder={trans.tele} aria-label={trans.tele} autoComplete='tel' maxLength={30} className={field} />
+            <textarea name='message' placeholder={trans.msg} aria-label={trans.msg} maxLength={5000} required rows={5} className={`${field} resize-y`} />
 
-                        <Heading size='5' align='center'>{trans.heading}</Heading>
-                        <Flex direction='column' gap='2'>
-                            <Box width={{ initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
-                                <TextField.Root name='name' size='2' type='text' placeholder={trans.name}></TextField.Root>
-                            </Box>
-                            <Box width={{initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
-                                <TextField.Root name='email' type='email' placeholder={trans.email}></TextField.Root>
-                            </Box>
-                            <Box width={{initial: '200px', xs: '200px', sm: '200px', md: '200px'}}>
-                                <TextField.Root name='tel' size='2' type='number' placeholder={trans.tele}></TextField.Root>
-                            </Box>
-                            <Box width={{initial: '250px', xs: '250px', sm: '250px', md: '350px'}}>
-                                <TextArea size="2" name='message'  placeholder={trans.msg} resize='vertical'></TextArea>
-                            </Box>
-                             
-                             
-                            
-                            <SubmitButton>Send</SubmitButton>
-                            {error? <Text>{error}</Text>:null}
-                            {message? <Text>{message}</Text>:null}
-                        </Flex>
-                       
-                    
-                    </Flex>
-                   
+            {/* Honeypot: hidden from people, filled in by spam bots */}
+            <input type='text' name='company' tabIndex={-1} autoComplete='off' aria-hidden='true' className="absolute -left-[9999px] h-px w-px opacity-0" />
 
-
-
-                </form>
-
-            </Card>
-
-            </Flex>
-
-
-        
-
+            <SubmitButton pending={pending}>{trans.send}</SubmitButton>
+            <div aria-live='polite' className="text-center">
+                {error? <p className="text-red-700">{error}</p>:null}
+                {message? <p className="font-semibold text-sage-dark">{message}</p>:null}
+            </div>
+        </form>
     )
 }
