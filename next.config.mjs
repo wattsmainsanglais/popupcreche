@@ -23,6 +23,11 @@ const nextConfig = {
 
   reactStrictMode: false,
 
+  images: {
+    // Keep optimised copies for 31 days (default is 4 hours), so the server re-processes images far less often
+    minimumCacheTTL: 2678400,
+  },
+
     async headers() {
         return [
           {
