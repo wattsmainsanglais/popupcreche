@@ -55,7 +55,10 @@ export default function ServicesTabs({services}: {services: ServiceItem[]}){
                 aria-labelledby={`service-tab-${current.value}`}
                 className="mt-8 rounded-2xl border-2 border-mint bg-white p-6 md:p-10">
                 <h3 className="font-display text-2xl font-semibold md:text-3xl">{current.heading}</h3>
-                <p className="mt-3 text-lg leading-relaxed">{current.text}</p>
+                {/* Blank lines in the translation text become separate paragraphs */}
+                {current.text.split('\n\n').map((para, i) => (
+                    <p key={i} className="mt-3 text-lg leading-relaxed">{para}</p>
+                ))}
             </div>
         </div>
     )

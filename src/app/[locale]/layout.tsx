@@ -24,9 +24,10 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
+// Title, description, canonical and hreflang are set per page (see page.tsx),
+// so a canonical here can't cascade to other pages.
 export const metadata: Metadata = {
-  title: "The Pop-up Wedding Crèche",
-  description: "Homepage for 'The Pop-up Wedding Crèche'",
+  metadataBase: new URL("https://www.thepopupweddingcreche.fr"),
 };
 
 export function generateStaticParams() {

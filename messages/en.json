@@ -1,4 +1,11 @@
 {
+    "Metadata": {
+        "title": "Wedding Nanny & Crèche France | The Pop-up Wedding Crèche",
+        "description": "Experienced wedding nanny and pop-up crèche in South West France. One-to-one and small-group childcare for weddings, events and holidays. Free consultation.",
+        "ogTitle": "The Pop-up Wedding Crèche - Wedding Nanny & Childcare in France",
+        "ogDescription": "One-to-one and small-group childcare for weddings, events and family holidays in South West France.",
+        "ogAlt": "Flower girl at a wedding in France - The Pop-up Wedding Crèche"
+    },
     "Nav": {
         "Links": {
             "what": "What I do",
@@ -20,13 +27,13 @@
     "Services": {
         "Headings": {
             "cn": "Wedding Nanny",
-            "pn": "Travel Nanny",
+            "pn": "Holiday Nanny",
             "wc": "Wedding Crèche"
         },
         "Content": {
             "cnc": "This is a one to one service where I will attend the wedding dedicated to your little one. I am there to care for, play with and meet their needs as well as enabling your child to participate in attending photoshoots and facilitating special jobs such as being a ring bearer. I will blend in like a guest and allow for those special family moments whilst constantly being there to support, care and ensure your child’s safety, especially important if there happens to be a pool. I will personally liaise with you and/or your wedding planner to ensure smooth running of your special day.",
-            "pnc": "This is a child-centered service, it is also a one-to-one service which often happens close by to where the wedding or event is taking place. Your baby and I do not attend, allowing me to fully follow your children's needs and keep to routine if that is something your baby is used to. Because I care solely for your child, we can be mobile, for example going for naps, walks, to play, or to bed, and I can bring young babies to a meeting point to facilitate breastfeeding. I discuss your child’s routine and your plans for the day with you, ensuring they are as happy as possible and you can relax knowing I have it all in hand",
-            "wcc": "This is the option I provide for groups of between 2 and 10 children. The crèche is a fun-filled day in which I set up a playspace filled with beautiful and enchanting games and activities to delight the little ones of those attending your wedding. The crèche must take place in a selfcontained room, with easy bathroom access, that is for sole use of the crèche throughout the agreed hours. A sign-in/ sign-out system allows children to be brought to and from the crèche to fit with your plan for the day, such as to be part of the wedding party or to attend a meal. The amount of children per staff member depends on their age and needs. It is a great space for children to have their needs met during a typically adult event, allowing the adults to relax and fully enjoy your special day. It is popular to have meals brought to the crèche so children can eat with me."
+            "pnc": "Travelling with young children is exciting and such an important part of creating family bonds, memories and adventures. But we all know that family holidays and special events can also be busy and tiring, and sometimes everyone needs a little time to rest and recharge.\n\nMy childcare service is designed to support families during holidays, events and special occasions, providing individual or small-group childcare for up to 5 children, with ratios adapted according to the children's ages and needs. Please note that the minimum booking is for 2 days and the maximum is for 7 days.\n\nI can provide childcare close to where your holiday or event is taking place, or accompany your family throughout your trip. This gives children the opportunity to enjoy a fun-filled day at their own pace, while parents and other adults have some valuable time to relax, reconnect or simply enjoy some restorative time together.\n\nI bring a selection of age-appropriate toys, books, games and activities, along with a wealth of knowledge and experience, so that the children in my care are engaged, happy and well looked after.\n\nEvery family is different, so I take the time to understand your individual needs and create a bespoke childcare package that works for you. Whether you need childcare for part of your holiday, support during a special event, or someone to accompany your family for the duration of your trip, we can create an arrangement that suits your plans.",
+            "wcc": "This is the option I provide for groups of between 2 and 5 children. Please note I do not provide childcare for large groups; I do this to ensure quality of care is consistent. The crèche is a fun-filled day in which I set up a playspace filled with beautiful and enchanting games and activities to delight the little ones of those attending your wedding. The crèche must take place in a self-contained room, with easy bathroom access, that is for sole use of the crèche throughout the agreed hours. A sign-in/ sign-out system allows children to be brought to and from the crèche to fit with your plan for the day, such as to be part of the wedding party or to attend a meal. It is a great space for children to have their needs met during a typically adult event, allowing the adults to relax and fully enjoy your special day. It is popular to have meals brought to the crèche so children can eat with me."
         }
     },
     "Meet": {
@@ -39,21 +46,21 @@
     "Reviews": {
         "heading": "Reviews",
         "list": {
-            "one": "'Sinead is a natural care giver. Kind, attentive and absolutely child-centered, she provided an invaluable service for this wedding' ",
-            "two": "'Thank you so much for looking after our baby, travelling to another country and knowing our baby was in great care enabled us to celebrate our friend's wedding feeling at ease. Thank you!!'"
+            "one": "'Sinead and the Pop Up Wedding Crèche are incredible and easily one of the best decisions we made regarding our wedding in July 2025. Our little girl was 11 months old at the time and she had a great wedding experience thanks to Sinead - she was a very happy baby over the 3 days as she had excellent care and attention!'",
+            "two": "'Sinead was absolutely fabulous when she provided the 1-2-1 nanny service for the full weekend for our wedding. We have a very adventurous 1 year old and Sinead could not have been better, he was very happy all weekend and loved spending time with her. It meant that we felt totally present and not worried at all and could enjoy our day and have some reprieve during the night. Sinead’s experience was evident in that she was so patient and behind the scenes got him into his wedding outfit at the right time and without us knowing had spent time for him to get to know the venue for the ceremony which meant he was happy enough to walk down the aisle! Thank you so much Sinead. We highly recommend! X'"
         }
     },
     "Faq": {
         "heading": "FAQs",
         "qs": {
-            "q1": "Why a Wedding Creche?",
-            "a1": "A wedding is a special day to celebrate your love with those you love. It’s a time to let your hair down, relax and enjoy yourself after all the hard work that has gone into the planning. Some parts of the day, although beautiful, can feel tiring for little ones- that’s where we come in. We arrive and create a beautiful, peaceful and fun environment for children of all ages to enjoy. Every element is thought about, from activities, toys and games, to a cosy place for story times and naps, let your guests take a breath knowing we’ve got it all covered to make their day easier. You can relax knowing that when it comes to your little guests, we have it all in hand.",
-            "q2": "What can we offer?",
-            "a2": "For small numbers of children our nanny or ceremony service can accompany them throughout your wedding day, while you get ready and the next day to allow you a lie-in (ideal for couples getting married who also have their own little ones). For groups of children we can offer full day crèches, and crèches the day before and after (ideal for rehearsal dinners and pool parties). Please see the services section for more details. We can care for children aged from birth to 10 years old.",
+            "q1": "Why have childcare?",
+            "a1": "A wedding is a special day to celebrate your love with those you love. It’s a time to let your hair down, relax and enjoy yourself after all the hard work that has gone into the planning. Some parts of the day, although beautiful, can feel tiring for little ones - that’s where I come in. I arrive and create a beautiful, peaceful and fun environment for children of all ages to enjoy. Every element is thought about, from activities, toys and games, to a cosy place for story times and naps, let your guests take a breath knowing I’ve got it all covered to make their day easier. You can relax knowing that when it comes to your little guests, I have it all in hand.",
+            "q2": "What can I offer?",
+            "a2": "I can offer high quality childcare, backed by 20 years of experience. I can offer childcare for up to five children and I ensure that I get to know all the families who I work with in advance, I do this through information forms, video calls and text messages. I can either accompany individual children to an event or I can create a small and enriching play area for them to use. I am passionate about supporting families and making space for children to play. This can be during a wedding, event, holiday or any other reason you may need childcare whilst travelling.",
             "q3": "What is the booking process?",
-            "a3": "Please contact us through the site using the contact form at the bottom of the page. We request a minimum booking of 8 hours per event and a 50% deposit in order to reserve your date. Contact us for a free, no obligation consultation to discuss your bespoke package, we look forward to meeting you!",
-            "q4": "What else do I need to know",
-            "a4": "We are safeguarding and first aid trained and are fully insured, and criminal record checked. In planning for your event, we will take information from you such as allergies and additional needs to ensure that we take the best care of each child. The pop-up crèche is full of beautiful toys, specially chosen to enchant your little ones. We will take information from you about the age and interests of your little guests, and you can leave the rest to us, everything we do will be tailored to them. "
+            "a3": "Please contact me either through the site or at the email address thepopupweddingcreche@gmail.com. Two or three day packages are my most popular bookings, and a deposit of 50% is required to reserve your date. Do contact me for a free, no obligation video call where we can discuss your individual childcare needs.",
+            "q4": "What else do I need to know?",
+            "a4": "I am safeguarding and first aid trained, fully insured and criminal record checked. In planning for your event, I will take information from you such as allergies and additional needs to ensure that I take the best care of each child. The pop-up crèche is full of beautiful toys, specially chosen to enchant your little ones. I will take information from you about the age and interests of your little guests, and you can leave the rest to me; everything I do will be tailored to them."
         }
     },
     "Map": {

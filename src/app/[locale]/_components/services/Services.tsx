@@ -11,7 +11,7 @@ export default function Services(){
 
     const t = useTranslations("Services")
 
-    // Order: Wedding Nanny, Wedding Crèche, Travel Nanny (keys cn / wc / pn kept from the original names)
+    // Order: Wedding Nanny, Wedding Crèche, Holiday Nanny (keys cn / wc / pn kept from the original names)
     const servicesArray: ServiceItem[] = [
        {
         heading: t("Headings.cn"),

@@ -1,5 +1,6 @@
+import type { Metadata } from "next";
 import { StaticImageData } from "next/image";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import Splash from "./_components/splash/Splash";
 import Whatwedo from "./_components/whatwedo/WhatWeDo";
@@ -42,11 +43,98 @@ import LeafletMapWrapper from "./_components/map/LeafletMapWrapper";
 const apiKey: string | undefined = process.env.NEXT_PUBLIC_GOOGLEMAPAPI
 const mapId: string | undefined = process.env.GOOGLEMAPID
 
+const baseUrl = 'https://www.thepopupweddingcreche.fr'
+
+const keywords = [
+  // English
+  'wedding creche France', 'wedding nanny France', 'wedding childcare France',
+  'destination wedding childcare France', 'wedding childcare Dordogne',
+  'wedding childcare Charente', 'wedding childcare Gironde', 'holiday nanny France',
+  'English speaking nanny France', 'event childcare South West France',
+  // French
+  "garde d'enfants mariage", 'crèche mariage', 'nounou mariage',
+  'baby-sitting mariage Dordogne', "garde d'enfants mariage Charente",
+  "garde d'enfants mariage Gironde", 'nounou anglophone vacances',
+]
+
+export async function generateMetadata({ params }: PageProps<'/[locale]'>): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Metadata' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords,
+    authors: [{ name: 'The Pop-up Wedding Crèche' }],
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        en: `${baseUrl}/en`,
+        fr: `${baseUrl}/fr`,
+        'x-default': `${baseUrl}/en`,
+      },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `${baseUrl}/${locale}`,
+      siteName: 'The Pop-up Wedding Crèche',
+      locale: locale === 'fr' ? 'fr_FR' : 'en_GB',
+      type: 'website',
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: t('ogAlt') }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ['/og-image.jpg'],
+    },
+  }
+}
+
 
 export default async function Home({ params }: PageProps<'/[locale]'>) {
 
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const tMeta = await getTranslations('Metadata')
+  const tServices = await getTranslations('Services.Headings')
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ChildCare',
+    name: 'The Pop-up Wedding Crèche',
+    description: tMeta('description'),
+    url: `${baseUrl}/${locale}`,
+    image: `${baseUrl}/og-image.jpg`,
+    email: 'thepopupweddingcreche@gmail.com',
+    priceRange: '€€',
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'Nouvelle-Aquitaine',
+      addressCountry: 'FR',
+    },
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Dordogne' },
+      { '@type': 'AdministrativeArea', name: 'Charente' },
+      { '@type': 'AdministrativeArea', name: 'Charente-Maritime' },
+      { '@type': 'AdministrativeArea', name: 'Gironde' },
+      { '@type': 'Country', name: 'France' },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Childcare services',
+      itemListElement: [tServices('cn'), tServices('wc'), tServices('pn')].map((name) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name },
+      })),
+    },
+    sameAs: [
+      'https://www.facebook.com/popupweddingcreche',
+      'https://www.instagram.com/popupweddingcreche/',
+    ],
+  }
 
   const portrait: number[] = [.9 , .7 , .5]
 
@@ -56,6 +144,10 @@ export default async function Home({ params }: PageProps<'/[locale]'>) {
 
   return (
     <main id="top">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+      />
       <Splash />
       <Whatwedo />
       <Services />
