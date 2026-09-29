@@ -41,7 +41,7 @@ export default function ServicesTabs({services}: {services: ServiceItem[]}){
                                     className="aspect-4/5 h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </span>
-                            <span className={`mt-3 font-display text-lg font-semibold leading-tight md:text-2xl ${isSelected ? 'text-ink' : 'text-muted'}`}>
+                            <span className={`mt-3 font-display text-base font-semibold leading-tight md:text-xl ${isSelected ? 'text-ink' : 'text-muted'}`}>
                                 {s.heading}
                             </span>
                         </button>
@@ -54,7 +54,7 @@ export default function ServicesTabs({services}: {services: ServiceItem[]}){
                 id={`service-panel-${current.value}`}
                 aria-labelledby={`service-tab-${current.value}`}
                 className="mt-8 rounded-2xl border-2 border-mint bg-white p-6 md:p-10">
-                <h3 className="font-display text-2xl font-semibold md:text-3xl">{current.heading}</h3>
+                <h3 className="font-display text-xl font-semibold md:text-2xl">{current.heading}</h3>
                 {/* Blank lines in the translation text become separate paragraphs */}
                 {current.text.split('\n\n').map((para, i) => (
                     <p key={i} className="mt-3 text-lg leading-relaxed">{para}</p>

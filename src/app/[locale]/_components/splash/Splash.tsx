@@ -15,7 +15,7 @@ export default function Splash(){
                 sizes="(max-width: 768px) 80vw, 420px"
                 className="h-auto w-[80vw] max-w-[420px]"
             />
-            <h1 className="mt-2 max-w-3xl font-display text-3xl font-semibold leading-tight md:text-5xl">
+            <h1 className="mt-2 max-w-3xl font-sans text-2xl font-semibold leading-tight md:text-[2.625rem]">
                 {t("heading")}
             </h1>
             <p className="mt-4 text-lg font-semibold uppercase tracking-[0.2em] text-sage-dark md:text-xl">

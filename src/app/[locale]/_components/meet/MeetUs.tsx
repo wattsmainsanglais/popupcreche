@@ -38,7 +38,7 @@ export default function Meetus(){
                         className="h-48 w-48 shrink-0 rounded-full object-cover object-top ring-4 ring-sage ring-offset-4 ring-offset-mint-pale md:h-64 md:w-64"
                     />
                     <div className="rounded-2xl border-2 border-mint bg-white p-6 md:p-10">
-                        <h3 className="font-display text-2xl font-semibold md:text-3xl">{solo.name}</h3>
+                        <h3 className="font-display text-xl font-semibold md:text-2xl">{solo.name}</h3>
                         <p className="mt-3 text-lg leading-relaxed">{solo.text}</p>
                     </div>
                 </div>

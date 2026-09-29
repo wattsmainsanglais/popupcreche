@@ -9,7 +9,9 @@
   --color-ink: #2f2a33;
   --color-muted: #5f5866;
 
-  --font-display: var(--font-display-face), Georgia, serif;
+  --font-display: var(--font-nunito), system-ui, sans-serif;
+  /* Script heading font, swap back in with the marck import in layout.tsx:
+  --font-display: var(--font-display-face), Georgia, serif; */
   --font-sans: var(--font-nunito), system-ui, sans-serif;
 }
 
@@ -28,7 +30,7 @@
     @apply font-display text-ink;
   }
 
-  /* The heading font has a single weight: don't let the browser fake a bold version */
+  /* Stop the browser faking a bold if the heading font lacks the weight (e.g. a single-weight script font) */
   .font-display, h1, h2, h3 {
     font-synthesis: none;
   }
@@ -36,7 +38,7 @@
 
 /* Section heading used across the page */
 @utility section-title {
-  @apply font-display text-3xl font-semibold text-ink md:text-5xl;
+  @apply font-display text-2xl font-semibold text-ink md:text-4xl;
 }
 
 /* Hide scrollbar on the photo reels (still scrollable by swipe, trackpad and buttons) */

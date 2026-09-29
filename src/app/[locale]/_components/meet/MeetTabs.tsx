@@ -43,7 +43,7 @@ export default function MeetTabs({people}: {people: MeetData[]}){
 
             <div role="tabpanel" id="meet-panel" aria-labelledby={`meet-tab-${selected}`}
                 className="mx-auto mt-8 min-h-[16rem] max-w-3xl rounded-2xl border-2 border-mint bg-white p-6 md:p-10">
-                <h3 className="font-display text-2xl font-semibold md:text-3xl">{person.name}</h3>
+                <h3 className="font-display text-xl font-semibold md:text-2xl">{person.name}</h3>
                 <p className="mt-3 text-lg leading-relaxed">{person.text}</p>
             </div>
         </div>

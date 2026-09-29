@@ -52,7 +52,7 @@ export default function LeafletMap({markerArray}: {markerArray: markerTypes[]}) 
                 <Marker key={m.name} position={[m.lat, m.long]} icon={bunnyIcon} alt={m.name} title={m.name}>
                     <Popup>
                         <div className="flex w-[220px] flex-col items-center gap-1.5 text-center">
-                            <em className="font-display text-lg font-semibold not-italic">{m.name}</em>
+                            <em className="font-display text-base font-semibold not-italic">{m.name}</em>
                             {typeof m.image2 === 'string' && (
                                 <Image
                                     src={m.image2}

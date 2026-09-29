@@ -49,7 +49,7 @@ export default function ContactForm({trans}: {trans: {[key: string]: string}}  )
 
     return  (
         <form onSubmit={submit} className="flex flex-col gap-3 rounded-2xl bg-white p-6 shadow-sm md:p-8">
-            <h3 className="mb-2 text-center font-display text-2xl font-semibold md:text-3xl">{trans.heading}</h3>
+            <h3 className="mb-2 text-center font-display text-xl font-semibold md:text-2xl">{trans.heading}</h3>
 
             <input name='name' type='text' placeholder={trans.name} aria-label={trans.name} autoComplete='name' maxLength={100} required className={field} />
             <input name='email' type='email' placeholder={trans.email} aria-label={trans.email} autoComplete='email' maxLength={254} required className={field} />
