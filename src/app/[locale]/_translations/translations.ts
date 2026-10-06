@@ -1,4 +1,7 @@
 import { getTranslations } from "next-intl/server"
+import type { StaticImageData } from "next/image"
+
+export type FaqItem = { q: string, a: string, i: StaticImageData }
 
 import truck from '../../../../public/images/trucks.png'
 import dino from '../../../../public/images/dino.png'
@@ -11,7 +14,7 @@ export async function translator(){
 const t = await getTranslations("Faq")
 
 
-const translationsA = [
+const translationsA: FaqItem[] = [
 
     {q: t("qs.q1"),
     a: t("qs.a1"),

@@ -1,38 +1,21 @@
-'use client'
-
-import React from "react";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
-import { Select, DropdownMenu, Button } from "@radix-ui/themes";
-import { ChevronDownIcon } from "@radix-ui/react-icons";
+const locales = ['en', 'fr']
 
 export default function LanguageSwitcher({locale}: {locale: string}){
 
-    const pathname = usePathname()
-    const currentRoute = pathname.slice(3)
-
     return (
-        <>
-        <DropdownMenu.Root modal={false} >
-            <DropdownMenu.Trigger>
-                <Button variant="ghost" size='2' >
-                    {locale}<ChevronDownIcon/>
-                </Button>
-            </DropdownMenu.Trigger>
-            
-                <DropdownMenu.Content size='2' side='bottom'>
-                        
-                        <Link href={'/en'+currentRoute}><DropdownMenu.Item >en</DropdownMenu.Item></Link>
-                        <Link href={'/fr'+currentRoute}><DropdownMenu.Item >fr</DropdownMenu.Item></Link>
-                        
-                   
-                </DropdownMenu.Content>
-        </DropdownMenu.Root>
-        
-        </>
-
-
+        <div className="flex items-center rounded-full border border-mint p-0.5 text-sm font-bold uppercase">
+            {locales.map((l) => (
+                <Link
+                    key={l}
+                    href={`/${l}`}
+                    hrefLang={l}
+                    aria-current={l === locale ? 'true' : undefined}
+                    className={`rounded-full px-2.5 py-1 transition-colors ${l === locale ? 'bg-mint text-ink' : 'text-muted hover:text-ink'}`}>
+                    {l}
+                </Link>
+            ))}
+        </div>
     )
 }

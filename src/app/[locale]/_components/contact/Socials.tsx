@@ -1,40 +1,19 @@
-import { Flex, Box, Text } from "@radix-ui/themes";
-
 import Image from "next/image";
 import fb from '../../../../../public/images/Facebook_icon-icons.com_66805.png'
 import ig from '../../../../../public/images/Instagram_icon-icons.com_66804.png'
 
-
-import style from './contact.module.css'
-
 export default function Socials(){
 
     return(
-
-        <Flex  width={{initial: '90vw', xs: '90vw', sm: '90vw', md: '45vw'}} height='60vh' className={style.socialWrapper} align='center' justify='center'>
-
-            <Flex gap='7'>
-        
-                <a href="https://www.facebook.com/profile.php?id=61550840310626" target='_blank'>
-                    <Image 
-                        src={fb}
-                        width={100}
-                        alt='The Popup Wedding Creche, Instagram Logo'
-                        className={style.socialLogo}
-                    />
+        <div className="flex min-h-[22rem] items-center justify-center rounded-2xl bg-[url('/images/girl-alt.jpg')] bg-cover bg-center">
+            <div className="flex gap-8">
+                <a href="https://www.facebook.com/profile.php?id=61550840310626" target='_blank' rel="noopener noreferrer" className="icon-dance">
+                    <Image src={fb} width={88} alt='The Pop-up Wedding Crèche on Facebook' />
                 </a>
-                 <a href="https://www.instagram.com/popupweddingcreche/" target='_blank'>
-                    <Image 
-                    src={ig}
-                    width={100}
-                    alt='The Popup Wedding Creche, Instagram Logo'
-                    className={style.socialLogo}
-                    />
+                <a href="https://www.instagram.com/popupweddingcreche/" target='_blank' rel="noopener noreferrer" className="icon-dance">
+                    <Image src={ig} width={88} alt='The Pop-up Wedding Crèche on Instagram' />
                 </a>
-
-               
-            </Flex>
-
-        </Flex>
+            </div>
+        </div>
     )
 }

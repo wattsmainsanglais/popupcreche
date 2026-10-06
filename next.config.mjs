@@ -8,8 +8,8 @@ const cspHeader = `
     default-src 'self' http://localhost:3000 https://localhost:3000 https://www.thepopupweddingcreche.fr https://thepopupweddingcreche.fr;
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com http://localhost:3000 https://thepopupweddingcreche.fr https://www.thepopupweddingcreche.fr;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    connect-src data: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com http://localhost:3000 https://localhost:3000 https://www.thepopupweddingcreche.fr https://thepopupweddingcreche.fr ws://localhost:3000 https://popupcreche-production.up.railway.app;
-    img-src 'self' 'unsafe-inline' blob: data: https://maps.googleapis.com  https://maps.gstatic.com;
+    connect-src 'self' data: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com http://localhost:3000 https://localhost:3000 https://www.thepopupweddingcreche.fr https://thepopupweddingcreche.fr ws://localhost:3000 https://popupcreche-production.up.railway.app;
+    img-src 'self' 'unsafe-inline' blob: data: https://maps.googleapis.com  https://maps.gstatic.com https://tile.openstreetmap.org;
     font-src 'self' https://fonts.gstatic.com;
     worker-src blob:;
     object-src 'none';
@@ -21,22 +21,12 @@ const cspHeader = `
 
 const nextConfig = {
 
-  typescript: {
-  
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
-  },
-
-
   reactStrictMode: false,
 
-
-    eslint: {
-      // Warning: This allows production builds to successfully complete even if
-      // your project has ESLint errors.
-      ignoreDuringBuilds: true,
-    },
+  images: {
+    // Keep optimised copies for 31 days (default is 4 hours), so the server re-processes images far less often
+    minimumCacheTTL: 2678400,
+  },
 
     async headers() {
         return [

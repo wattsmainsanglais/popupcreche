@@ -1,58 +1,31 @@
 'use client'
 
-import { Button, Text, Box } from "@radix-ui/themes";
-import style from './topButton.module.css'
-
-import { useState, useEffect } from "react";
-import { useScroll, useAnimationControls , motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { FaArrowUp } from "react-icons/fa6";
 
 
 export default function GoTop(){
 
-    const ScrollToTopContainerVariants= {
-        hide: { opacity: 0, y: 100 },
-        show: { opacity: 1, y: 0 },
-    };
-
-    const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
-
-    function scrollToTop() {
-        if (!isBrowser()) return;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    const { scrollYProgress } = useScroll();
-    const controls = useAnimationControls();
+    const [visible, setVisible] = useState(false)
 
     useEffect(() => {
-        return scrollYProgress.on('change', (latestValue) => {
-            if (latestValue > 0.35) {
-                controls.start('show');
-            } else {
-                controls.start('hide');
-            }
-        });
-    });
+        const onScroll = () => {
+            const max = document.documentElement.scrollHeight - window.innerHeight
+            setVisible(max > 0 && window.scrollY / max > 0.35)
+        }
+        onScroll()
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
 
     return (
-      <>
-        <Box  position='fixed' left='95%' bottom='5%' style={{zIndex: '3'}}>
-        
-          <motion.div
-          onClick={scrollToTop}
-          variants={ScrollToTopContainerVariants}
-          initial="hide"
-          animate={controls}
-          ><Button className={style.goTop} variant="solid">
-         
-            ^
-            </Button>
-          </motion.div>
-            
-        
-        </Box>
-      </>
+        <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Back to top"
+            tabIndex={visible ? 0 : -1}
+            className={`fixed bottom-5 right-5 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-sage-dark text-white shadow-lg transition-all duration-300 hover:bg-ink ${visible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-24 opacity-0'}`}>
+            <FaArrowUp />
+        </button>
     );
   };
-
-  

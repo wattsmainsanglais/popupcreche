@@ -1,21 +1,15 @@
 'use client'
 
-import { SymbolIcon } from '@radix-ui/react-icons'
-import { Button } from '@radix-ui/themes'
 import { ReactNode } from 'react'
-import { useFormStatus } from 'react-dom'
+import { ImSpinner8 } from 'react-icons/im'
 
 
+export const SubmitButton = ({ children, pending }: { children: ReactNode, pending: boolean }) => {
 
-
-export const SubmitButton = ({ children }: { children: ReactNode }) => {
-
-    const { pending } = useFormStatus()
     return (
-      
-      <Button type="submit" disabled={pending} variant='soft'>
-        {pending ? <SymbolIcon className="animate-spin" /> : children}
-      </Button>
-     
+      <button type="submit" disabled={pending}
+        className="mt-1 flex h-12 items-center justify-center rounded-full bg-sage-dark px-8 text-lg font-bold text-white transition-colors hover:bg-ink disabled:opacity-70">
+        {pending ? <ImSpinner8 className="animate-spin" aria-label="Sending" /> : children}
+      </button>
     )
   }

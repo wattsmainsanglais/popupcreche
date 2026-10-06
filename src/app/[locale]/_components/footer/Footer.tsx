@@ -1,86 +1,42 @@
-
-
-import React from "react";
-
 import Link from "next/link";
 import Image from "next/image";
-
-import { Box, Flex, Text, DropdownMenu, Button } from "@radix-ui/themes";
-
-
-import style from './footer.module.css'
-
-
-import { Genos, Indie_Flower } from "next/font/google";
-
+import { Genos } from "next/font/google";
 
 import logoMid from "../../../../../public/images/Logo-final-wo-central.jpg"
 
-const genos = Genos({weight: ["500"] , subsets: ['latin']}) 
+const genos = Genos({weight: ["500"] , subsets: ['latin']})
 
-const indie = Indie_Flower({
-    weight: ['400'],
-    subsets: ['latin'],
-    
-    
-  })
+const credits = [
+    { name: 'Katy Lunsford Photography', href: 'https://www.katylunsford.com/' },
+    { name: 'Anneli Marinovich Photography', href: 'https://annelimarinovich.com/' },
+    { name: 'Michael Mann Photography', href: 'https://michaelmannphotography.com/' },
+    { name: 'Lydia Taylor Photography', href: 'https://www.lydiataylorjones.com/' },
+    { name: 'David Page Photography', href: 'https://www.davidpagephotography.com/' },
+    { name: 'Logo and Graphics by Aquaroline', href: 'https://www.aquaroline.com/' },
+    { name: 'Rainey Mills Photography', href: 'https://rmphotography.weebly.com/' },
+]
 
 export default function Footer(){
 
-
-
     return (
-    
-    <Box width='99vw' height='30vh' pt='9' pb='9' className={style.footerWrapper}  >
+    <footer className="border-t border-mint px-4 py-12">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
+            <Image src={logoMid} alt='The Pop-up Wedding Crèche' width={110} height={110} />
+            <a href="mailto:thepopupweddingcreche@gmail.com" className="font-semibold text-sage-dark hover:underline">thepopupweddingcreche@gmail.com</a>
 
+            <details className="group mt-2 text-sm text-muted">
+                <summary className="cursor-pointer list-none font-semibold hover:text-ink [&::-webkit-details-marker]:hidden">
+                    Photo &amp; Art Credits <span className="inline-block transition-transform group-open:rotate-180">▾</span>
+                </summary>
+                <ul className="mt-3 flex flex-col gap-1.5">
+                    {credits.map((c) => (
+                        <li key={c.href}><a href={c.href} target='_blank' rel="noopener noreferrer" className="hover:text-ink hover:underline">{c.name}</a></li>
+                    ))}
+                </ul>
+            </details>
 
-        
-        <Flex justify='center' align='center' pr='3' direction='column' >
-            <Image
-                src={logoMid}
-                alt='Nature dopes logo'
-                width= {100}
-                height={100}
-
-            
-            />
-            <Text size='2'>thepopupweddingcreche@gmail.com</Text>
-        </Flex>
-
-        <Flex justify='center'>
-
-            <Text>Powered By <Link href='https://www.awattsdev.eu' target="_blank"><Text className={` ${genos.className} ${style.wattsLink}`}> awattsdev</Text></Link></Text >
-        </Flex>
-
-        <Flex justify='start' pb='5'>
-
-        <DropdownMenu.Root modal={false}>
-            <DropdownMenu.Trigger>
-                <Button variant='ghost'>
-                <Text>Photo & Art Credits</Text>
-                <DropdownMenu.TriggerIcon />
-                </Button>
-            </DropdownMenu.Trigger>
-            
-            <DropdownMenu.Content side='top'>
-                <DropdownMenu.Item><Text ><a href='https://www.katylunsford.com/' target='_blank'>Katy Lunsford Photography</a></Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text ><a href='https://annelimarinovich.com/' target='_blank'>Anneli Marinovich Photography</a></Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text ><a href='https://michaelmannphotography.com/' target='_blank'>Michael Mann Photography</a></Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text ><a href='https://www.lydiataylorjones.com/' target='_blank'>Lydia Taylor Photography</a></Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text ><a href='https://www.davidpagephotography.com/' target='_blank'>David Page Photography</a></Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text><a href='https://www.aquaroline.com/' target='_blank'>Logo and Graphics by Aquaroline</a></Text></DropdownMenu.Item>
-                <DropdownMenu.Item><Text><a href='https://rmphotography.weebly.com/' target='_blank'>Rainey Mills Photography</a></Text></DropdownMenu.Item>
-            </DropdownMenu.Content>
-            
-        </DropdownMenu.Root>
-
-        </Flex>
-       
-    
-
-
-    </Box>
-   
-  
+            <p className="mt-4 text-sm text-muted">Powered By <Link href='https://www.awattsdev.eu' target="_blank" className={`${genos.className} wattsLink`}>awattsdev</Link></p>
+        </div>
+    </footer>
     )
 }

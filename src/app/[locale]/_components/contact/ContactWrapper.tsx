@@ -1,12 +1,7 @@
-import React from "react";
-
 import { useTranslations } from "next-intl";
-
-import { Flex, Box, Grid, Heading} from "@radix-ui/themes";
 
 import ContactForm from "./ContactForm";
 import Socials from "./Socials";
-import { ResponsiveHeadingSizes } from "../../fonts/ResponsiveFontSizes";
 
 export default function ContactWrapper(){
 
@@ -17,20 +12,20 @@ export default function ContactWrapper(){
         name: t('formfields.name'),
         email: t('formfields.email'),
         tele: t('formfields.tele'),
-        msg: t('formfields.msg')
-
+        msg: t('formfields.msg'),
+        send: t('form.send'),
+        success: t('form.success'),
+        errorInvalid: t('form.errorInvalid'),
+        errorSend: t('form.errorSend')
     }
 
     return(
-        <Flex width='99vw' id='Contact-us' direction='column' justify='center' align='center'>
-            <Heading size={ResponsiveHeadingSizes}>Contact</Heading>
-           
-            <Flex direction={{initial: 'column', xs: 'column', sm: 'column', md: 'row'}} width='99vw' justify='center' align='center'>
+        <section id='Contact-us' className="bg-mint px-4 py-16 md:py-24">
+            <h2 className="section-title text-center">Contact</h2>
+            <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2 md:gap-10">
                 <ContactForm trans={trans} />
                 <Socials />
-
-            </Flex>
-        </Flex>
-       
+            </div>
+        </section>
     )
 }

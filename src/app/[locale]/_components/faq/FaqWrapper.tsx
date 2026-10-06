@@ -1,21 +1,18 @@
+import { getTranslations } from "next-intl/server";
 import { translator } from "../../_translations/translations";
- import { Flex } from "@radix-ui/themes";
 
 import Faq from "./Faq";
-import FaqMobile from "./FaqMobile";
 
 
 export default async function FaqWrapper(){
 
-    
     const tprops = await translator()
+    const t = await getTranslations("Faq")
 
     return (
-        
-        <Flex width='99vw' id='faq'>
+        <section id='faq' className="px-4 py-16 md:py-24">
+            <h2 className="section-title text-center">{t("heading")}</h2>
             <Faq tprops={tprops} />
-        </Flex>
-        
+        </section>
     )
-
 }
