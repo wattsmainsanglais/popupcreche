@@ -24,9 +24,9 @@ import s6 from '../../../public/slide1/4 michael_mannphotography.jpg'
 
 //slide2 imports
 // Sinead asked (Sept 2026) to replace the photos of her and Harriet in dungarees with the new château shoot.
-// The rocking horse photo has neither of them in it, so it stays as the 5th (the gallery needs exactly 5).
+// Oct 2026: rocking horse photo (s8) swapped for 1E0A5601 (boy in the blue armchair), also from the château shoot.
 // import s7 from '../../../public/slide2/KL2_7337.jpg'
-import s8 from '../../../public/slide2/KL2_7395.jpg'
+// import s8 from '../../../public/slide2/KL2_7395.jpg'
 // import s9 from '../../../public/slide2/KL2_7400.jpg'
 // import s10 from '../../../public/slide2/KL2_7813.jpg'
 // import s11 from '../../../public/slide2/KL2_7859.jpg'
@@ -34,6 +34,7 @@ import n1 from '../../../public/images/1E0A5626.jpg'
 import n2 from '../../../public/images/1E0A5593.jpg'
 import n3 from '../../../public/images/1E0A5641.jpg'
 import n4 from '../../../public/images/1E0A5617.jpg'
+import n5 from '../../../public/images/1E0A5601.jpg'
 
 // Map: two interchangeable versions. LeafletMapWrapper (free, no API key) is live;
 // to switch back to Google Maps, swap the two <...MapWrapper> lines in the JSX below.
@@ -139,8 +140,8 @@ export default async function Home({ params }: PageProps<'/[locale]'>) {
   const portrait: number[] = [.9 , .7 , .5]
 
   const images: StaticImageData[]= [s1, s2, s3, s5, s6]
-  const images2: StaticImageData[]= [n1, n2, n3, s8, n4]
-  const images2Credits: string[] = ['Lydia Taylor Photography', 'Lydia Taylor Photography', 'Lydia Taylor Photography', 'Katy Lunsford Photography', 'Lydia Taylor Photography']
+  const images2: StaticImageData[]= [n1, n2, n3, n5, n4]
+  const images2Credits: string[] = ['Lydia Taylor Photography', 'Lydia Taylor Photography', 'Lydia Taylor Photography', 'Lydia Taylor Photography', 'Lydia Taylor Photography']
 
   return (
     <main id="top">
